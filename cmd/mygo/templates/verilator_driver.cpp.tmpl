@@ -6,15 +6,29 @@ int main(int argc, char** argv) {
   Vmain top;
   const vluint64_t kMaxCycles = {{ .MaxCycles }}ULL;
   const vluint64_t kResetCycles = {{ .ResetCycles }}ULL;
-  top.clk = 0;
-  top.rst = 1;
+
+  // Initialize constant array input ports
+  {{ range $constant := .Constants }}
+  // Initialize {{ $constant.Name }}
+  {{ range $idx, $val := $constant.Values }}
+  top.{{ $constant.Name }}_{{ $idx }} = {{ $val }};
+  {{ end }}
+  {{ end }}
+
+  {{ if .HasClock }}top.clk = 0;
+  {{ end }}{{ if .HasReset }}top.rst = 1;
+  {{ end }}
   for (vluint64_t cycle = 0; cycle < kMaxCycles; ++cycle) {
-    top.clk = 0;
+    {{ if .HasClock }}top.clk = 0;
+    {{ end }}
     top.eval();
-    if (cycle >= kResetCycles) {
+    if ({{ if .HasReset }}cycle >= kResetCycles{{ else }}false{{ end }}) {
+      {{ if .HasReset }}
       top.rst = 0;
+      {{ end }}
     }
-    top.clk = 1;
+    {{ if .HasClock }}top.clk = 1;
+    {{ end }}
     top.eval();
     if (Verilated::gotFinish()) {
       break;
