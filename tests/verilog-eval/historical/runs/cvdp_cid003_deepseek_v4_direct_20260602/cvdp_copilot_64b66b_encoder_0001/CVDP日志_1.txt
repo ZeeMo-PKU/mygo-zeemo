@@ -1,0 +1,138 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_runner      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347092
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_encoder_64b66b.reset_test (1/7)
+                                                            Test the reset behavior of the encoder 
+    60.00ns INFO     cocotb.encoder_64b66b              Reset Test:
+                                                          encoder_data_out: 0x0
+                                                          Expected: 0
+    60.00ns INFO     cocotb.regression                  test_encoder_64b66b.reset_test passed
+    60.00ns INFO     cocotb.regression                  running test_encoder_64b66b.data_encoding_test (2/7)
+                                                            Test encoding when all data octets are pure data 
+   111.00ns INFO     cocotb.encoder_64b66b              Data Encoding Test:
+                                                          encoder_data_in: 0xa5a5a5a5a5a5a5a5
+                                                          encoder_control_in: 0b0
+   121.00ns INFO     cocotb.encoder_64b66b              Checking output:
+                                                          Actual encoder_data_out: 0x1a5a5a5a5a5a5a5a5
+                                                          Expected encoder_data_out: 0x1a5a5a5a5a5a5a5a5
+   121.00ns INFO     cocotb.regression                  test_encoder_64b66b.data_encoding_test passed
+   121.00ns INFO     cocotb.regression                  running test_encoder_64b66b.control_encoding_test (3/7)
+                                                            Test encoding when control characters are in the last four octets 
+   172.00ns INFO     cocotb.encoder_64b66b              Control Encoding Test:
+                                                          encoder_data_in: 0xffffffffffffffff
+                                                          encoder_control_in: 0b1111
+   182.00ns INFO     cocotb.encoder_64b66b              Checking output:
+                                                          Actual encoder_data_out: 0x20000000000000000
+                                                          Expected encoder_data_out: 0x20000000000000000
+   182.00ns INFO     cocotb.regression                  test_encoder_64b66b.control_encoding_test passed
+   182.00ns INFO     cocotb.regression                  running test_encoder_64b66b.mixed_data_control_test (4/7)
+                                                            Test encoding when control characters are mixed in the data 
+   233.00ns INFO     cocotb.encoder_64b66b              Mixed Data and Control Test:
+                                                          encoder_data_in: 0x123456789abcdef0
+                                                          encoder_control_in: 0b10000001
+   253.00ns INFO     cocotb.encoder_64b66b              Checking output:
+                                                          Actual encoder_data_out: 0x20000000000000000
+                                                          Expected encoder_data_out: 0x20000000000000000
+   253.00ns INFO     cocotb.regression                  test_encoder_64b66b.mixed_data_control_test passed
+   253.00ns INFO     cocotb.regression                  running test_encoder_64b66b.all_control_symbols_test (5/7)
+                                                            Test encoding when all characters are control 
+   304.00ns INFO     cocotb.encoder_64b66b              All Control Symbols Test:
+                                                          encoder_data_in: 0xa5a5a5a5a5a5a5a5
+                                                          encoder_control_in: 0b11111111
+   314.00ns INFO     cocotb.encoder_64b66b              Checking output:
+                                                          Actual encoder_data_out: 0x20000000000000000
+                                                          Expected encoder_data_out: 0x20000000000000000
+   314.00ns INFO     cocotb.regression                  test_encoder_64b66b.all_control_symbols_test passed
+   314.00ns INFO     cocotb.regression                  running test_encoder_64b66b.random_data_control_test (6/7)
+                                                            Test encoding with random data and control inputs 
+   365.00ns INFO     cocotb.encoder_64b66b              Random Test 1:
+                                                          encoder_data_in: 0x426a383c6bf0685
+                                                          encoder_control_in: 0b10110100
+   375.00ns INFO     cocotb.encoder_64b66b              Checking output:
+                                                          Actual encoder_data_out: 0x20000000000000000
+                                                          Expected encoder_data_out: 0x20000000000000000
+   385.00ns INFO     cocotb.encoder_64b66b              Random Test 2:
+                                                          encoder_data_in: 0xc42e4d3f4b4c0a04
+                                                          encoder_control_in: 0b10111110
+   395.00ns INFO     cocotb.encoder_64b66b              Checking output:
+                                                          Actual encoder_data_out: 0x20000000000000000
+                                                          Expected encoder_data_out: 0x20000000000000000
+   405.00ns INFO     cocotb.encoder_64b66b              Random Test 3:
+                                                          encoder_data_in: 0x2e814d5205db05fd
+                                                          encoder_control_in: 0b10100111
+   415.00ns INFO     cocotb.encoder_64b66b              Checking output:
+                                                          Actual encoder_data_out: 0x20000000000000000
+                                                          Expected encoder_data_out: 0x20000000000000000
+   425.00ns INFO     cocotb.encoder_64b66b              Random Test 4:
+                                                          encoder_data_in: 0xf836965474d0b2bd
+                                                          encoder_control_in: 0b100110
+   435.00ns INFO     cocotb.encoder_64b66b              Checking output:
+                                                          Actual encoder_data_out: 0x20000000000000000
+                                                          Expected encoder_data_out: 0x20000000000000000
+   445.00ns INFO     cocotb.encoder_64b66b              Random Test 5:
+                                                          encoder_data_in: 0x723cd2ab927bf464
+                                                          encoder_control_in: 0b1111001
+   455.00ns INFO     cocotb.encoder_64b66b              Checking output:
+                                                          Actual encoder_data_out: 0x20000000000000000
+                                                          Expected encoder_data_out: 0x20000000000000000
+   465.00ns INFO     cocotb.encoder_64b66b              Randomized tests completed successfully
+   465.00ns INFO     cocotb.regression                  test_encoder_64b66b.random_data_control_test passed
+   465.00ns INFO     cocotb.regression                  running test_encoder_64b66b.random_data_only_test (7/7)
+                                                            Test encoding with random data and control inputs 
+   506.00ns INFO     cocotb.encoder_64b66b              Random Test 1:
+                                                          encoder_data_in: 0x219b959164a3fd84
+                                                          encoder_control_in: 0b0
+   516.00ns INFO     cocotb.encoder_64b66b              Checking output:
+                                                          Actual encoder_data_out: 0x1219b959164a3fd84
+                                                          Expected encoder_data_out: 0x1219b959164a3fd84
+   526.00ns INFO     cocotb.encoder_64b66b              Random Test 2:
+                                                          encoder_data_in: 0xebd0a3e4e9aeb87f
+                                                          encoder_control_in: 0b0
+   536.00ns INFO     cocotb.encoder_64b66b              Checking output:
+                                                          Actual encoder_data_out: 0x1ebd0a3e4e9aeb87f
+                                                          Expected encoder_data_out: 0x1ebd0a3e4e9aeb87f
+   546.00ns INFO     cocotb.encoder_64b66b              Random Test 3:
+                                                          encoder_data_in: 0xe7acb0225946c3d5
+                                                          encoder_control_in: 0b0
+   556.00ns INFO     cocotb.encoder_64b66b              Checking output:
+                                                          Actual encoder_data_out: 0x1e7acb0225946c3d5
+                                                          Expected encoder_data_out: 0x1e7acb0225946c3d5
+   566.00ns INFO     cocotb.encoder_64b66b              Random Test 4:
+                                                          encoder_data_in: 0x62f1aeb131979d9c
+                                                          encoder_control_in: 0b0
+   576.00ns INFO     cocotb.encoder_64b66b              Checking output:
+                                                          Actual encoder_data_out: 0x162f1aeb131979d9c
+                                                          Expected encoder_data_out: 0x162f1aeb131979d9c
+   586.00ns INFO     cocotb.encoder_64b66b              Random Test 5:
+                                                          encoder_data_in: 0x9d514044a8b16b5
+                                                          encoder_control_in: 0b0
+   596.00ns INFO     cocotb.encoder_64b66b              Checking output:
+                                                          Actual encoder_data_out: 0x109d514044a8b16b5
+                                                          Expected encoder_data_out: 0x109d514044a8b16b5
+   606.00ns INFO     cocotb.encoder_64b66b              Randomized tests completed successfully
+   606.00ns INFO     cocotb.regression                  test_encoder_64b66b.random_data_only_test passed
+   606.00ns INFO     cocotb.regression                  ******************************************************************************************************
+                                                        ** TEST                                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ******************************************************************************************************
+                                                        ** test_encoder_64b66b.reset_test                 PASS          60.00           0.00      24990.89  **
+                                                        ** test_encoder_64b66b.data_encoding_test         PASS          60.00           0.00      35424.86  **
+                                                        ** test_encoder_64b66b.control_encoding_test      PASS          60.00           0.00      29259.18  **
+                                                        ** test_encoder_64b66b.mixed_data_control_test    PASS          70.00           0.00      29404.23  **
+                                                        ** test_encoder_64b66b.all_control_symbols_test   PASS          60.00           0.00      33372.00  **
+                                                        ** test_encoder_64b66b.random_data_control_test   PASS         150.00           0.01      20547.56  **
+                                                        ** test_encoder_64b66b.random_data_only_test      PASS         140.00           0.00      28855.16  **
+                                                        ******************************************************************************************************
+                                                        ** TESTS=7 PASS=7 FAIL=0 SKIP=0                                606.00           0.08       7164.88  **
+                                                        ******************************************************************************************************
+PASSED
+
+============================== 1 passed in 2.11s ===============================

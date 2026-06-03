@@ -1,0 +1,933 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 12 items
+
+../../src/test_runner.py::test_axi_reg[8-12-0] [DEBUG] Parameters: {'ADDR_WIDTH': 12, 'DATA_WIDTH': 8}
+FAILED
+../../src/test_runner.py::test_axi_reg[8-16-0] [DEBUG] Parameters: {'ADDR_WIDTH': 16, 'DATA_WIDTH': 8}
+FAILED
+../../src/test_runner.py::test_axi_reg[8-32-0] [DEBUG] Parameters: {'ADDR_WIDTH': 32, 'DATA_WIDTH': 8}
+FAILED
+../../src/test_runner.py::test_axi_reg[16-12-0] [DEBUG] Parameters: {'ADDR_WIDTH': 12, 'DATA_WIDTH': 16}
+FAILED
+../../src/test_runner.py::test_axi_reg[16-16-0] [DEBUG] Parameters: {'ADDR_WIDTH': 16, 'DATA_WIDTH': 16}
+FAILED
+../../src/test_runner.py::test_axi_reg[16-32-0] [DEBUG] Parameters: {'ADDR_WIDTH': 32, 'DATA_WIDTH': 16}
+FAILED
+../../src/test_runner.py::test_axi_reg[32-12-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347122
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_axi_register.test_axi_register (1/1)
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_valid_read_addr via any registered implementation
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_valid_write_addr via any registered implementation
+    40.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x4885f9dc, strb=0b1111
+   110.00ns INFO     cocotb.axi_register                Test 0: Read Data: 0x5f9dc from Address: 0x100
+   130.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x44cd2508, strb=0b1111
+   200.00ns INFO     cocotb.axi_register                Test 1: Read Data: 0xd2508 from Address: 0x100
+   220.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0xb63224a5, strb=0b1111
+   290.00ns INFO     cocotb.axi_register                Test 2: Read Data: 0x224a5 from Address: 0x100
+   310.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0xe818c532, strb=0b1111
+   380.00ns INFO     cocotb.axi_register                Test 3: Read Data: 0x8c532 from Address: 0x100
+   400.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x73aa63fb, strb=0b1111
+   470.00ns INFO     cocotb.axi_register                Test 4: Read Data: 0xa63fb from Address: 0x100
+   490.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0xcd91b243, strb=0b1111
+   560.00ns INFO     cocotb.axi_register                Test 5: Read Data: 0x1b243 from Address: 0x100
+   580.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0xc6a8847a, strb=0b1111
+   650.00ns INFO     cocotb.axi_register                Test 6: Read Data: 0x8847a from Address: 0x100
+   670.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x8a1a267e, strb=0b1111
+   740.00ns INFO     cocotb.axi_register                Test 7: Read Data: 0xa267e from Address: 0x100
+   760.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x8fcd1c07, strb=0b1111
+   830.00ns INFO     cocotb.axi_register                Test 8: Read Data: 0xd1c07 from Address: 0x100
+   850.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0xddbcb343, strb=0b1111
+   920.00ns INFO     cocotb.axi_register                Test 9: Read Data: 0xcb343 from Address: 0x100
+   920.00ns INFO     cocotb.axi_register                Randomized AXI register tests with all-ones wstrb passed successfully!
+   950.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x200, data=0x1, strb=0b1111
+   950.00ns INFO     cocotb.axi_register                CTRL_START write succeeded (pulse verified via bresp)
+   950.00ns INFO     cocotb.axi_register                CTRL_START test passed: start_value=1
+   990.00ns INFO     cocotb.axi_register                CTRL_DONE set test passed: expected=1, got=1
+  1010.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x300, data=0x1, strb=0b1111
+  1080.00ns INFO     cocotb.axi_register                CTRL_DONE clear test passed: expected=0, got=0
+  1110.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x400, data=0x1, strb=0b1111
+  1110.00ns INFO     cocotb.axi_register                CTRL_WRITEBACK write succeeded (pulse verified via bresp): expected=1
+  1140.00ns INFO     cocotb.axi_register                CTRL_ID test passed: expected=0x10001, got=0x10001
+  1200.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x4df09c21, strb=0b100
+  1210.00ns INFO     cocotb.axi_register                Partial write response is OK (AXI_RESP_OK).
+  1230.00ns INFO     cocotb.axi_register                Partial write did not affect the register: read_data=832323
+  1240.00ns INFO     cocotb.regression                  test_axi_register.test_axi_register passed
+  1240.00ns INFO     cocotb.regression                  *********************************************************************************************
+                                                        ** TEST                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************
+                                                        ** test_axi_register.test_axi_register   PASS        1240.00           0.05      23712.95  **
+                                                        *********************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                      1240.00           0.10      12669.21  **
+                                                        *********************************************************************************************
+[DEBUG] Parameters: {'ADDR_WIDTH': 12, 'DATA_WIDTH': 32}
+PASSED
+../../src/test_runner.py::test_axi_reg[32-16-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347125
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_axi_register.test_axi_register (1/1)
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_valid_read_addr via any registered implementation
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_valid_write_addr via any registered implementation
+    40.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0xe738b397, strb=0b1111
+   110.00ns INFO     cocotb.axi_register                Test 0: Read Data: 0x8b397 from Address: 0x100
+   130.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0xed5c63d2, strb=0b1111
+   200.00ns INFO     cocotb.axi_register                Test 1: Read Data: 0xc63d2 from Address: 0x100
+   220.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0xdc3e3915, strb=0b1111
+   290.00ns INFO     cocotb.axi_register                Test 2: Read Data: 0xe3915 from Address: 0x100
+   310.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0xec5b874b, strb=0b1111
+   380.00ns INFO     cocotb.axi_register                Test 3: Read Data: 0xb874b from Address: 0x100
+   400.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x2e62a276, strb=0b1111
+   470.00ns INFO     cocotb.axi_register                Test 4: Read Data: 0x2a276 from Address: 0x100
+   490.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x19a80fb8, strb=0b1111
+   560.00ns INFO     cocotb.axi_register                Test 5: Read Data: 0x80fb8 from Address: 0x100
+   580.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x7b9476d, strb=0b1111
+   650.00ns INFO     cocotb.axi_register                Test 6: Read Data: 0x9476d from Address: 0x100
+   670.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0xea9216ae, strb=0b1111
+   740.00ns INFO     cocotb.axi_register                Test 7: Read Data: 0x216ae from Address: 0x100
+   760.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0xa960925, strb=0b1111
+   830.00ns INFO     cocotb.axi_register                Test 8: Read Data: 0x60925 from Address: 0x100
+   850.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x82faec5d, strb=0b1111
+   920.00ns INFO     cocotb.axi_register                Test 9: Read Data: 0xaec5d from Address: 0x100
+   920.00ns INFO     cocotb.axi_register                Randomized AXI register tests with all-ones wstrb passed successfully!
+   950.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x200, data=0x1, strb=0b1111
+   950.00ns INFO     cocotb.axi_register                CTRL_START write succeeded (pulse verified via bresp)
+   950.00ns INFO     cocotb.axi_register                CTRL_START test passed: start_value=1
+   990.00ns INFO     cocotb.axi_register                CTRL_DONE set test passed: expected=1, got=1
+  1010.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x300, data=0x1, strb=0b1111
+  1080.00ns INFO     cocotb.axi_register                CTRL_DONE clear test passed: expected=0, got=0
+  1110.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x400, data=0x0, strb=0b1111
+  1110.00ns INFO     cocotb.axi_register                CTRL_WRITEBACK write succeeded (pulse verified via bresp): expected=0
+  1140.00ns INFO     cocotb.axi_register                CTRL_ID test passed: expected=0x10001, got=0x10001
+  1200.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x8e883f8a, strb=0b1100
+  1210.00ns INFO     cocotb.axi_register                Partial write response is OK (AXI_RESP_OK).
+  1230.00ns INFO     cocotb.axi_register                Partial write did not affect the register: read_data=715869
+  1240.00ns INFO     cocotb.regression                  test_axi_register.test_axi_register passed
+  1240.00ns INFO     cocotb.regression                  *********************************************************************************************
+                                                        ** TEST                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************
+                                                        ** test_axi_register.test_axi_register   PASS        1240.00           0.05      24649.34  **
+                                                        *********************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                      1240.00           0.08      15868.27  **
+                                                        *********************************************************************************************
+[DEBUG] Parameters: {'ADDR_WIDTH': 16, 'DATA_WIDTH': 32}
+PASSED
+../../src/test_runner.py::test_axi_reg[32-32-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347126
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_axi_register.test_axi_register (1/1)
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_valid_read_addr via any registered implementation
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_valid_write_addr via any registered implementation
+    40.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x66f523c1, strb=0b1111
+   110.00ns INFO     cocotb.axi_register                Test 0: Read Data: 0x523c1 from Address: 0x100
+   130.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x9c758e42, strb=0b1111
+   200.00ns INFO     cocotb.axi_register                Test 1: Read Data: 0x58e42 from Address: 0x100
+   220.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x85f68070, strb=0b1111
+   290.00ns INFO     cocotb.axi_register                Test 2: Read Data: 0x68070 from Address: 0x100
+   310.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0xd5cb0541, strb=0b1111
+   380.00ns INFO     cocotb.axi_register                Test 3: Read Data: 0xb0541 from Address: 0x100
+   400.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0xb39f40a0, strb=0b1111
+   470.00ns INFO     cocotb.axi_register                Test 4: Read Data: 0xf40a0 from Address: 0x100
+   490.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x27686098, strb=0b1111
+   560.00ns INFO     cocotb.axi_register                Test 5: Read Data: 0x86098 from Address: 0x100
+   580.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x441e0c56, strb=0b1111
+   650.00ns INFO     cocotb.axi_register                Test 6: Read Data: 0xe0c56 from Address: 0x100
+   670.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x2b8c880f, strb=0b1111
+   740.00ns INFO     cocotb.axi_register                Test 7: Read Data: 0xc880f from Address: 0x100
+   760.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0xf16d3632, strb=0b1111
+   830.00ns INFO     cocotb.axi_register                Test 8: Read Data: 0xd3632 from Address: 0x100
+   850.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0xa3738709, strb=0b1111
+   920.00ns INFO     cocotb.axi_register                Test 9: Read Data: 0x38709 from Address: 0x100
+   920.00ns INFO     cocotb.axi_register                Randomized AXI register tests with all-ones wstrb passed successfully!
+   950.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x200, data=0x1, strb=0b1111
+   950.00ns INFO     cocotb.axi_register                CTRL_START write succeeded (pulse verified via bresp)
+   950.00ns INFO     cocotb.axi_register                CTRL_START test passed: start_value=1
+   990.00ns INFO     cocotb.axi_register                CTRL_DONE set test passed: expected=1, got=1
+  1010.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x300, data=0x1, strb=0b1111
+  1080.00ns INFO     cocotb.axi_register                CTRL_DONE clear test passed: expected=0, got=0
+  1110.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x400, data=0x1, strb=0b1111
+  1110.00ns INFO     cocotb.axi_register                CTRL_WRITEBACK write succeeded (pulse verified via bresp): expected=1
+  1140.00ns INFO     cocotb.axi_register                CTRL_ID test passed: expected=0x10001, got=0x10001
+  1200.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x1c8533f1, strb=0b1001
+  1210.00ns INFO     cocotb.axi_register                Partial write response is OK (AXI_RESP_OK).
+  1230.00ns INFO     cocotb.axi_register                Partial write did not affect the register: read_data=231177
+  1240.00ns INFO     cocotb.regression                  test_axi_register.test_axi_register passed
+  1240.00ns INFO     cocotb.regression                  *********************************************************************************************
+                                                        ** TEST                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************
+                                                        ** test_axi_register.test_axi_register   PASS        1240.00           0.04      32904.62  **
+                                                        *********************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                      1240.00           0.05      22908.49  **
+                                                        *********************************************************************************************
+[DEBUG] Parameters: {'ADDR_WIDTH': 32, 'DATA_WIDTH': 32}
+PASSED
+../../src/test_runner.py::test_axi_reg[64-12-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347127
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_axi_register.test_axi_register (1/1)
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_valid_read_addr via any registered implementation
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_valid_write_addr via any registered implementation
+    40.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0xde85de6fd793aab5, strb=0b11111111
+   110.00ns INFO     cocotb.axi_register                Test 0: Read Data: 0x3aab5 from Address: 0x100
+   130.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x1e4d8c3a360a50a3, strb=0b11111111
+   200.00ns INFO     cocotb.axi_register                Test 1: Read Data: 0xa50a3 from Address: 0x100
+   220.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0xebc3d65f497aafc8, strb=0b11111111
+   290.00ns INFO     cocotb.axi_register                Test 2: Read Data: 0xaafc8 from Address: 0x100
+   310.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0xda104dc68564b66f, strb=0b11111111
+   380.00ns INFO     cocotb.axi_register                Test 3: Read Data: 0x4b66f from Address: 0x100
+   400.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x30449a0ac527bb28, strb=0b11111111
+   470.00ns INFO     cocotb.axi_register                Test 4: Read Data: 0x7bb28 from Address: 0x100
+   490.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x521c76077735601, strb=0b11111111
+   560.00ns INFO     cocotb.axi_register                Test 5: Read Data: 0x35601 from Address: 0x100
+   580.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x9638fdbb35e3e5c5, strb=0b11111111
+   650.00ns INFO     cocotb.axi_register                Test 6: Read Data: 0x3e5c5 from Address: 0x100
+   670.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x2b267b04ac16d40a, strb=0b11111111
+   740.00ns INFO     cocotb.axi_register                Test 7: Read Data: 0x6d40a from Address: 0x100
+   760.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x12da5c12eb3ae9dd, strb=0b11111111
+   830.00ns INFO     cocotb.axi_register                Test 8: Read Data: 0xae9dd from Address: 0x100
+   850.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x2ffe6ffd7ab86377, strb=0b11111111
+   920.00ns INFO     cocotb.axi_register                Test 9: Read Data: 0x86377 from Address: 0x100
+   920.00ns INFO     cocotb.axi_register                Randomized AXI register tests with all-ones wstrb passed successfully!
+   950.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x200, data=0x1, strb=0b11111111
+   950.00ns INFO     cocotb.axi_register                CTRL_START write succeeded (pulse verified via bresp)
+   950.00ns INFO     cocotb.axi_register                CTRL_START test passed: start_value=1
+   990.00ns INFO     cocotb.axi_register                CTRL_DONE set test passed: expected=1, got=1
+  1010.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x300, data=0x1, strb=0b11111111
+  1080.00ns INFO     cocotb.axi_register                CTRL_DONE clear test passed: expected=0, got=0
+  1110.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x400, data=0x0, strb=0b11111111
+  1110.00ns INFO     cocotb.axi_register                CTRL_WRITEBACK write succeeded (pulse verified via bresp): expected=0
+  1140.00ns INFO     cocotb.axi_register                CTRL_ID test passed: expected=0x10001, got=0x10001
+  1200.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x887bee2446e38046, strb=0b1011110
+  1210.00ns INFO     cocotb.axi_register                Partial write response is OK (AXI_RESP_OK).
+  1230.00ns INFO     cocotb.axi_register                Partial write did not affect the register: read_data=549751
+  1240.00ns INFO     cocotb.regression                  test_axi_register.test_axi_register passed
+  1240.00ns INFO     cocotb.regression                  *********************************************************************************************
+                                                        ** TEST                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************
+                                                        ** test_axi_register.test_axi_register   PASS        1240.00           0.04      30321.92  **
+                                                        *********************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                      1240.00           0.08      14820.36  **
+                                                        *********************************************************************************************
+[DEBUG] Parameters: {'ADDR_WIDTH': 12, 'DATA_WIDTH': 64}
+PASSED
+../../src/test_runner.py::test_axi_reg[64-16-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347129
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_axi_register.test_axi_register (1/1)
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_valid_read_addr via any registered implementation
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_valid_write_addr via any registered implementation
+    40.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x3cae39b776efee39, strb=0b11111111
+   110.00ns INFO     cocotb.axi_register                Test 0: Read Data: 0xfee39 from Address: 0x100
+   130.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x5d355f1ced0e5b4d, strb=0b11111111
+   200.00ns INFO     cocotb.axi_register                Test 1: Read Data: 0xe5b4d from Address: 0x100
+   220.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x52bb7e7a4f3493e1, strb=0b11111111
+   290.00ns INFO     cocotb.axi_register                Test 2: Read Data: 0x493e1 from Address: 0x100
+   310.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x45a943092f805072, strb=0b11111111
+   380.00ns INFO     cocotb.axi_register                Test 3: Read Data: 0x5072 from Address: 0x100
+   400.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x79b0d6299b735500, strb=0b11111111
+   470.00ns INFO     cocotb.axi_register                Test 4: Read Data: 0x35500 from Address: 0x100
+   490.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0xf360bc7cddbd3e8b, strb=0b11111111
+   560.00ns INFO     cocotb.axi_register                Test 5: Read Data: 0xd3e8b from Address: 0x100
+   580.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x98826cfe5369c43a, strb=0b11111111
+   650.00ns INFO     cocotb.axi_register                Test 6: Read Data: 0x9c43a from Address: 0x100
+   670.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0xa099ac437cdc05c, strb=0b11111111
+   740.00ns INFO     cocotb.axi_register                Test 7: Read Data: 0xdc05c from Address: 0x100
+   760.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x5167b9a3ac46c5aa, strb=0b11111111
+   830.00ns INFO     cocotb.axi_register                Test 8: Read Data: 0x6c5aa from Address: 0x100
+   850.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0xa4e5ff01bc08e20c, strb=0b11111111
+   920.00ns INFO     cocotb.axi_register                Test 9: Read Data: 0x8e20c from Address: 0x100
+   920.00ns INFO     cocotb.axi_register                Randomized AXI register tests with all-ones wstrb passed successfully!
+   950.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x200, data=0x1, strb=0b11111111
+   950.00ns INFO     cocotb.axi_register                CTRL_START write succeeded (pulse verified via bresp)
+   950.00ns INFO     cocotb.axi_register                CTRL_START test passed: start_value=1
+   990.00ns INFO     cocotb.axi_register                CTRL_DONE set test passed: expected=1, got=1
+  1010.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x300, data=0x1, strb=0b11111111
+  1080.00ns INFO     cocotb.axi_register                CTRL_DONE clear test passed: expected=0, got=0
+  1110.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x400, data=0x0, strb=0b11111111
+  1110.00ns INFO     cocotb.axi_register                CTRL_WRITEBACK write succeeded (pulse verified via bresp): expected=0
+  1140.00ns INFO     cocotb.axi_register                CTRL_ID test passed: expected=0x10001, got=0x10001
+  1200.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x437f993380311dba, strb=0b11010001
+  1210.00ns INFO     cocotb.axi_register                Partial write response is OK (AXI_RESP_OK).
+  1230.00ns INFO     cocotb.axi_register                Partial write did not affect the register: read_data=582156
+  1240.00ns INFO     cocotb.regression                  test_axi_register.test_axi_register passed
+  1240.00ns INFO     cocotb.regression                  *********************************************************************************************
+                                                        ** TEST                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************
+                                                        ** test_axi_register.test_axi_register   PASS        1240.00           0.05      22812.03  **
+                                                        *********************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                      1240.00           0.08      15478.15  **
+                                                        *********************************************************************************************
+[DEBUG] Parameters: {'ADDR_WIDTH': 16, 'DATA_WIDTH': 64}
+PASSED
+../../src/test_runner.py::test_axi_reg[64-32-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347131
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_axi_register.test_axi_register (1/1)
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_valid_read_addr via any registered implementation
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_valid_write_addr via any registered implementation
+    40.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x55f474a844595e1e, strb=0b11111111
+   110.00ns INFO     cocotb.axi_register                Test 0: Read Data: 0x95e1e from Address: 0x100
+   130.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x7693cb6206309b6d, strb=0b11111111
+   200.00ns INFO     cocotb.axi_register                Test 1: Read Data: 0x9b6d from Address: 0x100
+   220.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x69038c6d8658dbc0, strb=0b11111111
+   290.00ns INFO     cocotb.axi_register                Test 2: Read Data: 0x8dbc0 from Address: 0x100
+   310.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x8bd5ffa3ca04e486, strb=0b11111111
+   380.00ns INFO     cocotb.axi_register                Test 3: Read Data: 0x4e486 from Address: 0x100
+   400.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x5c26ee3809513a86, strb=0b11111111
+   470.00ns INFO     cocotb.axi_register                Test 4: Read Data: 0x13a86 from Address: 0x100
+   490.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0xb8430d43ac728a5b, strb=0b11111111
+   560.00ns INFO     cocotb.axi_register                Test 5: Read Data: 0x28a5b from Address: 0x100
+   580.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x9c8c063656106f0f, strb=0b11111111
+   650.00ns INFO     cocotb.axi_register                Test 6: Read Data: 0x6f0f from Address: 0x100
+   670.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x7c7a80ace74338f5, strb=0b11111111
+   740.00ns INFO     cocotb.axi_register                Test 7: Read Data: 0x338f5 from Address: 0x100
+   760.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0xe8ace7e45e9ea0a2, strb=0b11111111
+   830.00ns INFO     cocotb.axi_register                Test 8: Read Data: 0xea0a2 from Address: 0x100
+   850.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0xd2eac23974597177, strb=0b11111111
+   920.00ns INFO     cocotb.axi_register                Test 9: Read Data: 0x97177 from Address: 0x100
+   920.00ns INFO     cocotb.axi_register                Randomized AXI register tests with all-ones wstrb passed successfully!
+   950.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x200, data=0x1, strb=0b11111111
+   950.00ns INFO     cocotb.axi_register                CTRL_START write succeeded (pulse verified via bresp)
+   950.00ns INFO     cocotb.axi_register                CTRL_START test passed: start_value=1
+   990.00ns INFO     cocotb.axi_register                CTRL_DONE set test passed: expected=1, got=1
+  1010.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x300, data=0x1, strb=0b11111111
+  1080.00ns INFO     cocotb.axi_register                CTRL_DONE clear test passed: expected=0, got=0
+  1110.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x400, data=0x1, strb=0b11111111
+  1110.00ns INFO     cocotb.axi_register                CTRL_WRITEBACK write succeeded (pulse verified via bresp): expected=1
+  1140.00ns INFO     cocotb.axi_register                CTRL_ID test passed: expected=0x10001, got=0x10001
+  1200.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x418be346d94b97d9, strb=0b1001000
+  1210.00ns INFO     cocotb.axi_register                Partial write response is OK (AXI_RESP_OK).
+  1230.00ns INFO     cocotb.axi_register                Partial write did not affect the register: read_data=618871
+  1240.00ns INFO     cocotb.regression                  test_axi_register.test_axi_register passed
+  1240.00ns INFO     cocotb.regression                  *********************************************************************************************
+                                                        ** TEST                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************
+                                                        ** test_axi_register.test_axi_register   PASS        1240.00           0.05      23676.03  **
+                                                        *********************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                      1240.00           0.07      16679.40  **
+                                                        *********************************************************************************************
+[DEBUG] Parameters: {'ADDR_WIDTH': 32, 'DATA_WIDTH': 64}
+PASSED
+
+=================================== FAILURES ===================================
+_____________________________ test_axi_reg[8-12-0] _____________________________
+
+test = 0, ADDR_WIDTH = 12, DATA_WIDTH = 8
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("ADDR_WIDTH", [12,16,32])
+    @pytest.mark.parametrize("DATA_WIDTH", [8,16,32,64])
+    def test_axi_reg(test,ADDR_WIDTH,DATA_WIDTH):
+>           runner(DATA_WIDTH = DATA_WIDTH ,ADDR_WIDTH = ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/src/test_runner.py:19: in runner
+    runner.build(
+/venv/lib/python3.12/site-packages/cocotb_tools/runner.py:389: in build
+    self._execute(cmds, cwd=self.build_dir)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = False, timeout = None, check = True
+popenargs = (['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'axi_register', '-g2012', ...],)
+kwargs = {'cwd': PosixPath('/code/rundir/sim_build'), 'env': {'HASH': '748c8466993ff067bc3f8a4953d002e1b5913109', 'HOME': '/cod...45', 'LC_CTYPE': 'C.UTF-8', ...}, 'stderr': -2, 'stdout': <_io.TextIOWrapper name='sim.log' mode='w' encoding='utf-8'>}
+process = <Popen: returncode: 2 args: ['iverilog', '-o', '/code/rundir/sim_build/sim.v...>
+stdout = None, stderr = None, retcode = 2
+
+    def run(*popenargs,
+            input=None, capture_output=False, timeout=None, check=False, **kwargs):
+        """Run command with arguments and return a CompletedProcess instance.
+    
+        The returned instance will have attributes args, returncode, stdout and
+        stderr. By default, stdout and stderr are not captured, and those attributes
+        will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+        or pass capture_output=True to capture both.
+    
+        If check is True and the exit code was non-zero, it raises a
+        CalledProcessError. The CalledProcessError object will have the return code
+        in the returncode attribute, and output & stderr attributes if those streams
+        were captured.
+    
+        If timeout is given, and the process takes too long, a TimeoutExpired
+        exception will be raised.
+    
+        There is an optional argument "input", allowing you to
+        pass bytes or a string to the subprocess's stdin.  If you use this argument
+        you may not also use the Popen constructor's "stdin" argument, as
+        it will be used internally.
+    
+        By default, all communication is in bytes, and therefore any "input" should
+        be bytes, and the stdout and stderr will be bytes. If in text mode, any
+        "input" should be a string, and stdout and stderr will be strings decoded
+        according to locale encoding, or by "encoding" if set. Text mode is
+        triggered by setting any of text, encoding, errors or universal_newlines.
+    
+        The other arguments are the same as for the Popen constructor.
+        """
+        if input is not None:
+            if kwargs.get('stdin') is not None:
+                raise ValueError('stdin and input arguments may not both be used.')
+            kwargs['stdin'] = PIPE
+    
+        if capture_output:
+            if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+                raise ValueError('stdout and stderr arguments may not be used '
+                                 'with capture_output.')
+            kwargs['stdout'] = PIPE
+            kwargs['stderr'] = PIPE
+    
+        with Popen(*popenargs, **kwargs) as process:
+            try:
+                stdout, stderr = process.communicate(input, timeout=timeout)
+            except TimeoutExpired as exc:
+                process.kill()
+                if _mswindows:
+                    # Windows accumulates the output in a single blocking
+                    # read() call run on child threads, with the timeout
+                    # being done in a join() on those threads.  communicate()
+                    # _after_ kill() is required to collect that and add it
+                    # to the exception.
+                    exc.stdout, exc.stderr = process.communicate()
+                else:
+                    # POSIX _communicate already populated the output so
+                    # far into the TimeoutExpired exception.
+                    process.wait()
+                raise
+            except:  # Including KeyboardInterrupt, communicate handled that.
+                process.kill()
+                # We don't call process.wait() as .__exit__ does that for us.
+                raise
+            retcode = process.poll()
+            if check and retcode:
+>               raise CalledProcessError(retcode, process.args,
+                                         output=stdout, stderr=stderr)
+E               subprocess.CalledProcessError: Command '['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'axi_register', '-g2012', '-Paxi_register.ADDR_WIDTH=12', '-Paxi_register.DATA_WIDTH=8', '-f', '/code/rundir/sim_build/cmds.f', '/code/rtl/axi_register.sv']' returned non-zero exit status 2.
+
+/usr/lib/python3.12/subprocess.py:571: CalledProcessError
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s axi_register -g2012 -Paxi_register.ADDR_WIDTH=12 -Paxi_register.DATA_WIDTH=8 -f /code/rundir/sim_build/cmds.f /code/rtl/axi_register.sv in directory /code/rundir/sim_build
+_____________________________ test_axi_reg[8-16-0] _____________________________
+
+test = 0, ADDR_WIDTH = 16, DATA_WIDTH = 8
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("ADDR_WIDTH", [12,16,32])
+    @pytest.mark.parametrize("DATA_WIDTH", [8,16,32,64])
+    def test_axi_reg(test,ADDR_WIDTH,DATA_WIDTH):
+>           runner(DATA_WIDTH = DATA_WIDTH ,ADDR_WIDTH = ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/src/test_runner.py:19: in runner
+    runner.build(
+/venv/lib/python3.12/site-packages/cocotb_tools/runner.py:389: in build
+    self._execute(cmds, cwd=self.build_dir)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = False, timeout = None, check = True
+popenargs = (['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'axi_register', '-g2012', ...],)
+kwargs = {'cwd': PosixPath('/code/rundir/sim_build'), 'env': {'HASH': '748c8466993ff067bc3f8a4953d002e1b5913109', 'HOME': '/cod...45', 'LC_CTYPE': 'C.UTF-8', ...}, 'stderr': -2, 'stdout': <_io.TextIOWrapper name='sim.log' mode='w' encoding='utf-8'>}
+process = <Popen: returncode: 2 args: ['iverilog', '-o', '/code/rundir/sim_build/sim.v...>
+stdout = None, stderr = None, retcode = 2
+
+    def run(*popenargs,
+            input=None, capture_output=False, timeout=None, check=False, **kwargs):
+        """Run command with arguments and return a CompletedProcess instance.
+    
+        The returned instance will have attributes args, returncode, stdout and
+        stderr. By default, stdout and stderr are not captured, and those attributes
+        will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+        or pass capture_output=True to capture both.
+    
+        If check is True and the exit code was non-zero, it raises a
+        CalledProcessError. The CalledProcessError object will have the return code
+        in the returncode attribute, and output & stderr attributes if those streams
+        were captured.
+    
+        If timeout is given, and the process takes too long, a TimeoutExpired
+        exception will be raised.
+    
+        There is an optional argument "input", allowing you to
+        pass bytes or a string to the subprocess's stdin.  If you use this argument
+        you may not also use the Popen constructor's "stdin" argument, as
+        it will be used internally.
+    
+        By default, all communication is in bytes, and therefore any "input" should
+        be bytes, and the stdout and stderr will be bytes. If in text mode, any
+        "input" should be a string, and stdout and stderr will be strings decoded
+        according to locale encoding, or by "encoding" if set. Text mode is
+        triggered by setting any of text, encoding, errors or universal_newlines.
+    
+        The other arguments are the same as for the Popen constructor.
+        """
+        if input is not None:
+            if kwargs.get('stdin') is not None:
+                raise ValueError('stdin and input arguments may not both be used.')
+            kwargs['stdin'] = PIPE
+    
+        if capture_output:
+            if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+                raise ValueError('stdout and stderr arguments may not be used '
+                                 'with capture_output.')
+            kwargs['stdout'] = PIPE
+            kwargs['stderr'] = PIPE
+    
+        with Popen(*popenargs, **kwargs) as process:
+            try:
+                stdout, stderr = process.communicate(input, timeout=timeout)
+            except TimeoutExpired as exc:
+                process.kill()
+                if _mswindows:
+                    # Windows accumulates the output in a single blocking
+                    # read() call run on child threads, with the timeout
+                    # being done in a join() on those threads.  communicate()
+                    # _after_ kill() is required to collect that and add it
+                    # to the exception.
+                    exc.stdout, exc.stderr = process.communicate()
+                else:
+                    # POSIX _communicate already populated the output so
+                    # far into the TimeoutExpired exception.
+                    process.wait()
+                raise
+            except:  # Including KeyboardInterrupt, communicate handled that.
+                process.kill()
+                # We don't call process.wait() as .__exit__ does that for us.
+                raise
+            retcode = process.poll()
+            if check and retcode:
+>               raise CalledProcessError(retcode, process.args,
+                                         output=stdout, stderr=stderr)
+E               subprocess.CalledProcessError: Command '['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'axi_register', '-g2012', '-Paxi_register.ADDR_WIDTH=16', '-Paxi_register.DATA_WIDTH=8', '-f', '/code/rundir/sim_build/cmds.f', '/code/rtl/axi_register.sv']' returned non-zero exit status 2.
+
+/usr/lib/python3.12/subprocess.py:571: CalledProcessError
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s axi_register -g2012 -Paxi_register.ADDR_WIDTH=16 -Paxi_register.DATA_WIDTH=8 -f /code/rundir/sim_build/cmds.f /code/rtl/axi_register.sv in directory /code/rundir/sim_build
+_____________________________ test_axi_reg[8-32-0] _____________________________
+
+test = 0, ADDR_WIDTH = 32, DATA_WIDTH = 8
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("ADDR_WIDTH", [12,16,32])
+    @pytest.mark.parametrize("DATA_WIDTH", [8,16,32,64])
+    def test_axi_reg(test,ADDR_WIDTH,DATA_WIDTH):
+>           runner(DATA_WIDTH = DATA_WIDTH ,ADDR_WIDTH = ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/src/test_runner.py:19: in runner
+    runner.build(
+/venv/lib/python3.12/site-packages/cocotb_tools/runner.py:389: in build
+    self._execute(cmds, cwd=self.build_dir)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = False, timeout = None, check = True
+popenargs = (['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'axi_register', '-g2012', ...],)
+kwargs = {'cwd': PosixPath('/code/rundir/sim_build'), 'env': {'HASH': '748c8466993ff067bc3f8a4953d002e1b5913109', 'HOME': '/cod...45', 'LC_CTYPE': 'C.UTF-8', ...}, 'stderr': -2, 'stdout': <_io.TextIOWrapper name='sim.log' mode='w' encoding='utf-8'>}
+process = <Popen: returncode: 2 args: ['iverilog', '-o', '/code/rundir/sim_build/sim.v...>
+stdout = None, stderr = None, retcode = 2
+
+    def run(*popenargs,
+            input=None, capture_output=False, timeout=None, check=False, **kwargs):
+        """Run command with arguments and return a CompletedProcess instance.
+    
+        The returned instance will have attributes args, returncode, stdout and
+        stderr. By default, stdout and stderr are not captured, and those attributes
+        will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+        or pass capture_output=True to capture both.
+    
+        If check is True and the exit code was non-zero, it raises a
+        CalledProcessError. The CalledProcessError object will have the return code
+        in the returncode attribute, and output & stderr attributes if those streams
+        were captured.
+    
+        If timeout is given, and the process takes too long, a TimeoutExpired
+        exception will be raised.
+    
+        There is an optional argument "input", allowing you to
+        pass bytes or a string to the subprocess's stdin.  If you use this argument
+        you may not also use the Popen constructor's "stdin" argument, as
+        it will be used internally.
+    
+        By default, all communication is in bytes, and therefore any "input" should
+        be bytes, and the stdout and stderr will be bytes. If in text mode, any
+        "input" should be a string, and stdout and stderr will be strings decoded
+        according to locale encoding, or by "encoding" if set. Text mode is
+        triggered by setting any of text, encoding, errors or universal_newlines.
+    
+        The other arguments are the same as for the Popen constructor.
+        """
+        if input is not None:
+            if kwargs.get('stdin') is not None:
+                raise ValueError('stdin and input arguments may not both be used.')
+            kwargs['stdin'] = PIPE
+    
+        if capture_output:
+            if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+                raise ValueError('stdout and stderr arguments may not be used '
+                                 'with capture_output.')
+            kwargs['stdout'] = PIPE
+            kwargs['stderr'] = PIPE
+    
+        with Popen(*popenargs, **kwargs) as process:
+            try:
+                stdout, stderr = process.communicate(input, timeout=timeout)
+            except TimeoutExpired as exc:
+                process.kill()
+                if _mswindows:
+                    # Windows accumulates the output in a single blocking
+                    # read() call run on child threads, with the timeout
+                    # being done in a join() on those threads.  communicate()
+                    # _after_ kill() is required to collect that and add it
+                    # to the exception.
+                    exc.stdout, exc.stderr = process.communicate()
+                else:
+                    # POSIX _communicate already populated the output so
+                    # far into the TimeoutExpired exception.
+                    process.wait()
+                raise
+            except:  # Including KeyboardInterrupt, communicate handled that.
+                process.kill()
+                # We don't call process.wait() as .__exit__ does that for us.
+                raise
+            retcode = process.poll()
+            if check and retcode:
+>               raise CalledProcessError(retcode, process.args,
+                                         output=stdout, stderr=stderr)
+E               subprocess.CalledProcessError: Command '['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'axi_register', '-g2012', '-Paxi_register.ADDR_WIDTH=32', '-Paxi_register.DATA_WIDTH=8', '-f', '/code/rundir/sim_build/cmds.f', '/code/rtl/axi_register.sv']' returned non-zero exit status 2.
+
+/usr/lib/python3.12/subprocess.py:571: CalledProcessError
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s axi_register -g2012 -Paxi_register.ADDR_WIDTH=32 -Paxi_register.DATA_WIDTH=8 -f /code/rundir/sim_build/cmds.f /code/rtl/axi_register.sv in directory /code/rundir/sim_build
+____________________________ test_axi_reg[16-12-0] _____________________________
+
+test = 0, ADDR_WIDTH = 12, DATA_WIDTH = 16
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("ADDR_WIDTH", [12,16,32])
+    @pytest.mark.parametrize("DATA_WIDTH", [8,16,32,64])
+    def test_axi_reg(test,ADDR_WIDTH,DATA_WIDTH):
+>           runner(DATA_WIDTH = DATA_WIDTH ,ADDR_WIDTH = ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/src/test_runner.py:19: in runner
+    runner.build(
+/venv/lib/python3.12/site-packages/cocotb_tools/runner.py:389: in build
+    self._execute(cmds, cwd=self.build_dir)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = False, timeout = None, check = True
+popenargs = (['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'axi_register', '-g2012', ...],)
+kwargs = {'cwd': PosixPath('/code/rundir/sim_build'), 'env': {'HASH': '748c8466993ff067bc3f8a4953d002e1b5913109', 'HOME': '/cod...45', 'LC_CTYPE': 'C.UTF-8', ...}, 'stderr': -2, 'stdout': <_io.TextIOWrapper name='sim.log' mode='w' encoding='utf-8'>}
+process = <Popen: returncode: 2 args: ['iverilog', '-o', '/code/rundir/sim_build/sim.v...>
+stdout = None, stderr = None, retcode = 2
+
+    def run(*popenargs,
+            input=None, capture_output=False, timeout=None, check=False, **kwargs):
+        """Run command with arguments and return a CompletedProcess instance.
+    
+        The returned instance will have attributes args, returncode, stdout and
+        stderr. By default, stdout and stderr are not captured, and those attributes
+        will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+        or pass capture_output=True to capture both.
+    
+        If check is True and the exit code was non-zero, it raises a
+        CalledProcessError. The CalledProcessError object will have the return code
+        in the returncode attribute, and output & stderr attributes if those streams
+        were captured.
+    
+        If timeout is given, and the process takes too long, a TimeoutExpired
+        exception will be raised.
+    
+        There is an optional argument "input", allowing you to
+        pass bytes or a string to the subprocess's stdin.  If you use this argument
+        you may not also use the Popen constructor's "stdin" argument, as
+        it will be used internally.
+    
+        By default, all communication is in bytes, and therefore any "input" should
+        be bytes, and the stdout and stderr will be bytes. If in text mode, any
+        "input" should be a string, and stdout and stderr will be strings decoded
+        according to locale encoding, or by "encoding" if set. Text mode is
+        triggered by setting any of text, encoding, errors or universal_newlines.
+    
+        The other arguments are the same as for the Popen constructor.
+        """
+        if input is not None:
+            if kwargs.get('stdin') is not None:
+                raise ValueError('stdin and input arguments may not both be used.')
+            kwargs['stdin'] = PIPE
+    
+        if capture_output:
+            if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+                raise ValueError('stdout and stderr arguments may not be used '
+                                 'with capture_output.')
+            kwargs['stdout'] = PIPE
+            kwargs['stderr'] = PIPE
+    
+        with Popen(*popenargs, **kwargs) as process:
+            try:
+                stdout, stderr = process.communicate(input, timeout=timeout)
+            except TimeoutExpired as exc:
+                process.kill()
+                if _mswindows:
+                    # Windows accumulates the output in a single blocking
+                    # read() call run on child threads, with the timeout
+                    # being done in a join() on those threads.  communicate()
+                    # _after_ kill() is required to collect that and add it
+                    # to the exception.
+                    exc.stdout, exc.stderr = process.communicate()
+                else:
+                    # POSIX _communicate already populated the output so
+                    # far into the TimeoutExpired exception.
+                    process.wait()
+                raise
+            except:  # Including KeyboardInterrupt, communicate handled that.
+                process.kill()
+                # We don't call process.wait() as .__exit__ does that for us.
+                raise
+            retcode = process.poll()
+            if check and retcode:
+>               raise CalledProcessError(retcode, process.args,
+                                         output=stdout, stderr=stderr)
+E               subprocess.CalledProcessError: Command '['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'axi_register', '-g2012', '-Paxi_register.ADDR_WIDTH=12', '-Paxi_register.DATA_WIDTH=16', '-f', '/code/rundir/sim_build/cmds.f', '/code/rtl/axi_register.sv']' returned non-zero exit status 2.
+
+/usr/lib/python3.12/subprocess.py:571: CalledProcessError
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s axi_register -g2012 -Paxi_register.ADDR_WIDTH=12 -Paxi_register.DATA_WIDTH=16 -f /code/rundir/sim_build/cmds.f /code/rtl/axi_register.sv in directory /code/rundir/sim_build
+____________________________ test_axi_reg[16-16-0] _____________________________
+
+test = 0, ADDR_WIDTH = 16, DATA_WIDTH = 16
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("ADDR_WIDTH", [12,16,32])
+    @pytest.mark.parametrize("DATA_WIDTH", [8,16,32,64])
+    def test_axi_reg(test,ADDR_WIDTH,DATA_WIDTH):
+>           runner(DATA_WIDTH = DATA_WIDTH ,ADDR_WIDTH = ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/src/test_runner.py:19: in runner
+    runner.build(
+/venv/lib/python3.12/site-packages/cocotb_tools/runner.py:389: in build
+    self._execute(cmds, cwd=self.build_dir)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = False, timeout = None, check = True
+popenargs = (['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'axi_register', '-g2012', ...],)
+kwargs = {'cwd': PosixPath('/code/rundir/sim_build'), 'env': {'HASH': '748c8466993ff067bc3f8a4953d002e1b5913109', 'HOME': '/cod...45', 'LC_CTYPE': 'C.UTF-8', ...}, 'stderr': -2, 'stdout': <_io.TextIOWrapper name='sim.log' mode='w' encoding='utf-8'>}
+process = <Popen: returncode: 2 args: ['iverilog', '-o', '/code/rundir/sim_build/sim.v...>
+stdout = None, stderr = None, retcode = 2
+
+    def run(*popenargs,
+            input=None, capture_output=False, timeout=None, check=False, **kwargs):
+        """Run command with arguments and return a CompletedProcess instance.
+    
+        The returned instance will have attributes args, returncode, stdout and
+        stderr. By default, stdout and stderr are not captured, and those attributes
+        will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+        or pass capture_output=True to capture both.
+    
+        If check is True and the exit code was non-zero, it raises a
+        CalledProcessError. The CalledProcessError object will have the return code
+        in the returncode attribute, and output & stderr attributes if those streams
+        were captured.
+    
+        If timeout is given, and the process takes too long, a TimeoutExpired
+        exception will be raised.
+    
+        There is an optional argument "input", allowing you to
+        pass bytes or a string to the subprocess's stdin.  If you use this argument
+        you may not also use the Popen constructor's "stdin" argument, as
+        it will be used internally.
+    
+        By default, all communication is in bytes, and therefore any "input" should
+        be bytes, and the stdout and stderr will be bytes. If in text mode, any
+        "input" should be a string, and stdout and stderr will be strings decoded
+        according to locale encoding, or by "encoding" if set. Text mode is
+        triggered by setting any of text, encoding, errors or universal_newlines.
+    
+        The other arguments are the same as for the Popen constructor.
+        """
+        if input is not None:
+            if kwargs.get('stdin') is not None:
+                raise ValueError('stdin and input arguments may not both be used.')
+            kwargs['stdin'] = PIPE
+    
+        if capture_output:
+            if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+                raise ValueError('stdout and stderr arguments may not be used '
+                                 'with capture_output.')
+            kwargs['stdout'] = PIPE
+            kwargs['stderr'] = PIPE
+    
+        with Popen(*popenargs, **kwargs) as process:
+            try:
+                stdout, stderr = process.communicate(input, timeout=timeout)
+            except TimeoutExpired as exc:
+                process.kill()
+                if _mswindows:
+                    # Windows accumulates the output in a single blocking
+                    # read() call run on child threads, with the timeout
+                    # being done in a join() on those threads.  communicate()
+                    # _after_ kill() is required to collect that and add it
+                    # to the exception.
+                    exc.stdout, exc.stderr = process.communicate()
+                else:
+                    # POSIX _communicate already populated the output so
+                    # far into the TimeoutExpired exception.
+                    process.wait()
+                raise
+            except:  # Including KeyboardInterrupt, communicate handled that.
+                process.kill()
+                # We don't call process.wait() as .__exit__ does that for us.
+                raise
+            retcode = process.poll()
+            if check and retcode:
+>               raise CalledProcessError(retcode, process.args,
+                                         output=stdout, stderr=stderr)
+E               subprocess.CalledProcessError: Command '['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'axi_register', '-g2012', '-Paxi_register.ADDR_WIDTH=16', '-Paxi_register.DATA_WIDTH=16', '-f', '/code/rundir/sim_build/cmds.f', '/code/rtl/axi_register.sv']' returned non-zero exit status 2.
+
+/usr/lib/python3.12/subprocess.py:571: CalledProcessError
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s axi_register -g2012 -Paxi_register.ADDR_WIDTH=16 -Paxi_register.DATA_WIDTH=16 -f /code/rundir/sim_build/cmds.f /code/rtl/axi_register.sv in directory /code/rundir/sim_build
+____________________________ test_axi_reg[16-32-0] _____________________________
+
+test = 0, ADDR_WIDTH = 32, DATA_WIDTH = 16
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("ADDR_WIDTH", [12,16,32])
+    @pytest.mark.parametrize("DATA_WIDTH", [8,16,32,64])
+    def test_axi_reg(test,ADDR_WIDTH,DATA_WIDTH):
+>           runner(DATA_WIDTH = DATA_WIDTH ,ADDR_WIDTH = ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/src/test_runner.py:19: in runner
+    runner.build(
+/venv/lib/python3.12/site-packages/cocotb_tools/runner.py:389: in build
+    self._execute(cmds, cwd=self.build_dir)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = False, timeout = None, check = True
+popenargs = (['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'axi_register', '-g2012', ...],)
+kwargs = {'cwd': PosixPath('/code/rundir/sim_build'), 'env': {'HASH': '748c8466993ff067bc3f8a4953d002e1b5913109', 'HOME': '/cod...45', 'LC_CTYPE': 'C.UTF-8', ...}, 'stderr': -2, 'stdout': <_io.TextIOWrapper name='sim.log' mode='w' encoding='utf-8'>}
+process = <Popen: returncode: 2 args: ['iverilog', '-o', '/code/rundir/sim_build/sim.v...>
+stdout = None, stderr = None, retcode = 2
+
+    def run(*popenargs,
+            input=None, capture_output=False, timeout=None, check=False, **kwargs):
+        """Run command with arguments and return a CompletedProcess instance.
+    
+        The returned instance will have attributes args, returncode, stdout and
+        stderr. By default, stdout and stderr are not captured, and those attributes
+        will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+        or pass capture_output=True to capture both.
+    
+        If check is True and the exit code was non-zero, it raises a
+        CalledProcessError. The CalledProcessError object will have the return code
+        in the returncode attribute, and output & stderr attributes if those streams
+        were captured.
+    
+        If timeout is given, and the process takes too long, a TimeoutExpired
+        exception will be raised.
+    
+        There is an optional argument "input", allowing you to
+        pass bytes or a string to the subprocess's stdin.  If you use this argument
+        you may not also use the Popen constructor's "stdin" argument, as
+        it will be used internally.
+    
+        By default, all communication is in bytes, and therefore any "input" should
+        be bytes, and the stdout and stderr will be bytes. If in text mode, any
+        "input" should be a string, and stdout and stderr will be strings decoded
+        according to locale encoding, or by "encoding" if set. Text mode is
+        triggered by setting any of text, encoding, errors or universal_newlines.
+    
+        The other arguments are the same as for the Popen constructor.
+        """
+        if input is not None:
+            if kwargs.get('stdin') is not None:
+                raise ValueError('stdin and input arguments may not both be used.')
+            kwargs['stdin'] = PIPE
+    
+        if capture_output:
+            if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+                raise ValueError('stdout and stderr arguments may not be used '
+                                 'with capture_output.')
+            kwargs['stdout'] = PIPE
+            kwargs['stderr'] = PIPE
+    
+        with Popen(*popenargs, **kwargs) as process:
+            try:
+                stdout, stderr = process.communicate(input, timeout=timeout)
+            except TimeoutExpired as exc:
+                process.kill()
+                if _mswindows:
+                    # Windows accumulates the output in a single blocking
+                    # read() call run on child threads, with the timeout
+                    # being done in a join() on those threads.  communicate()
+                    # _after_ kill() is required to collect that and add it
+                    # to the exception.
+                    exc.stdout, exc.stderr = process.communicate()
+                else:
+                    # POSIX _communicate already populated the output so
+                    # far into the TimeoutExpired exception.
+                    process.wait()
+                raise
+            except:  # Including KeyboardInterrupt, communicate handled that.
+                process.kill()
+                # We don't call process.wait() as .__exit__ does that for us.
+                raise
+            retcode = process.poll()
+            if check and retcode:
+>               raise CalledProcessError(retcode, process.args,
+                                         output=stdout, stderr=stderr)
+E               subprocess.CalledProcessError: Command '['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'axi_register', '-g2012', '-Paxi_register.ADDR_WIDTH=32', '-Paxi_register.DATA_WIDTH=16', '-f', '/code/rundir/sim_build/cmds.f', '/code/rtl/axi_register.sv']' returned non-zero exit status 2.
+
+/usr/lib/python3.12/subprocess.py:571: CalledProcessError
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s axi_register -g2012 -Paxi_register.ADDR_WIDTH=32 -Paxi_register.DATA_WIDTH=16 -f /code/rundir/sim_build/cmds.f /code/rtl/axi_register.sv in directory /code/rundir/sim_build
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_axi_reg[8-12-0] - subprocess.CalledProc...
+FAILED ../../src/test_runner.py::test_axi_reg[8-16-0] - subprocess.CalledProc...
+FAILED ../../src/test_runner.py::test_axi_reg[8-32-0] - subprocess.CalledProc...
+FAILED ../../src/test_runner.py::test_axi_reg[16-12-0] - subprocess.CalledPro...
+FAILED ../../src/test_runner.py::test_axi_reg[16-16-0] - subprocess.CalledPro...
+FAILED ../../src/test_runner.py::test_axi_reg[16-32-0] - subprocess.CalledPro...
+========================= 6 failed, 6 passed in 13.01s =========================

@@ -1,0 +1,14 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "base_url": "https://openrouter.ai/api/v1",
+  "dataset": "C:\\cvdp_benchmark\\datasets\\cvdp_v1.1.0_nonagentic_code_generation_no_commercial.jsonl",
+  "filtered_dataset": "C:\\cvdp_benchmark\\runs\\cid003_20260602_040629_deepseek_deepseek-v4-pro\\cid003_input.jsonl",
+  "work_dir": "C:\\cvdp_benchmark\\runs\\cid003_20260602_040629_deepseek_deepseek-v4-pro\\work",
+  "archive_dir": "C:\\cvdp_benchmark\\runs\\cid003_20260602_040629_deepseek_deepseek-v4-pro\\archive",
+  "problem_count": 78,
+  "passed": 37,
+  "failed": 41,
+  "not_run": 0,
+  "report_json": "C:\\cvdp_benchmark\\runs\\cid003_20260602_040629_deepseek_deepseek-v4-pro\\work\\report.json",
+  "report_text": "C:\\cvdp_benchmark\\runs\\cid003_20260602_040629_deepseek_deepseek-v4-pro\\work\\report_ascii.txt"
+}

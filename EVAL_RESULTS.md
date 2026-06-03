@@ -68,6 +68,38 @@ Normalized on 143 common problems: r7 = 97.2% (best), average = 94.0%.
 
 #### With Kimi-k2.6 fallback on hard cases: 148/151 (98.0%)
 
+### 4. CVDP cid003 direct Verilog baseline (no MyGO) -- 37/78 PASS
+
+This run is a direct-output baseline: OpenRouter `deepseek/deepseek-v4-pro`
+generated Verilog directly for the CVDP public non-agentic no-commercial
+`cid003` subset. It does not use the MyGO DSL or MyGO compiler path.
+
+| Suite | Model | Path | Score | Rate |
+|---|---|---|---|---|
+| CVDP cid003 | DeepSeek V4 Pro | prompt -> Verilog -> CVDP harness | 37/78 | 47.44% |
+
+By difficulty:
+
+| Difficulty | Problems | PASS | FAIL | Pass rate |
+|---|---:|---:|---:|---:|
+| easy | 41 | 26 | 15 | 63.41% |
+| medium | 37 | 11 | 26 | 29.73% |
+
+Failure categories:
+
+| Category | Count |
+|---|---:|
+| Timeout | 18 |
+| Functional assertion failure | 16 |
+| Simulation error / test failure | 6 |
+| Harness execution failure / timeout | 1 |
+
+Artifacts are archived in
+`tests/verilog-eval/historical/runs/cvdp_cid003_deepseek_v4_direct_20260602/`.
+The archived directory includes the summary CSV files, run configuration, and
+one subdirectory per CVDP problem with the prompt, direct Verilog output, test
+result JSON, and CVDP logs.
+
 #### Path B hard floor (4 problems never solved by DeepSeek)
 - Prob092_gatesv100: LLM uses loops instead of BitsHelper for 100-bit vectors
 - Prob144_conwaylife: LLM gets neighbor counting wrong (Kimi solves it)

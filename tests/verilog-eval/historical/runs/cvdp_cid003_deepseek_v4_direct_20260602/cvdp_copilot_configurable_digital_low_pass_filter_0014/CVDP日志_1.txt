@@ -1,0 +1,2760 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collected 35 items
+
+../../src/test_runner.py      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347160
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 1
+    20.00ns INFO     test                               [INFO] Applying reset at cycle 1
+    40.00ns WARNING  py.warnings                        /src/test_fsm.py:73: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    40.00ns WARNING  py.warnings                        /src/test_fsm.py:74: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    50.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    50.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    80.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == -1
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == -1
+    80.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    80.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          80.00           0.03       2608.01  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 80.00           0.05       1556.97  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=2
+[DEBUG] Parameters: {'DATA_WIDTH': 2}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347161
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 10
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    50.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == 536838144
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == 536838144
+    50.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    50.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          50.00           0.02       2480.90  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 50.00           0.04       1327.12  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=16
+[DEBUG] Parameters: {'DATA_WIDTH': 16}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347162
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 11
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    60.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == -536854528
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == -536854528
+    60.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    60.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          60.00           0.02       3643.42  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 60.00           0.03       1782.72  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=16
+[DEBUG] Parameters: {'DATA_WIDTH': 16}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347163
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 11
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    70.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == -8128
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == -8128
+    70.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    70.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          70.00           0.03       2761.31  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 70.00           0.05       1437.37  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=8
+[DEBUG] Parameters: {'DATA_WIDTH': 8}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347164
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 10
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    50.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == 2095104
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == 2095104
+    50.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    50.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          50.00           0.02       2087.84  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 50.00           0.04       1318.04  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=12
+[DEBUG] Parameters: {'DATA_WIDTH': 12}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347165
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 10
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    50.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == 130560
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == 130560
+    50.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    50.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          50.00           0.02       3135.51  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 50.00           0.04       1264.64  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=10
+[DEBUG] Parameters: {'DATA_WIDTH': 10}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347166
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 3
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    40.00ns INFO     test                               [INFO] Applying reset at cycle 3
+    60.00ns WARNING  py.warnings                        /src/test_fsm.py:73: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    60.00ns WARNING  py.warnings                        /src/test_fsm.py:74: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+   100.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == 135036
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == 135036
+   100.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+   100.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL         100.00           0.02       5754.69  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                100.00           0.03       2953.76  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=11
+[DEBUG] Parameters: {'DATA_WIDTH': 11}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347167
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 1
+    20.00ns INFO     test                               [INFO] Applying reset at cycle 1
+    40.00ns WARNING  py.warnings                        /src/test_fsm.py:73: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    40.00ns WARNING  py.warnings                        /src/test_fsm.py:74: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    50.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    50.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    80.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == -1
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == -1
+    80.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    80.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          80.00           0.02       4420.41  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 80.00           0.03       2443.08  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=2
+[DEBUG] Parameters: {'DATA_WIDTH': 2}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347168
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 13
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    60.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == -536854528
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == -536854528
+    60.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    60.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          60.00           0.01       4269.16  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 60.00           0.03       2257.77  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=16
+[DEBUG] Parameters: {'DATA_WIDTH': 16}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347169
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 1
+    20.00ns INFO     test                               [INFO] Applying reset at cycle 1
+    40.00ns WARNING  py.warnings                        /src/test_fsm.py:73: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    40.00ns WARNING  py.warnings                        /src/test_fsm.py:74: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    50.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    50.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    80.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == -536854528
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == -536854528
+    80.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    80.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          80.00           0.03       2321.85  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 80.00           0.06       1344.01  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=16
+[DEBUG] Parameters: {'DATA_WIDTH': 16}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347170
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 4
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    50.00ns INFO     test                               [INFO] Applying reset at cycle 4
+    70.00ns WARNING  py.warnings                        /src/test_fsm.py:73: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    70.00ns WARNING  py.warnings                        /src/test_fsm.py:74: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+   110.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == 3444
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == 3444
+   110.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+   110.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL         110.00           0.03       4389.43  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                110.00           0.05       2307.73  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=8
+[DEBUG] Parameters: {'DATA_WIDTH': 8}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347171
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 5
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    50.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == 2095104
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == 2095104
+    50.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    50.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          50.00           0.03       1923.92  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 50.00           0.05       1009.15  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=12
+[DEBUG] Parameters: {'DATA_WIDTH': 12}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347172
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 4
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    50.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == 130560
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == 130560
+    50.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    50.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          50.00           0.02       2596.77  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 50.00           0.03       1432.51  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=10
+[DEBUG] Parameters: {'DATA_WIDTH': 10}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347173
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 2
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    30.00ns INFO     test                               [INFO] Applying reset at cycle 2
+    50.00ns WARNING  py.warnings                        /src/test_fsm.py:73: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    50.00ns WARNING  py.warnings                        /src/test_fsm.py:74: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    60.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == 523264
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == 523264
+    60.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    60.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          60.00           0.03       2261.36  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 60.00           0.04       1357.52  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=11
+[DEBUG] Parameters: {'DATA_WIDTH': 11}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347175
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 3
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    40.00ns INFO     test                               [INFO] Applying reset at cycle 3
+    60.00ns WARNING  py.warnings                        /src/test_fsm.py:73: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    60.00ns WARNING  py.warnings                        /src/test_fsm.py:74: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    70.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == -1
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == -1
+    70.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    70.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          70.00           0.02       3507.99  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 70.00           0.04       1963.94  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=2
+[DEBUG] Parameters: {'DATA_WIDTH': 2}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347177
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 9
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    80.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == -329351053
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == -329351053
+    80.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    80.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          80.00           0.03       2428.38  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 80.00           0.05       1524.17  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=16
+[DEBUG] Parameters: {'DATA_WIDTH': 16}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347178
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 11
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    50.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == 536838144
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == 536838144
+    50.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    50.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          50.00           0.02       2405.74  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 50.00           0.04       1410.20  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=16
+[DEBUG] Parameters: {'DATA_WIDTH': 16}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347179
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 13
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    50.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == 8064
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == 8064
+    50.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    50.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          50.00           0.02       2703.80  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 50.00           0.03       1469.55  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=8
+[DEBUG] Parameters: {'DATA_WIDTH': 8}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347180
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 13
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    60.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == -2096128
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == -2096128
+    60.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    60.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          60.00           0.02       2845.78  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 60.00           0.04       1668.38  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=12
+[DEBUG] Parameters: {'DATA_WIDTH': 12}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347181
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 4
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    50.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == 130560
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == 130560
+    50.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    50.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          50.00           0.02       2496.61  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 50.00           0.03       1430.17  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=10
+[DEBUG] Parameters: {'DATA_WIDTH': 10}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347182
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 12
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    50.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == 523264
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == 523264
+    50.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    50.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          50.00           0.02       2747.34  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 50.00           0.03       1537.69  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=11
+[DEBUG] Parameters: {'DATA_WIDTH': 11}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347184
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 4
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    50.00ns INFO     test                               [INFO] Applying reset at cycle 4
+    70.00ns WARNING  py.warnings                        /src/test_fsm.py:73: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    70.00ns WARNING  py.warnings                        /src/test_fsm.py:74: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+   130.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == -3
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 120, in test_fsm_linear_reg
+                                                            assert result2 == model_out[1]
+                                                        AssertionError: assert 0 == -3
+   130.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+   130.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL         130.00           0.02       5384.38  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                130.00           0.04       3242.81  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=2
+[DEBUG] Parameters: {'DATA_WIDTH': 2}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347185
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 13
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    60.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == -536854528
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == -536854528
+    60.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    60.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          60.00           0.02       2728.15  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 60.00           0.05       1295.32  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=16
+[DEBUG] Parameters: {'DATA_WIDTH': 16}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347186
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 12
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    70.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == -536854528
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == -536854528
+    70.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    70.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          70.00           0.02       3740.67  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 70.00           0.04       1601.79  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=16
+[DEBUG] Parameters: {'DATA_WIDTH': 16}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347187
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 7
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    50.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == 8064
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == 8064
+    50.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    50.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          50.00           0.04       1404.17  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 50.00           0.06        848.46  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=8
+[DEBUG] Parameters: {'DATA_WIDTH': 8}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347189
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 7
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    70.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == -2096128
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == -2096128
+    70.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    70.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          70.00           0.03       2618.26  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 70.00           0.04       1597.89  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=12
+[DEBUG] Parameters: {'DATA_WIDTH': 12}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347190
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 9
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    50.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == 130560
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == 130560
+    50.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    50.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          50.00           0.02       2273.63  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 50.00           0.04       1169.00  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=10
+[DEBUG] Parameters: {'DATA_WIDTH': 10}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347191
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 10
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    50.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == 523264
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == 523264
+    50.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    50.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          50.00           0.02       2126.20  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 50.00           0.04       1183.05  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=11
+[DEBUG] Parameters: {'DATA_WIDTH': 11}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347193
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 3
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    40.00ns INFO     test                               [INFO] Applying reset at cycle 3
+    60.00ns WARNING  py.warnings                        /src/test_fsm.py:73: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    60.00ns WARNING  py.warnings                        /src/test_fsm.py:74: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+   100.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == 2
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == 2
+   100.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+   100.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL         100.00           0.02       4254.94  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                100.00           0.04       2438.07  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=2
+[DEBUG] Parameters: {'DATA_WIDTH': 2}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347194
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 5
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    50.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == 536838144
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == 536838144
+    50.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    50.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          50.00           0.02       2080.65  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 50.00           0.04       1122.86  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=16
+[DEBUG] Parameters: {'DATA_WIDTH': 16}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347195
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 7
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    50.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == 536838144
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == 536838144
+    50.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    50.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          50.00           0.02       2214.47  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 50.00           0.04       1336.26  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=16
+[DEBUG] Parameters: {'DATA_WIDTH': 16}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347196
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 5
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    60.00ns INFO     test                               [INFO] Applying reset at cycle 5
+    80.00ns WARNING  py.warnings                        /src/test_fsm.py:73: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    80.00ns WARNING  py.warnings                        /src/test_fsm.py:74: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+   120.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == 3187
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == 3187
+   120.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+   120.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL         120.00           0.03       4523.62  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                120.00           0.04       2770.27  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=8
+[DEBUG] Parameters: {'DATA_WIDTH': 8}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347197
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 1
+    20.00ns INFO     test                               [INFO] Applying reset at cycle 1
+    40.00ns WARNING  py.warnings                        /src/test_fsm.py:73: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    40.00ns WARNING  py.warnings                        /src/test_fsm.py:74: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    50.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    50.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    50.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == 2097152
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == 2097152
+    50.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    50.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          50.00           0.02       2354.47  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 50.00           0.04       1324.63  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=12
+[DEBUG] Parameters: {'DATA_WIDTH': 12}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347199
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 7
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    50.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == 130560
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == 130560
+    50.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    50.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          50.00           0.04       1252.35  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 50.00           0.06        803.87  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=10
+[DEBUG] Parameters: {'DATA_WIDTH': 10}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347200
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm.test_fsm_linear_reg (1/1)
+                                                            Test the FSM Linear Regression module with edge cases and random data.
+    20.00ns WARNING  test                               Reset will be applied at cycle = 10
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:106: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result1 = dut.result1.value.signed_integer
+    30.00ns WARNING  py.warnings                        /src/test_fsm.py:107: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          result2 = dut.result2.value.signed_integer
+    50.00ns WARNING  ..m_linear_reg.test_fsm_linear_reg assert 0 == 523264
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fsm.py", line 119, in test_fsm_linear_reg
+                                                            assert result1 == model_out[0]
+                                                        AssertionError: assert 0 == 523264
+    50.00ns WARNING  cocotb.regression                  test_fsm.test_fsm_linear_reg failed
+    50.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm.test_fsm_linear_reg   FAIL          50.00           0.03       1983.23  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 50.00           0.05       1013.59  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with DATA_WIDTH=11
+[DEBUG] Parameters: {'DATA_WIDTH': 11}
+F
+
+=================================== FAILURES ===================================
+________________________________ test_data[0-2] ________________________________
+
+DATA_WIDTH = 2, test = 0
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 2
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=2 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+______________________________ test_data[0-16_0] _______________________________
+
+DATA_WIDTH = 16, test = 0
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 16
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=16 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+______________________________ test_data[0-16_1] _______________________________
+
+DATA_WIDTH = 16, test = 0
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 16
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=16 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+________________________________ test_data[0-8] ________________________________
+
+DATA_WIDTH = 8, test = 0
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 8
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=8 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[0-12] ________________________________
+
+DATA_WIDTH = 12, test = 0
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 12
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=12 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[0-10] ________________________________
+
+DATA_WIDTH = 10, test = 0
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 10
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=10 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[0-11] ________________________________
+
+DATA_WIDTH = 11, test = 0
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 11
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=11 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+________________________________ test_data[1-2] ________________________________
+
+DATA_WIDTH = 2, test = 1
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 2
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=2 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+______________________________ test_data[1-16_0] _______________________________
+
+DATA_WIDTH = 16, test = 1
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 16
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=16 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+______________________________ test_data[1-16_1] _______________________________
+
+DATA_WIDTH = 16, test = 1
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 16
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=16 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+________________________________ test_data[1-8] ________________________________
+
+DATA_WIDTH = 8, test = 1
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 8
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=8 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[1-12] ________________________________
+
+DATA_WIDTH = 12, test = 1
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 12
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=12 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[1-10] ________________________________
+
+DATA_WIDTH = 10, test = 1
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 10
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=10 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[1-11] ________________________________
+
+DATA_WIDTH = 11, test = 1
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 11
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=11 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+________________________________ test_data[2-2] ________________________________
+
+DATA_WIDTH = 2, test = 2
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 2
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=2 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+______________________________ test_data[2-16_0] _______________________________
+
+DATA_WIDTH = 16, test = 2
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 16
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=16 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+______________________________ test_data[2-16_1] _______________________________
+
+DATA_WIDTH = 16, test = 2
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 16
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=16 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+________________________________ test_data[2-8] ________________________________
+
+DATA_WIDTH = 8, test = 2
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 8
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=8 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[2-12] ________________________________
+
+DATA_WIDTH = 12, test = 2
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 12
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=12 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[2-10] ________________________________
+
+DATA_WIDTH = 10, test = 2
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 10
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=10 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[2-11] ________________________________
+
+DATA_WIDTH = 11, test = 2
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 11
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=11 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+________________________________ test_data[3-2] ________________________________
+
+DATA_WIDTH = 2, test = 3
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 2
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=2 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+______________________________ test_data[3-16_0] _______________________________
+
+DATA_WIDTH = 16, test = 3
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 16
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=16 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+______________________________ test_data[3-16_1] _______________________________
+
+DATA_WIDTH = 16, test = 3
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 16
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=16 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+________________________________ test_data[3-8] ________________________________
+
+DATA_WIDTH = 8, test = 3
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 8
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=8 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[3-12] ________________________________
+
+DATA_WIDTH = 12, test = 3
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 12
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=12 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[3-10] ________________________________
+
+DATA_WIDTH = 10, test = 3
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 10
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=10 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[3-11] ________________________________
+
+DATA_WIDTH = 11, test = 3
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 11
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=11 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+________________________________ test_data[4-2] ________________________________
+
+DATA_WIDTH = 2, test = 4
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 2
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=2 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+______________________________ test_data[4-16_0] _______________________________
+
+DATA_WIDTH = 16, test = 4
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 16
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=16 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+______________________________ test_data[4-16_1] _______________________________
+
+DATA_WIDTH = 16, test = 4
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 16
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=16 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+________________________________ test_data[4-8] ________________________________
+
+DATA_WIDTH = 8, test = 4
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 8
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=8 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[4-12] ________________________________
+
+DATA_WIDTH = 12, test = 4
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 12
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=12 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[4-10] ________________________________
+
+DATA_WIDTH = 10, test = 4
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 10
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=10 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[4-11] ________________________________
+
+DATA_WIDTH = 11, test = 4
+
+    @pytest.mark.parametrize("DATA_WIDTH", random_data_width)
+    @pytest.mark.parametrize("test", range(5))
+    def test_data(DATA_WIDTH, test):
+        # Run the simulation with specified DATA_WIDTH
+>       runner(DATA_WIDTH=DATA_WIDTH)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 11
+
+    def runner(DATA_WIDTH: int = 16):
+        # Simulation parameters
+        parameter = {
+            "DATA_WIDTH": DATA_WIDTH
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with DATA_WIDTH={DATA_WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:39: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fsm_linear_reg -g2012 -Pfsm_linear_reg.DATA_WIDTH=11 -f /code/rundir/sim_build/cmds.f /code/rtl/fsm_linear_reg.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_data[0-2] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[0-16_0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[0-16_1] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[0-8] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[0-12] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[0-10] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[0-11] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[1-2] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[1-16_0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[1-16_1] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[1-8] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[1-12] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[1-10] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[1-11] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[2-2] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[2-16_0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[2-16_1] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[2-8] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[2-12] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[2-10] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[2-11] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[3-2] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[3-16_0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[3-16_1] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[3-8] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[3-12] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[3-10] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[3-11] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[4-2] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[4-16_0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[4-16_1] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[4-8] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[4-12] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[4-10] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[4-11] - SystemExit: 1
+============================= 35 failed in 41.96s ==============================

@@ -1,0 +1,25 @@
+﻿CVDP cid003 DeepSeek-v4 测试统计
+
+模型：OpenRouter deepseek/deepseek-v4-pro
+数据集：CVDP public non-agentic no-commercial cid003
+题目数：78
+
+总体结果：
+- 通过：37
+- 失败：41
+- 通过率：47.44%
+
+按难度：
+- easy：41 题，通过 26，失败 15，通过率 63.41%
+- medium：37 题，通过 11，失败 26，通过率 29.73%
+
+失败类型粗分：
+- 超时：18
+- 功能断言失败：16
+- 仿真错误/测试失败：6
+- Harness执行失败/超时：1
+
+主要文件：
+- 总表.csv：每题 pass/fail 和路径
+- 失败类型统计明细.csv：失败题目的粗分类
+- 每个题目子文件夹：题目.md、LLM输出的Verilog、测试结果.json、CVDP日志

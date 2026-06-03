@@ -1,0 +1,33 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_gp_test      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347099
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_gp_test.test_gp_test (1/1)
+                                                            Test GP module for all possible input combinations.
+     2.00ns INFO     cocotb.GP                          Test passed for A=0, B=0, Cin=0.
+     4.00ns INFO     cocotb.GP                          Test passed for A=0, B=0, Cin=1.
+     6.00ns INFO     cocotb.GP                          Test passed for A=0, B=1, Cin=0.
+     8.00ns INFO     cocotb.GP                          Test passed for A=0, B=1, Cin=1.
+    10.00ns INFO     cocotb.GP                          Test passed for A=1, B=0, Cin=0.
+    12.00ns INFO     cocotb.GP                          Test passed for A=1, B=0, Cin=1.
+    14.00ns INFO     cocotb.GP                          Test passed for A=1, B=1, Cin=0.
+    16.00ns INFO     cocotb.GP                          Test passed for A=1, B=1, Cin=1.
+    16.00ns INFO     cocotb.regression                  test_gp_test.test_gp_test passed
+    16.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_gp_test.test_gp_test      PASS          16.00           0.01       2754.09  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                 16.00           0.02        653.06  **
+                                                        **************************************************************************************
+PASSED
+
+============================== 1 passed in 1.51s ===============================

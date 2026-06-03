@@ -1,0 +1,100 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_microcode_sequencer Running microcode sequencer testbench...
+
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s microcode_sequencer -g2012 -s cocotb_iverilog_dump -f /code/rundir/sim_build/cmds.f /code/rtl/microcode_sequencer.sv /code/rundir/sim_build/cocotb_iverilog_dump.v in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347232
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_microcode_sequencer.test_microcode_sequencer (1/1)
+                                                            Testbench for microcode_sequencer
+     0.00ns INFO     cocotb.microcode_sequencer         Resetting DUT...
+     3.00ns INFO     cocotb.microcode_sequencer         Reset complete.
+    40.00ns INFO     cocotb.microcode_sequencer         Running test case: Reset Instruction
+    40.00ns INFO     cocotb.microcode_sequencer         Inputs: instr_in = 0, c_n_in = 0, c_inc_in = 0, r_en = 0, cc = 0, ien = 0, d_in = 0, oen = 0
+    40.00ns INFO     cocotb.microcode_sequencer         Expected: d_out = 0, c_n_out = 0, c_inc_out = 0, full = 0, empty = 1
+    40.00ns INFO     cocotb.microcode_sequencer         Actual: d_out = 0, c_n_out = 0, c_inc_out = 0, full = 0, empty = 1
+    60.00ns INFO     cocotb.microcode_sequencer         Running test case: Fetch PC Instruction 1
+    60.00ns INFO     cocotb.microcode_sequencer         Inputs: instr_in = 1, c_n_in = 0, c_inc_in = 1, r_en = 0, cc = 0, ien = 0, d_in = 0, oen = 0
+    60.00ns INFO     cocotb.microcode_sequencer         Expected: d_out = 1, c_n_out = 0, c_inc_out = 0, full = 0, empty = 1
+    60.00ns INFO     cocotb.microcode_sequencer         Actual: d_out = 0, c_n_out = 0, c_inc_out = 0, full = 0, empty = 1
+    60.00ns WARNING  ..quencer.test_microcode_sequencer Fetch PC Instruction 1 - d_out mismatch
+                                                        assert 0 == 1
+                                                         +  where 0 = int(LogicArray('0000', Range(3, 'downto', 0)))
+                                                         +    where LogicArray('0000', Range(3, 'downto', 0)) = LogicArrayObject(microcode_sequencer.d_out).value
+                                                         +      where LogicArrayObject(microcode_sequencer.d_out) = HierarchyObject(microcode_sequencer).d_out
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_microcode_sequencer.py", line 171, in test_microcode_sequencer
+                                                            await run_test_case(0b00001, 0, 1, 0, 0, 0, 0b0000, 0, 0b0001, 0, 0, 0, 1, "Fetch PC Instruction 1")
+                                                          File "/src/test_microcode_sequencer.py", line 163, in run_test_case
+                                                            assert int(dut.d_out.value) == expected_d_out, f"{case_name} - d_out mismatch"
+                                                        AssertionError: Fetch PC Instruction 1 - d_out mismatch
+                                                        assert 0 == 1
+                                                         +  where 0 = int(LogicArray('0000', Range(3, 'downto', 0)))
+                                                         +    where LogicArray('0000', Range(3, 'downto', 0)) = LogicArrayObject(microcode_sequencer.d_out).value
+                                                         +      where LogicArrayObject(microcode_sequencer.d_out) = HierarchyObject(microcode_sequencer).d_out
+    60.00ns WARNING  cocotb.regression                  test_microcode_sequencer.test_microcode_sequencer failed
+    60.00ns INFO     cocotb.regression                  ***********************************************************************************************************
+                                                        ** TEST                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************
+                                                        ** test_microcode_sequencer.test_microcode_sequencer   FAIL          60.00           0.05       1200.08  **
+                                                        ***********************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                      60.00           0.07        857.36  **
+                                                        ***********************************************************************************************************
+FST info: dumpfile /code/rundir/sim_build/microcode_sequencer.fst opened for output.
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+FAILED
+
+=================================== FAILURES ===================================
+___________________________ test_microcode_sequencer ___________________________
+
+    def test_microcode_sequencer():
+        """Pytest function to execute the microcode sequencer testbench."""
+        print("Running microcode sequencer testbench...")
+>       runner()
+
+/src/test_runner.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def runner():
+        """Runs the simulation for the microcode sequencer."""
+        # Get the simulation runner
+        simulation_runner = get_runner(sim)
+    
+        # Build the simulation environment
+        simulation_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            always=True,         # Always rebuild
+            clean=True,          # Clean previous build files
+            waves=True ,   # Enable waveform generation if WAVE=1
+            verbose=True,        # Verbose build and simulation output
+            timescale=("1ns", "1ns"),  # Set the timescale for simulation
+            log_file="build.log"      # Log file for the build process
+        )
+    
+        # Run the testbench
+>       simulation_runner.test(
+            hdl_toplevel=toplevel,
+            test_module=module,
+            waves=True    # Enable waveform dump if WAVE=1
+        )
+E       SystemExit: 1
+
+/src/test_runner.py:33: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s microcode_sequencer -g2012 -s cocotb_iverilog_dump -f /code/rundir/sim_build/cmds.f /code/rtl/microcode_sequencer.sv /code/rundir/sim_build/cocotb_iverilog_dump.v in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_microcode_sequencer - SystemExit: 1
+============================== 1 failed in 1.66s ===============================

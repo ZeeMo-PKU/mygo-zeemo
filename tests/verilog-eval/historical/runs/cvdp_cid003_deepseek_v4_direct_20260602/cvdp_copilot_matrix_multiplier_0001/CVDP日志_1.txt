@@ -1,0 +1,854 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 36 items
+
+../../src/test_runner.py::test_matrix_multiplication[2-2-2-2-8-matrix_a0-matrix_b0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347228
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 2, COL_A: 2
+ROW_B: 2, COL_B: 2
+INPUT_DATA_WIDTH: 8
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       2881.03  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.03        222.60  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_matrix_multiplication[2-2-2-2-8-matrix_a1-matrix_b1]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347229
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 2, COL_A: 2
+ROW_B: 2, COL_B: 2
+INPUT_DATA_WIDTH: 8
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       2257.83  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.02        302.42  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_matrix_multiplication[2-2-2-2-8-matrix_a2-matrix_b2]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347229
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 2, COL_A: 2
+ROW_B: 2, COL_B: 2
+INPUT_DATA_WIDTH: 8
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       2015.20  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.02        254.31  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_matrix_multiplication[3-3-3-3-8-matrix_a3-matrix_b3]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347231
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 3, COL_A: 3
+ROW_B: 3, COL_B: 3
+INPUT_DATA_WIDTH: 8
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       2904.64  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.02        284.14  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_matrix_multiplication[3-3-3-3-8-matrix_a4-matrix_b4]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347232
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 3, COL_A: 3
+ROW_B: 3, COL_B: 3
+INPUT_DATA_WIDTH: 8
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.01       1150.65  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.03        235.73  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_matrix_multiplication[3-3-3-3-8-matrix_a5-matrix_b5]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347235
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 3, COL_A: 3
+ROW_B: 3, COL_B: 3
+INPUT_DATA_WIDTH: 8
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.01        583.98  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.05        116.99  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_matrix_multiplication[4-4-4-4-8-matrix_a6-matrix_b6]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347238
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 4, COL_A: 4
+ROW_B: 4, COL_B: 4
+INPUT_DATA_WIDTH: 8
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       1396.16  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.03        212.50  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_matrix_multiplication[4-4-4-4-8-matrix_a7-matrix_b7]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347239
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 4, COL_A: 4
+ROW_B: 4, COL_B: 4
+INPUT_DATA_WIDTH: 8
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       1996.81  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.02        281.39  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_matrix_multiplication[4-4-4-4-8-matrix_a8-matrix_b8]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347241
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 4, COL_A: 4
+ROW_B: 4, COL_B: 4
+INPUT_DATA_WIDTH: 8
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       1522.07  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.02        317.10  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_matrix_multiplication[2-2-2-2-8-matrix_a9-matrix_b9]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347242
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 2, COL_A: 2
+ROW_B: 2, COL_B: 2
+INPUT_DATA_WIDTH: 8
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       1765.03  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.02        253.88  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_matrix_multiplication[3-3-3-3-8-matrix_a10-matrix_b10]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347243
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 3, COL_A: 3
+ROW_B: 3, COL_B: 3
+INPUT_DATA_WIDTH: 8
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       3734.36  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.01        444.12  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_matrix_multiplication[4-4-4-4-8-matrix_a11-matrix_b11]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347244
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 4, COL_A: 4
+ROW_B: 4, COL_B: 4
+INPUT_DATA_WIDTH: 8
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       1987.98  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.02        320.50  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_matrix_multiplication[2-2-2-2-8-matrix_a12-matrix_b12]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347245
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 2, COL_A: 2
+ROW_B: 2, COL_B: 2
+INPUT_DATA_WIDTH: 8
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       2563.23  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.05        128.76  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_matrix_multiplication[3-3-3-3-8-matrix_a13-matrix_b13]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347246
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 3, COL_A: 3
+ROW_B: 3, COL_B: 3
+INPUT_DATA_WIDTH: 8
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       2552.83  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.02        329.03  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_matrix_multiplication[4-4-4-4-8-matrix_a14-matrix_b14]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347247
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 4, COL_A: 4
+ROW_B: 4, COL_B: 4
+INPUT_DATA_WIDTH: 8
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       1920.91  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.03        194.77  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_matrix_multiplication[2-2-2-2-4-matrix_a15-matrix_b15]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347249
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 2, COL_A: 2
+ROW_B: 2, COL_B: 2
+INPUT_DATA_WIDTH: 4
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       2752.17  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.04        149.08  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_matrix_multiplication[2-2-2-2-8-matrix_a16-matrix_b16]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347251
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 2, COL_A: 2
+ROW_B: 2, COL_B: 2
+INPUT_DATA_WIDTH: 8
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       1542.69  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.03        231.41  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_matrix_multiplication[2-2-2-2-16-matrix_a17-matrix_b17]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347252
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 2, COL_A: 2
+ROW_B: 2, COL_B: 2
+INPUT_DATA_WIDTH: 16
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       2537.39  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.03        191.23  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_matrix_multiplication[1-1-1-1-8-matrix_a18-matrix_b18]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347255
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 1, COL_A: 1
+ROW_B: 1, COL_B: 1
+INPUT_DATA_WIDTH: 8
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       2632.41  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.05        112.89  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_matrix_multiplication[1-1-1-1-8-matrix_a19-matrix_b19]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347256
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 1, COL_A: 1
+ROW_B: 1, COL_B: 1
+INPUT_DATA_WIDTH: 8
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       1980.78  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.05        125.85  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_matrix_multiplication[1-1-1-1-8-matrix_a20-matrix_b20]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347258
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 1, COL_A: 1
+ROW_B: 1, COL_B: 1
+INPUT_DATA_WIDTH: 8
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       4019.46  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.09         63.38  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_matrix_multiplication[2-3-3-2-8-matrix_a21-matrix_b21]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347261
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 2, COL_A: 3
+ROW_B: 3, COL_B: 2
+INPUT_DATA_WIDTH: 8
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       2298.46  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.02        255.35  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_matrix_multiplication[3-4-4-2-8-matrix_a22-matrix_b22]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347262
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 3, COL_A: 4
+ROW_B: 4, COL_B: 2
+INPUT_DATA_WIDTH: 8
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       1858.22  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.02        274.65  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_matrix_multiplication[4-3-3-5-8-matrix_a23-matrix_b23]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347263
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 4, COL_A: 3
+ROW_B: 3, COL_B: 5
+INPUT_DATA_WIDTH: 8
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       1603.63  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.05        128.25  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_random_matrix_multiplication[0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347265
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 7, COL_A: 2
+ROW_B: 2, COL_B: 1
+INPUT_DATA_WIDTH: 6
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       2441.15  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.16         36.38  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_random_matrix_multiplication[1]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347267
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 4, COL_A: 8
+ROW_B: 8, COL_B: 2
+INPUT_DATA_WIDTH: 9
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       1905.06  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.03        187.89  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_random_matrix_multiplication[2]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347269
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 4, COL_A: 3
+ROW_B: 3, COL_B: 6
+INPUT_DATA_WIDTH: 5
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       1906.79  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.02        323.31  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_random_matrix_multiplication[3]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347270
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 5, COL_A: 7
+ROW_B: 7, COL_B: 7
+INPUT_DATA_WIDTH: 13
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.01       1061.36  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.02        255.14  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_random_matrix_multiplication[4]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347272
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 1, COL_A: 5
+ROW_B: 5, COL_B: 6
+INPUT_DATA_WIDTH: 9
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.01       1108.77  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.05        119.44  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_random_matrix_multiplication[5]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347274
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 2, COL_A: 8
+ROW_B: 8, COL_B: 1
+INPUT_DATA_WIDTH: 1
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       2650.43  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.03        208.73  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_random_matrix_multiplication[6]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347275
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 8, COL_A: 3
+ROW_B: 3, COL_B: 4
+INPUT_DATA_WIDTH: 15
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       1309.42  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.02        300.16  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_random_matrix_multiplication[7]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347276
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 2, COL_A: 8
+ROW_B: 8, COL_B: 4
+INPUT_DATA_WIDTH: 1
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       2122.09  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.04        158.98  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_random_matrix_multiplication[8]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347277
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 4, COL_A: 3
+ROW_B: 3, COL_B: 5
+INPUT_DATA_WIDTH: 10
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.01       1165.41  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.02        243.97  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_random_matrix_multiplication[9]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347278
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 1, COL_A: 6
+ROW_B: 6, COL_B: 3
+INPUT_DATA_WIDTH: 10
+Test 1 passed
+     6.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+     6.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS           6.00           0.00       2871.50  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         6.00           0.02        296.03  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_matrix_multiplication_without_inputs[2-2-2-2-8]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347279
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 2, COL_A: 2
+ROW_B: 2, COL_B: 2
+INPUT_DATA_WIDTH: 8
+Test 1 passed
+Test 2 passed
+Test 3 passed
+Test 4 passed
+Test 5 passed
+Test 6 passed
+Test 7 passed
+Test 8 passed
+Test 9 passed
+Test 10 passed
+    42.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+    42.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS          42.00           0.00       8575.64  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                        42.00           0.02       2321.17  **
+                                                        *************************************************************************************************************
+PASSED
+../../src/test_runner.py::test_matrix_multiplication_without_inputs[3-3-3-3-8]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347280
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_matrix_multiplier.verify_matrix_multiplication (1/1)
+                                                            Verify matrix multiplication outputs
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $unm_blk_3 via any registered implementation
+ROW_A: 3, COL_A: 3
+ROW_B: 3, COL_B: 3
+INPUT_DATA_WIDTH: 8
+Test 1 passed
+Test 2 passed
+Test 3 passed
+Test 4 passed
+Test 5 passed
+Test 6 passed
+Test 7 passed
+Test 8 passed
+Test 9 passed
+Test 10 passed
+    42.00ns INFO     cocotb.regression                  test_matrix_multiplier.verify_matrix_multiplication passed
+    42.00ns INFO     cocotb.regression                  *************************************************************************************************************
+                                                        ** TEST                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************
+                                                        ** test_matrix_multiplier.verify_matrix_multiplication   PASS          42.00           0.01       4194.10  **
+                                                        *************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                        42.00           0.03       1391.15  **
+                                                        *************************************************************************************************************
+PASSED
+
+============================= 36 passed in 53.95s ==============================

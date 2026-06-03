@@ -1,0 +1,14 @@
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": "C:\\cvdp_benchmark\\runs\\cid003_20260602_040629_deepseek_deepseek-v4-pro\\work\\cvdp_copilot_perfect_squares\\reports\\1.txt",
+      "error_msg": null,
+      "execution": 7.465701103210449,
+      "pid": 40276
+    }
+  ],
+  "errors": 1
+}

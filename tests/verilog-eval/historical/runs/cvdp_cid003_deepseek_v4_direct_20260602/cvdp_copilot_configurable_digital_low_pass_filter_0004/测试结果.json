@@ -1,0 +1,14 @@
+{
+  "category": "cid003",
+  "difficulty": "medium",
+  "tests": [
+    {
+      "result": 0,
+      "log": "C:\\cvdp_benchmark\\runs\\cid003_20260602_040629_deepseek_deepseek-v4-pro\\work\\cvdp_copilot_configurable_digital_low_pass_filter\\reports\\4.txt",
+      "error_msg": null,
+      "execution": 40.30719971656799,
+      "pid": 14428
+    }
+  ],
+  "errors": 0
+}

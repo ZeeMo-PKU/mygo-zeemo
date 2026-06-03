@@ -1,0 +1,93 @@
+Requirement already satisfied: aes in /venv/lib/python3.12/site-packages (1.2.0)
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_runner      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347207
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fibonacci_series.test_reset_scenario (1/2)
+                                                            Test case to cover the scenario where the sequence is interrupted by reset. 
+    10.00ns INFO     cocotb.fibonacci_series            Reset applied to DUT.
+    10.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 0, Expected = 0
+    20.00ns WARNING  ..set_scenario.test_reset_scenario Can't convert LogicArray to int: it contains non-0/1 values
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fibonacci_series.py", line 49, in test_reset_scenario
+                                                            await calculate_fibonacci(dut)  # Run sequence until reset or overflow
+                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/test_fibonacci_series.py", line 14, in calculate_fibonacci
+                                                            dut_output = int(dut.fib_out.value)
+                                                                         ^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 787, in __int__
+                                                            return self.to_unsigned()
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 655, in to_unsigned
+                                                            return self._get_int()
+                                                                   ^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 304, in _get_int
+                                                            raise ValueError(
+                                                        ValueError: Can't convert LogicArray to int: it contains non-0/1 values
+    20.00ns WARNING  cocotb.regression                  test_fibonacci_series.test_reset_scenario failed
+    20.00ns INFO     cocotb.regression                  running test_fibonacci_series.test_overflow_and_reset (2/2)
+                                                            Test case to cover overflow scenario and reset after overflow. 
+    31.00ns INFO     cocotb.fibonacci_series            Reset applied to DUT.
+    31.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 0, Expected = 0
+    41.00ns WARNING  ..nd_reset.test_overflow_and_reset Can't convert LogicArray to int: it contains non-0/1 values
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_fibonacci_series.py", line 68, in test_overflow_and_reset
+                                                            await calculate_fibonacci(dut)
+                                                          File "/src/test_fibonacci_series.py", line 14, in calculate_fibonacci
+                                                            dut_output = int(dut.fib_out.value)
+                                                                         ^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 787, in __int__
+                                                            return self.to_unsigned()
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 655, in to_unsigned
+                                                            return self._get_int()
+                                                                   ^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 304, in _get_int
+                                                            raise ValueError(
+                                                        ValueError: Can't convert LogicArray to int: it contains non-0/1 values
+    41.00ns WARNING  cocotb.regression                  test_fibonacci_series.test_overflow_and_reset failed
+    41.00ns INFO     cocotb.regression                  *******************************************************************************************************
+                                                        ** TEST                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *******************************************************************************************************
+                                                        ** test_fibonacci_series.test_reset_scenario       FAIL          20.00           0.02       1077.08  **
+                                                        ** test_fibonacci_series.test_overflow_and_reset   FAIL          20.00           0.01       3765.08  **
+                                                        *******************************************************************************************************
+                                                        ** TESTS=2 PASS=0 FAIL=2 SKIP=0                                  41.00           0.05        891.24  **
+                                                        *******************************************************************************************************
+FAILED
+
+=================================== FAILURES ===================================
+_________________________________ test_runner __________________________________
+
+    def test_runner():
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="build.log")
+    
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:27: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fibonacci_series -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/fibonacci_series.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 2 of 2 tests.
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_runner - SystemExit: 1
+============================== 1 failed in 1.48s ===============================

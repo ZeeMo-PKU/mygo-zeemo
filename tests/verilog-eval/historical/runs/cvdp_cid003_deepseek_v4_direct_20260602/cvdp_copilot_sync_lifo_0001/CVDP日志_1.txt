@@ -1,0 +1,595 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 5 items
+
+../../src/test_runner.py::test_areg_param[4]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347312
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_sync_lifo.lifo_test (1/1)
+                                                            Test the basic functionality of the LIFO with continuous write and read enable.
+     0.00ns INFO     cocotb.sync_lifo                   ADDR_WIDTH = 2, DATA_WIDTH = 4
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $ivl_for_loop0 via any registered implementation
+    60.00ns INFO     cocotb.sync_lifo                   Wrote 4 to LIFO
+    70.00ns INFO     cocotb.sync_lifo                   Wrote 4 to LIFO
+    80.00ns INFO     cocotb.sync_lifo                   Wrote 10 to LIFO
+    90.00ns INFO     cocotb.sync_lifo                   Wrote 5 to LIFO
+   100.00ns INFO     cocotb.sync_lifo                   Wrote 7 to LIFO
+   110.00ns INFO     cocotb.sync_lifo                   Overflow occurred on iteration 4 when attempting to write to a full LIFO.
+   110.00ns INFO     cocotb.sync_lifo                   Wrote 0 to LIFO
+   130.00ns INFO     cocotb.sync_lifo                   Overflow occurred on iteration 5 when attempting to write to a full LIFO.
+   150.00ns INFO     cocotb.sync_lifo                   Two-clock cycle delay before first read
+   150.00ns INFO     cocotb.sync_lifo                   Read 7 from LIFO
+   160.00ns INFO     cocotb.sync_lifo                   Read 7 from LIFO
+   170.00ns WARNING  cocotb.Test lifo_test.lifo_test    Expected 5, got 7
+                                                        assert 7 == 5
+                                                         +  where 7 = int(LogicArray('0111', Range(3, 'downto', 0)))
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_sync_lifo.py", line 72, in lifo_test
+                                                            assert int(data_out) == expected_data, f"Expected {expected_data}, got {int(data_out)}"
+                                                        AssertionError: Expected 5, got 7
+                                                        assert 7 == 5
+                                                         +  where 7 = int(LogicArray('0111', Range(3, 'downto', 0)))
+   170.00ns WARNING  cocotb.regression                  test_sync_lifo.lifo_test failed
+   170.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_sync_lifo.lifo_test       FAIL         170.00           0.02       8674.35  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                170.00           0.03       5264.13  **
+                                                        **************************************************************************************
+FAILED
+../../src/test_runner.py::test_areg_param[8]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347313
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_sync_lifo.lifo_test (1/1)
+                                                            Test the basic functionality of the LIFO with continuous write and read enable.
+     0.00ns INFO     cocotb.sync_lifo                   ADDR_WIDTH = 3, DATA_WIDTH = 8
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $ivl_for_loop0 via any registered implementation
+    60.00ns INFO     cocotb.sync_lifo                   Wrote 71 to LIFO
+    70.00ns INFO     cocotb.sync_lifo                   Wrote 10 to LIFO
+    80.00ns INFO     cocotb.sync_lifo                   Wrote 149 to LIFO
+    90.00ns INFO     cocotb.sync_lifo                   Wrote 101 to LIFO
+   100.00ns INFO     cocotb.sync_lifo                   Wrote 70 to LIFO
+   110.00ns INFO     cocotb.sync_lifo                   Wrote 66 to LIFO
+   120.00ns INFO     cocotb.sync_lifo                   Wrote 218 to LIFO
+   130.00ns INFO     cocotb.sync_lifo                   Wrote 234 to LIFO
+   140.00ns INFO     cocotb.sync_lifo                   Wrote 234 to LIFO
+   150.00ns INFO     cocotb.sync_lifo                   Overflow occurred on iteration 8 when attempting to write to a full LIFO.
+   150.00ns INFO     cocotb.sync_lifo                   Wrote 40 to LIFO
+   170.00ns INFO     cocotb.sync_lifo                   Overflow occurred on iteration 9 when attempting to write to a full LIFO.
+   190.00ns INFO     cocotb.sync_lifo                   Two-clock cycle delay before first read
+   190.00ns INFO     cocotb.sync_lifo                   Read 234 from LIFO
+   200.00ns INFO     cocotb.sync_lifo                   Read 234 from LIFO
+   210.00ns INFO     cocotb.sync_lifo                   Read 234 from LIFO
+   220.00ns WARNING  cocotb.Test lifo_test.lifo_test    Expected 218, got 234
+                                                        assert 234 == 218
+                                                         +  where 234 = int(LogicArray('11101010', Range(7, 'downto', 0)))
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_sync_lifo.py", line 72, in lifo_test
+                                                            assert int(data_out) == expected_data, f"Expected {expected_data}, got {int(data_out)}"
+                                                        AssertionError: Expected 218, got 234
+                                                        assert 234 == 218
+                                                         +  where 234 = int(LogicArray('11101010', Range(7, 'downto', 0)))
+   220.00ns WARNING  cocotb.regression                  test_sync_lifo.lifo_test failed
+   220.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_sync_lifo.lifo_test       FAIL         220.00           0.02      11110.61  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                220.00           0.03       6482.01  **
+                                                        **************************************************************************************
+FAILED
+../../src/test_runner.py::test_areg_param[16]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347313
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_sync_lifo.lifo_test (1/1)
+                                                            Test the basic functionality of the LIFO with continuous write and read enable.
+     0.00ns INFO     cocotb.sync_lifo                   ADDR_WIDTH = 4, DATA_WIDTH = 16
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $ivl_for_loop0 via any registered implementation
+    60.00ns INFO     cocotb.sync_lifo                   Wrote 18306 to LIFO
+    70.00ns INFO     cocotb.sync_lifo                   Wrote 2679 to LIFO
+    80.00ns INFO     cocotb.sync_lifo                   Wrote 38204 to LIFO
+    90.00ns INFO     cocotb.sync_lifo                   Wrote 26024 to LIFO
+   100.00ns INFO     cocotb.sync_lifo                   Wrote 17971 to LIFO
+   110.00ns INFO     cocotb.sync_lifo                   Wrote 16923 to LIFO
+   120.00ns INFO     cocotb.sync_lifo                   Wrote 55852 to LIFO
+   130.00ns INFO     cocotb.sync_lifo                   Wrote 59933 to LIFO
+   140.00ns INFO     cocotb.sync_lifo                   Wrote 60149 to LIFO
+   150.00ns INFO     cocotb.sync_lifo                   Wrote 10454 to LIFO
+   160.00ns INFO     cocotb.sync_lifo                   Wrote 20551 to LIFO
+   170.00ns INFO     cocotb.sync_lifo                   Wrote 18774 to LIFO
+   180.00ns INFO     cocotb.sync_lifo                   Wrote 32823 to LIFO
+   190.00ns INFO     cocotb.sync_lifo                   Wrote 49652 to LIFO
+   200.00ns INFO     cocotb.sync_lifo                   Wrote 45696 to LIFO
+   210.00ns INFO     cocotb.sync_lifo                   Wrote 55221 to LIFO
+   220.00ns INFO     cocotb.sync_lifo                   Wrote 61197 to LIFO
+   230.00ns INFO     cocotb.sync_lifo                   Overflow occurred on iteration 16 when attempting to write to a full LIFO.
+   230.00ns INFO     cocotb.sync_lifo                   Wrote 39091 to LIFO
+   250.00ns INFO     cocotb.sync_lifo                   Overflow occurred on iteration 17 when attempting to write to a full LIFO.
+   270.00ns INFO     cocotb.sync_lifo                   Two-clock cycle delay before first read
+   270.00ns INFO     cocotb.sync_lifo                   Read 61197 from LIFO
+   280.00ns INFO     cocotb.sync_lifo                   Read 61197 from LIFO
+   290.00ns WARNING  cocotb.Test lifo_test.lifo_test    Expected 55221, got 61197
+                                                        assert 61197 == 55221
+                                                         +  where 61197 = int(LogicArray('1110111100001101', Range(15, 'downto', 0)))
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_sync_lifo.py", line 72, in lifo_test
+                                                            assert int(data_out) == expected_data, f"Expected {expected_data}, got {int(data_out)}"
+                                                        AssertionError: Expected 55221, got 61197
+                                                        assert 61197 == 55221
+                                                         +  where 61197 = int(LogicArray('1110111100001101', Range(15, 'downto', 0)))
+   290.00ns WARNING  cocotb.regression                  test_sync_lifo.lifo_test failed
+   290.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_sync_lifo.lifo_test       FAIL         290.00           0.02      11959.34  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                290.00           0.04       7594.39  **
+                                                        **************************************************************************************
+FAILED
+../../src/test_runner.py::test_areg_param[64]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347314
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_sync_lifo.lifo_test (1/1)
+                                                            Test the basic functionality of the LIFO with continuous write and read enable.
+     0.00ns INFO     cocotb.sync_lifo                   ADDR_WIDTH = 6, DATA_WIDTH = 64
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $ivl_for_loop0 via any registered implementation
+    60.00ns INFO     cocotb.sync_lifo                   Wrote 5186879478525969899 to LIFO
+    70.00ns INFO     cocotb.sync_lifo                   Wrote 2282283637852193798 to LIFO
+    80.00ns INFO     cocotb.sync_lifo                   Wrote 11350808473597802154 to LIFO
+    90.00ns INFO     cocotb.sync_lifo                   Wrote 680265720117789596 to LIFO
+   100.00ns INFO     cocotb.sync_lifo                   Wrote 8504268318609863935 to LIFO
+   110.00ns INFO     cocotb.sync_lifo                   Wrote 16499417089088197489 to LIFO
+   120.00ns INFO     cocotb.sync_lifo                   Wrote 14826779006231675087 to LIFO
+   130.00ns INFO     cocotb.sync_lifo                   Wrote 10670920962065558176 to LIFO
+   140.00ns INFO     cocotb.sync_lifo                   Wrote 6780279181844803697 to LIFO
+   150.00ns INFO     cocotb.sync_lifo                   Wrote 9124545901674989400 to LIFO
+   160.00ns INFO     cocotb.sync_lifo                   Wrote 14219836350697973316 to LIFO
+   170.00ns INFO     cocotb.sync_lifo                   Wrote 5966770825518179414 to LIFO
+   180.00ns INFO     cocotb.sync_lifo                   Wrote 8348698515850935962 to LIFO
+   190.00ns INFO     cocotb.sync_lifo                   Wrote 13131320569167297361 to LIFO
+   200.00ns INFO     cocotb.sync_lifo                   Wrote 14772570204618780890 to LIFO
+   210.00ns INFO     cocotb.sync_lifo                   Wrote 14721251065288966145 to LIFO
+   220.00ns INFO     cocotb.sync_lifo                   Wrote 16988640930435041458 to LIFO
+   230.00ns INFO     cocotb.sync_lifo                   Wrote 15930259989049500053 to LIFO
+   240.00ns INFO     cocotb.sync_lifo                   Wrote 12143103096700575846 to LIFO
+   250.00ns INFO     cocotb.sync_lifo                   Wrote 5062397661404325976 to LIFO
+   260.00ns INFO     cocotb.sync_lifo                   Wrote 3231209137873110734 to LIFO
+   270.00ns INFO     cocotb.sync_lifo                   Wrote 15755046539104545620 to LIFO
+   280.00ns INFO     cocotb.sync_lifo                   Wrote 4487801399674248730 to LIFO
+   290.00ns INFO     cocotb.sync_lifo                   Wrote 8711354336307160762 to LIFO
+   300.00ns INFO     cocotb.sync_lifo                   Wrote 2202689110237431656 to LIFO
+   310.00ns INFO     cocotb.sync_lifo                   Wrote 16384283811235968673 to LIFO
+   320.00ns INFO     cocotb.sync_lifo                   Wrote 11005053959999157211 to LIFO
+   330.00ns INFO     cocotb.sync_lifo                   Wrote 16476852019945301947 to LIFO
+   340.00ns INFO     cocotb.sync_lifo                   Wrote 4752379069549041173 to LIFO
+   350.00ns INFO     cocotb.sync_lifo                   Wrote 727664834606132712 to LIFO
+   360.00ns INFO     cocotb.sync_lifo                   Wrote 16837225266972290677 to LIFO
+   370.00ns INFO     cocotb.sync_lifo                   Wrote 3003051998688995622 to LIFO
+   380.00ns INFO     cocotb.sync_lifo                   Wrote 14840302181708429465 to LIFO
+   390.00ns INFO     cocotb.sync_lifo                   Wrote 6663159340059512480 to LIFO
+   400.00ns INFO     cocotb.sync_lifo                   Wrote 14650637385937726866 to LIFO
+   410.00ns INFO     cocotb.sync_lifo                   Wrote 10912108078456564087 to LIFO
+   420.00ns INFO     cocotb.sync_lifo                   Wrote 16167010675628957035 to LIFO
+   430.00ns INFO     cocotb.sync_lifo                   Wrote 6032440074006343611 to LIFO
+   440.00ns INFO     cocotb.sync_lifo                   Wrote 6271519473043779766 to LIFO
+   450.00ns INFO     cocotb.sync_lifo                   Wrote 14235738003488852919 to LIFO
+   460.00ns INFO     cocotb.sync_lifo                   Wrote 16712111158152556547 to LIFO
+   470.00ns INFO     cocotb.sync_lifo                   Wrote 7799875869608230312 to LIFO
+   480.00ns INFO     cocotb.sync_lifo                   Wrote 7313306766802735170 to LIFO
+   490.00ns INFO     cocotb.sync_lifo                   Wrote 12942701017946870155 to LIFO
+   500.00ns INFO     cocotb.sync_lifo                   Wrote 13343155683365633887 to LIFO
+   510.00ns INFO     cocotb.sync_lifo                   Wrote 1487048058373840453 to LIFO
+   520.00ns INFO     cocotb.sync_lifo                   Wrote 337618986951402368 to LIFO
+   530.00ns INFO     cocotb.sync_lifo                   Wrote 15748962630051021771 to LIFO
+   540.00ns INFO     cocotb.sync_lifo                   Wrote 10637893993762650809 to LIFO
+   550.00ns INFO     cocotb.sync_lifo                   Wrote 994821562132952028 to LIFO
+   560.00ns INFO     cocotb.sync_lifo                   Wrote 3174843666800622899 to LIFO
+   570.00ns INFO     cocotb.sync_lifo                   Wrote 11198383552929902730 to LIFO
+   580.00ns INFO     cocotb.sync_lifo                   Wrote 1516262147617710818 to LIFO
+   590.00ns INFO     cocotb.sync_lifo                   Wrote 5720220885139074378 to LIFO
+   600.00ns INFO     cocotb.sync_lifo                   Wrote 7266337728598299495 to LIFO
+   610.00ns INFO     cocotb.sync_lifo                   Wrote 7498325880587375170 to LIFO
+   620.00ns INFO     cocotb.sync_lifo                   Wrote 11666132264258963883 to LIFO
+   630.00ns INFO     cocotb.sync_lifo                   Wrote 7043872867542369399 to LIFO
+   640.00ns INFO     cocotb.sync_lifo                   Wrote 10747453940279000078 to LIFO
+   650.00ns INFO     cocotb.sync_lifo                   Wrote 11209982724238649410 to LIFO
+   660.00ns INFO     cocotb.sync_lifo                   Wrote 11965295880255963447 to LIFO
+   670.00ns INFO     cocotb.sync_lifo                   Wrote 1712613923447504231 to LIFO
+   680.00ns INFO     cocotb.sync_lifo                   Wrote 17205913998153975 to LIFO
+   690.00ns INFO     cocotb.sync_lifo                   Wrote 883336419059813617 to LIFO
+   700.00ns INFO     cocotb.sync_lifo                   Wrote 8315991449000213822 to LIFO
+   710.00ns INFO     cocotb.sync_lifo                   Overflow occurred on iteration 64 when attempting to write to a full LIFO.
+   710.00ns INFO     cocotb.sync_lifo                   Wrote 9643192947471045503 to LIFO
+   730.00ns INFO     cocotb.sync_lifo                   Overflow occurred on iteration 65 when attempting to write to a full LIFO.
+   750.00ns INFO     cocotb.sync_lifo                   Two-clock cycle delay before first read
+   750.00ns INFO     cocotb.sync_lifo                   Read 8315991449000213822 from LIFO
+   760.00ns INFO     cocotb.sync_lifo                   Read 8315991449000213822 from LIFO
+   770.00ns WARNING  cocotb.Test lifo_test.lifo_test    Expected 883336419059813617, got 8315991449000213822
+                                                        assert 8315991449000213822 == 883336419059813617
+                                                         +  where 8315991449000213822 = int(LogicArray('0111001101101000010101100010100110110000110101111111110100111110', Range(63, 'downto', 0)))
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_sync_lifo.py", line 72, in lifo_test
+                                                            assert int(data_out) == expected_data, f"Expected {expected_data}, got {int(data_out)}"
+                                                        AssertionError: Expected 883336419059813617, got 8315991449000213822
+                                                        assert 8315991449000213822 == 883336419059813617
+                                                         +  where 8315991449000213822 = int(LogicArray('0111001101101000010101100010100110110000110101111111110100111110', Range(63, 'downto', 0)))
+   770.00ns WARNING  cocotb.regression                  test_sync_lifo.lifo_test failed
+   770.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_sync_lifo.lifo_test       FAIL         770.00           0.04      17205.80  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                770.00           0.06      13358.37  **
+                                                        **************************************************************************************
+FAILED
+../../src/test_runner.py::test_areg_param[128]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347315
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_sync_lifo.lifo_test (1/1)
+                                                            Test the basic functionality of the LIFO with continuous write and read enable.
+     0.00ns INFO     cocotb.sync_lifo                   ADDR_WIDTH = 7, DATA_WIDTH = 128
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $ivl_for_loop0 via any registered implementation
+    60.00ns INFO     cocotb.sync_lifo                   Wrote 173150663044098099426669961539740515099 to LIFO
+    70.00ns INFO     cocotb.sync_lifo                   Wrote 276604876574211826719485124178574277179 to LIFO
+    80.00ns INFO     cocotb.sync_lifo                   Wrote 328196607102571492621003698520285199503 to LIFO
+    90.00ns INFO     cocotb.sync_lifo                   Wrote 239400818988527638383570001245627987451 to LIFO
+   100.00ns INFO     cocotb.sync_lifo                   Wrote 157089839920891791195603343719193811478 to LIFO
+   110.00ns INFO     cocotb.sync_lifo                   Wrote 157069469075881585224823482890418965564 to LIFO
+   120.00ns INFO     cocotb.sync_lifo                   Wrote 233406177089468673236964978199314224727 to LIFO
+   130.00ns INFO     cocotb.sync_lifo                   Wrote 98026171405588302780703741465519165517 to LIFO
+   140.00ns INFO     cocotb.sync_lifo                   Wrote 47281348069792659123839494714366195283 to LIFO
+   150.00ns INFO     cocotb.sync_lifo                   Wrote 95658391673032444157200867464826181244 to LIFO
+   160.00ns INFO     cocotb.sync_lifo                   Wrote 40599816378247220504258909030840695689 to LIFO
+   170.00ns INFO     cocotb.sync_lifo                   Wrote 113505630521987393595687557658233180861 to LIFO
+   180.00ns INFO     cocotb.sync_lifo                   Wrote 81306978445158083007129003826777318185 to LIFO
+   190.00ns INFO     cocotb.sync_lifo                   Wrote 165916510365549557254687033492613148065 to LIFO
+   200.00ns INFO     cocotb.sync_lifo                   Wrote 20044820559239075612752362045396030511 to LIFO
+   210.00ns INFO     cocotb.sync_lifo                   Wrote 46042568786759431316461691159661331959 to LIFO
+   220.00ns INFO     cocotb.sync_lifo                   Wrote 111928003012416507223938711397527669647 to LIFO
+   230.00ns INFO     cocotb.sync_lifo                   Wrote 250758270575434858128484373975431432410 to LIFO
+   240.00ns INFO     cocotb.sync_lifo                   Wrote 97412258561727473680258279188978720774 to LIFO
+   250.00ns INFO     cocotb.sync_lifo                   Wrote 140806997256524653115640060650558150250 to LIFO
+   260.00ns INFO     cocotb.sync_lifo                   Wrote 84916478777182876405938624208963088581 to LIFO
+   270.00ns INFO     cocotb.sync_lifo                   Wrote 318318857406110905771356638582502552597 to LIFO
+   280.00ns INFO     cocotb.sync_lifo                   Wrote 278583725837228154067675332250531262537 to LIFO
+   290.00ns INFO     cocotb.sync_lifo                   Wrote 270939509760784468924272560304775052436 to LIFO
+   300.00ns INFO     cocotb.sync_lifo                   Wrote 66777111775708193872585676661387219791 to LIFO
+   310.00ns INFO     cocotb.sync_lifo                   Wrote 74560783784500448505867090154922862812 to LIFO
+   320.00ns INFO     cocotb.sync_lifo                   Wrote 18722312766558565901529182212280079318 to LIFO
+   330.00ns INFO     cocotb.sync_lifo                   Wrote 295707399914230048053651902194320321224 to LIFO
+   340.00ns INFO     cocotb.sync_lifo                   Wrote 65640483882539057001833850459114920146 to LIFO
+   350.00ns INFO     cocotb.sync_lifo                   Wrote 253568017194720728262828417420544258095 to LIFO
+   360.00ns INFO     cocotb.sync_lifo                   Wrote 59942620819890578377519944761096826869 to LIFO
+   370.00ns INFO     cocotb.sync_lifo                   Wrote 121273910752992360945306447464424408985 to LIFO
+   380.00ns INFO     cocotb.sync_lifo                   Wrote 324425970382644870700488642160700145747 to LIFO
+   390.00ns INFO     cocotb.sync_lifo                   Wrote 67684589101668251699634308111612275703 to LIFO
+   400.00ns INFO     cocotb.sync_lifo                   Wrote 304355565706205149713370201782501251783 to LIFO
+   410.00ns INFO     cocotb.sync_lifo                   Wrote 96655634091142415264562568452163785103 to LIFO
+   420.00ns INFO     cocotb.sync_lifo                   Wrote 169165308577535757389006860977212491621 to LIFO
+   430.00ns INFO     cocotb.sync_lifo                   Wrote 323759090865041008385597946767927248679 to LIFO
+   440.00ns INFO     cocotb.sync_lifo                   Wrote 291955746800498166790115723400326686577 to LIFO
+   450.00ns INFO     cocotb.sync_lifo                   Wrote 89417935245553534834515394162718815738 to LIFO
+   460.00ns INFO     cocotb.sync_lifo                   Wrote 272078116890328005642812900725142091099 to LIFO
+   470.00ns INFO     cocotb.sync_lifo                   Wrote 327056269896277499256474198885609342742 to LIFO
+   480.00ns INFO     cocotb.sync_lifo                   Wrote 256907702849260372766809672823221774191 to LIFO
+   490.00ns INFO     cocotb.sync_lifo                   Wrote 188687311848630619521489103009634900284 to LIFO
+   500.00ns INFO     cocotb.sync_lifo                   Wrote 34779476916611836683099923731829266291 to LIFO
+   510.00ns INFO     cocotb.sync_lifo                   Wrote 33648183773285463536427331339647394791 to LIFO
+   520.00ns INFO     cocotb.sync_lifo                   Wrote 320675303446942996392751482211948390610 to LIFO
+   530.00ns INFO     cocotb.sync_lifo                   Wrote 324139269185810197582752803738081740725 to LIFO
+   540.00ns INFO     cocotb.sync_lifo                   Wrote 125526933978152724809185254353892755967 to LIFO
+   550.00ns INFO     cocotb.sync_lifo                   Wrote 286081605006278143395339737596672848836 to LIFO
+   560.00ns INFO     cocotb.sync_lifo                   Wrote 100731808413467563640612848146783717079 to LIFO
+   570.00ns INFO     cocotb.sync_lifo                   Wrote 175078725596611353372939658984455586895 to LIFO
+   580.00ns INFO     cocotb.sync_lifo                   Wrote 275917946885151537933468442384052686508 to LIFO
+   590.00ns INFO     cocotb.sync_lifo                   Wrote 31032894100833381769660095744468801534 to LIFO
+   600.00ns INFO     cocotb.sync_lifo                   Wrote 311589394766897503710727848827868710440 to LIFO
+   610.00ns INFO     cocotb.sync_lifo                   Wrote 91233237961060014379051678028349744338 to LIFO
+   620.00ns INFO     cocotb.sync_lifo                   Wrote 42774684312265389908871648094534659483 to LIFO
+   630.00ns INFO     cocotb.sync_lifo                   Wrote 197814536153922877968195483825538691418 to LIFO
+   640.00ns INFO     cocotb.sync_lifo                   Wrote 21316454641344568540489095510014787915 to LIFO
+   650.00ns INFO     cocotb.sync_lifo                   Wrote 210506481096982259004309087795324308632 to LIFO
+   660.00ns INFO     cocotb.sync_lifo                   Wrote 48204982888521559767519912040311926464 to LIFO
+   670.00ns INFO     cocotb.sync_lifo                   Wrote 124283757790326743425118781559716095600 to LIFO
+   680.00ns INFO     cocotb.sync_lifo                   Wrote 325691304617418434497159556608793438272 to LIFO
+   690.00ns INFO     cocotb.sync_lifo                   Wrote 298843986839906198058879986019248133679 to LIFO
+   700.00ns INFO     cocotb.sync_lifo                   Wrote 16864994756187283466047872014085644708 to LIFO
+   710.00ns INFO     cocotb.sync_lifo                   Wrote 74286507257830622895992816333409224293 to LIFO
+   720.00ns INFO     cocotb.sync_lifo                   Wrote 188128302486794338822282798309334647649 to LIFO
+   730.00ns INFO     cocotb.sync_lifo                   Wrote 240947911572888996411116245530045535963 to LIFO
+   740.00ns INFO     cocotb.sync_lifo                   Wrote 115337037142935124549991150551726523883 to LIFO
+   750.00ns INFO     cocotb.sync_lifo                   Wrote 255781754213178245368653647726087719479 to LIFO
+   760.00ns INFO     cocotb.sync_lifo                   Wrote 331643814196296873000512876174121624458 to LIFO
+   770.00ns INFO     cocotb.sync_lifo                   Wrote 117892893098765776879071160756524651166 to LIFO
+   780.00ns INFO     cocotb.sync_lifo                   Wrote 325564276728937128603414441738957998654 to LIFO
+   790.00ns INFO     cocotb.sync_lifo                   Wrote 224524897051422714927574248985581727226 to LIFO
+   800.00ns INFO     cocotb.sync_lifo                   Wrote 240404142235822489112098372347724831421 to LIFO
+   810.00ns INFO     cocotb.sync_lifo                   Wrote 66268141149798299871282024116485437320 to LIFO
+   820.00ns INFO     cocotb.sync_lifo                   Wrote 177952958157884278326508395141526462663 to LIFO
+   830.00ns INFO     cocotb.sync_lifo                   Wrote 20958257479295983562726268303453852829 to LIFO
+   840.00ns INFO     cocotb.sync_lifo                   Wrote 34429409409034568193500359727443672509 to LIFO
+   850.00ns INFO     cocotb.sync_lifo                   Wrote 61576111861542325720026633265945016677 to LIFO
+   860.00ns INFO     cocotb.sync_lifo                   Wrote 220195431197490346023266218885628221910 to LIFO
+   870.00ns INFO     cocotb.sync_lifo                   Wrote 201613638988417846150588354657761998372 to LIFO
+   880.00ns INFO     cocotb.sync_lifo                   Wrote 66597860131131724979818953323726199888 to LIFO
+   890.00ns INFO     cocotb.sync_lifo                   Wrote 274433324243929276476992906589007227338 to LIFO
+   900.00ns INFO     cocotb.sync_lifo                   Wrote 122251753221441767226967640903077890047 to LIFO
+   910.00ns INFO     cocotb.sync_lifo                   Wrote 324247379339095793826681031381144107584 to LIFO
+   920.00ns INFO     cocotb.sync_lifo                   Wrote 16291709751119181806183739677654916348 to LIFO
+   930.00ns INFO     cocotb.sync_lifo                   Wrote 10854929659439134916744524144784951485 to LIFO
+   940.00ns INFO     cocotb.sync_lifo                   Wrote 203843968138708813314243146712026242378 to LIFO
+   950.00ns INFO     cocotb.sync_lifo                   Wrote 204580983232342188770434437712594282045 to LIFO
+   960.00ns INFO     cocotb.sync_lifo                   Wrote 91926699851192030938071791826559013178 to LIFO
+   970.00ns INFO     cocotb.sync_lifo                   Wrote 31838934061684459301094885514057909892 to LIFO
+   980.00ns INFO     cocotb.sync_lifo                   Wrote 305959320096613374112548638142273323893 to LIFO
+   990.00ns INFO     cocotb.sync_lifo                   Wrote 313150293796271467382668874897811971866 to LIFO
+  1000.00ns INFO     cocotb.sync_lifo                   Wrote 176210781779996533259260701297092026443 to LIFO
+  1010.00ns INFO     cocotb.sync_lifo                   Wrote 72091556893395326477233950704531428198 to LIFO
+  1020.00ns INFO     cocotb.sync_lifo                   Wrote 114997187470903451578756091350366044765 to LIFO
+  1030.00ns INFO     cocotb.sync_lifo                   Wrote 258828747640768433209852535229726530356 to LIFO
+  1040.00ns INFO     cocotb.sync_lifo                   Wrote 270967861096971749034341880507441857869 to LIFO
+  1050.00ns INFO     cocotb.sync_lifo                   Wrote 56898571756329125054162575873721051046 to LIFO
+  1060.00ns INFO     cocotb.sync_lifo                   Wrote 45691981437025517238464041298418390572 to LIFO
+  1070.00ns INFO     cocotb.sync_lifo                   Wrote 267821937787116096136905095325235232947 to LIFO
+  1080.00ns INFO     cocotb.sync_lifo                   Wrote 104318345125801192404336815822997981806 to LIFO
+  1090.00ns INFO     cocotb.sync_lifo                   Wrote 157316488992134981673664985886384824769 to LIFO
+  1100.00ns INFO     cocotb.sync_lifo                   Wrote 154834851867145260295863506606656004922 to LIFO
+  1110.00ns INFO     cocotb.sync_lifo                   Wrote 133620315358574173215067662294156959327 to LIFO
+  1120.00ns INFO     cocotb.sync_lifo                   Wrote 170081402820528204285936957596487090564 to LIFO
+  1130.00ns INFO     cocotb.sync_lifo                   Wrote 244641095885474701854890848338028487294 to LIFO
+  1140.00ns INFO     cocotb.sync_lifo                   Wrote 297449523138950147673614004575221140345 to LIFO
+  1150.00ns INFO     cocotb.sync_lifo                   Wrote 229083524720228672298001104625079437002 to LIFO
+  1160.00ns INFO     cocotb.sync_lifo                   Wrote 307912034953587767791172808098493771173 to LIFO
+  1170.00ns INFO     cocotb.sync_lifo                   Wrote 172239854878835791496989973618002955935 to LIFO
+  1180.00ns INFO     cocotb.sync_lifo                   Wrote 56828153161882310198762316637012582204 to LIFO
+  1190.00ns INFO     cocotb.sync_lifo                   Wrote 108137783680677569469695906102228553399 to LIFO
+  1200.00ns INFO     cocotb.sync_lifo                   Wrote 304712174672244016160220718528948686992 to LIFO
+  1210.00ns INFO     cocotb.sync_lifo                   Wrote 80436266195752283896901813845404210478 to LIFO
+  1220.00ns INFO     cocotb.sync_lifo                   Wrote 145265542923450241034911586885482096441 to LIFO
+  1230.00ns INFO     cocotb.sync_lifo                   Wrote 197600110945540742510139382190262444959 to LIFO
+  1240.00ns INFO     cocotb.sync_lifo                   Wrote 332188373451736239664419149995420793596 to LIFO
+  1250.00ns INFO     cocotb.sync_lifo                   Wrote 189303607630906461586825809636660771877 to LIFO
+  1260.00ns INFO     cocotb.sync_lifo                   Wrote 333975137056598577548750702634023444602 to LIFO
+  1270.00ns INFO     cocotb.sync_lifo                   Wrote 261873004870885443123605303396226055958 to LIFO
+  1280.00ns INFO     cocotb.sync_lifo                   Wrote 131648913083563005342618342547270626574 to LIFO
+  1290.00ns INFO     cocotb.sync_lifo                   Wrote 146725720747150431658278168940889621426 to LIFO
+  1300.00ns INFO     cocotb.sync_lifo                   Wrote 145577597634387208418312131603863024823 to LIFO
+  1310.00ns INFO     cocotb.sync_lifo                   Wrote 170216036991503442860861161848834706917 to LIFO
+  1320.00ns INFO     cocotb.sync_lifo                   Wrote 36270884913889839498602304005459188808 to LIFO
+  1330.00ns INFO     cocotb.sync_lifo                   Wrote 301731018328806461583852984377438682838 to LIFO
+  1340.00ns INFO     cocotb.sync_lifo                   Wrote 173876104709823611618515421598595517423 to LIFO
+  1350.00ns INFO     cocotb.sync_lifo                   Overflow occurred on iteration 128 when attempting to write to a full LIFO.
+  1350.00ns INFO     cocotb.sync_lifo                   Wrote 262521758234087355472291866054449641278 to LIFO
+  1370.00ns INFO     cocotb.sync_lifo                   Overflow occurred on iteration 129 when attempting to write to a full LIFO.
+  1390.00ns INFO     cocotb.sync_lifo                   Two-clock cycle delay before first read
+  1390.00ns INFO     cocotb.sync_lifo                   Read 173876104709823611618515421598595517423 from LIFO
+  1400.00ns INFO     cocotb.sync_lifo                   Read 173876104709823611618515421598595517423 from LIFO
+  1410.00ns WARNING  cocotb.Test lifo_test.lifo_test    Expected 301731018328806461583852984377438682838, got 173876104709823611618515421598595517423
+                                                        assert 173876104709823611618515421598595517423 == 301731018328806461583852984377438682838
+                                                         +  where 173876104709823611618515421598595517423 = int(LogicArray('10000010110011110101000111010101101110010001111001000110011111101110100110000000100101011111110000011100001000011000101111101111', Range(127, 'downto', 0)))
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_sync_lifo.py", line 72, in lifo_test
+                                                            assert int(data_out) == expected_data, f"Expected {expected_data}, got {int(data_out)}"
+                                                        AssertionError: Expected 301731018328806461583852984377438682838, got 173876104709823611618515421598595517423
+                                                        assert 173876104709823611618515421598595517423 == 301731018328806461583852984377438682838
+                                                         +  where 173876104709823611618515421598595517423 = int(LogicArray('10000010110011110101000111010101101110010001111001000110011111101110100110000000100101011111110000011100001000011000101111101111', Range(127, 'downto', 0)))
+  1410.00ns WARNING  cocotb.regression                  test_sync_lifo.lifo_test failed
+  1410.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_sync_lifo.lifo_test       FAIL        1410.00           0.08      16911.16  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0               1410.00           0.10      14696.27  **
+                                                        **************************************************************************************
+FAILED
+
+=================================== FAILURES ===================================
+______________________________ test_areg_param[4] ______________________________
+
+DATA_WIDTH = 4
+
+    @pytest.mark.parametrize("DATA_WIDTH", [4,8,16,64,128])
+    def test_areg_param(DATA_WIDTH):
+>           runner(DATA_WIDTH = DATA_WIDTH)
+
+/src/test_runner.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 4
+
+    def runner(DATA_WIDTH: int=0):
+        ADDR_WIDTH = math.ceil(math.log2(DATA_WIDTH))  # Calculate ADDR_WIDTH based on DATA_WIDTH
+        parameter = {"DATA_WIDTH":DATA_WIDTH,"ADDR_WIDTH":ADDR_WIDTH}
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:27: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s sync_lifo -g2012 -Psync_lifo.DATA_WIDTH=4 -Psync_lifo.ADDR_WIDTH=2 -f /code/rundir/sim_build/cmds.f /code/rtl/sync_lifo.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+______________________________ test_areg_param[8] ______________________________
+
+DATA_WIDTH = 8
+
+    @pytest.mark.parametrize("DATA_WIDTH", [4,8,16,64,128])
+    def test_areg_param(DATA_WIDTH):
+>           runner(DATA_WIDTH = DATA_WIDTH)
+
+/src/test_runner.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 8
+
+    def runner(DATA_WIDTH: int=0):
+        ADDR_WIDTH = math.ceil(math.log2(DATA_WIDTH))  # Calculate ADDR_WIDTH based on DATA_WIDTH
+        parameter = {"DATA_WIDTH":DATA_WIDTH,"ADDR_WIDTH":ADDR_WIDTH}
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:27: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s sync_lifo -g2012 -Psync_lifo.DATA_WIDTH=8 -Psync_lifo.ADDR_WIDTH=3 -f /code/rundir/sim_build/cmds.f /code/rtl/sync_lifo.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_____________________________ test_areg_param[16] ______________________________
+
+DATA_WIDTH = 16
+
+    @pytest.mark.parametrize("DATA_WIDTH", [4,8,16,64,128])
+    def test_areg_param(DATA_WIDTH):
+>           runner(DATA_WIDTH = DATA_WIDTH)
+
+/src/test_runner.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 16
+
+    def runner(DATA_WIDTH: int=0):
+        ADDR_WIDTH = math.ceil(math.log2(DATA_WIDTH))  # Calculate ADDR_WIDTH based on DATA_WIDTH
+        parameter = {"DATA_WIDTH":DATA_WIDTH,"ADDR_WIDTH":ADDR_WIDTH}
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:27: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s sync_lifo -g2012 -Psync_lifo.DATA_WIDTH=16 -Psync_lifo.ADDR_WIDTH=4 -f /code/rundir/sim_build/cmds.f /code/rtl/sync_lifo.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_____________________________ test_areg_param[64] ______________________________
+
+DATA_WIDTH = 64
+
+    @pytest.mark.parametrize("DATA_WIDTH", [4,8,16,64,128])
+    def test_areg_param(DATA_WIDTH):
+>           runner(DATA_WIDTH = DATA_WIDTH)
+
+/src/test_runner.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 64
+
+    def runner(DATA_WIDTH: int=0):
+        ADDR_WIDTH = math.ceil(math.log2(DATA_WIDTH))  # Calculate ADDR_WIDTH based on DATA_WIDTH
+        parameter = {"DATA_WIDTH":DATA_WIDTH,"ADDR_WIDTH":ADDR_WIDTH}
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:27: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s sync_lifo -g2012 -Psync_lifo.DATA_WIDTH=64 -Psync_lifo.ADDR_WIDTH=6 -f /code/rundir/sim_build/cmds.f /code/rtl/sync_lifo.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_____________________________ test_areg_param[128] _____________________________
+
+DATA_WIDTH = 128
+
+    @pytest.mark.parametrize("DATA_WIDTH", [4,8,16,64,128])
+    def test_areg_param(DATA_WIDTH):
+>           runner(DATA_WIDTH = DATA_WIDTH)
+
+/src/test_runner.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+DATA_WIDTH = 128
+
+    def runner(DATA_WIDTH: int=0):
+        ADDR_WIDTH = math.ceil(math.log2(DATA_WIDTH))  # Calculate ADDR_WIDTH based on DATA_WIDTH
+        parameter = {"DATA_WIDTH":DATA_WIDTH,"ADDR_WIDTH":ADDR_WIDTH}
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:27: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s sync_lifo -g2012 -Psync_lifo.DATA_WIDTH=128 -Psync_lifo.ADDR_WIDTH=7 -f /code/rundir/sim_build/cmds.f /code/rtl/sync_lifo.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_areg_param[4] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_areg_param[8] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_areg_param[16] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_areg_param[64] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_areg_param[128] - SystemExit: 1
+============================== 5 failed in 4.81s ===============================

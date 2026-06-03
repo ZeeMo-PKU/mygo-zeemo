@@ -1,0 +1,13 @@
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": null,
+      "error_msg": "Failed to execute objective harness",
+      "execution": 0
+    }
+  ],
+  "errors": 1
+}

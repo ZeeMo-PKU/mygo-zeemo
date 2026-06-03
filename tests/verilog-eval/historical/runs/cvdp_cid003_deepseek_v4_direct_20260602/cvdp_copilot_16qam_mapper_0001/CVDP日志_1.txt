@@ -1,0 +1,1345 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collected 15 items
+
+../../src/test_runner.py      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347092
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Can't convert LogicArray to int: it contains non-0/1 values
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 66, in test_qam16_mapper_interpolated
+                                                            dut_I = await hrs_lb.extract_signed(dut.I, OUT_WIDTH, N + N // 2)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/harness_library.py", line 17, in extract_signed
+                                                            unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/_deprecation.py", line 32, in wrapper
+                                                            return f(*args, **kwargs)
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 599, in signed_integer
+                                                            return self.to_signed()
+                                                                   ^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 669, in to_signed
+                                                            value = self._get_int()
+                                                                    ^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 304, in _get_int
+                                                            raise ValueError(
+                                                        ValueError: Can't convert LogicArray to int: it contains non-0/1 values
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.04        242.36  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.06        170.73  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=2
+[DEBUG] Parameters: {'N': 2}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347094
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Can't convert LogicArray to int: it contains non-0/1 values
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 66, in test_qam16_mapper_interpolated
+                                                            dut_I = await hrs_lb.extract_signed(dut.I, OUT_WIDTH, N + N // 2)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/harness_library.py", line 17, in extract_signed
+                                                            unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/_deprecation.py", line 32, in wrapper
+                                                            return f(*args, **kwargs)
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 599, in signed_integer
+                                                            return self.to_signed()
+                                                                   ^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 669, in to_signed
+                                                            value = self._get_int()
+                                                                    ^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 304, in _get_int
+                                                            raise ValueError(
+                                                        ValueError: Can't convert LogicArray to int: it contains non-0/1 values
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.06        177.13  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.08        131.20  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=4
+[DEBUG] Parameters: {'N': 4}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347096
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Can't convert LogicArray to int: it contains non-0/1 values
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 66, in test_qam16_mapper_interpolated
+                                                            dut_I = await hrs_lb.extract_signed(dut.I, OUT_WIDTH, N + N // 2)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/harness_library.py", line 17, in extract_signed
+                                                            unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/_deprecation.py", line 32, in wrapper
+                                                            return f(*args, **kwargs)
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 599, in signed_integer
+                                                            return self.to_signed()
+                                                                   ^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 669, in to_signed
+                                                            value = self._get_int()
+                                                                    ^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 304, in _get_int
+                                                            raise ValueError(
+                                                        ValueError: Can't convert LogicArray to int: it contains non-0/1 values
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.07        138.50  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.10         99.10  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=8
+[DEBUG] Parameters: {'N': 8}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347098
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Can't convert LogicArray to int: it contains non-0/1 values
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 66, in test_qam16_mapper_interpolated
+                                                            dut_I = await hrs_lb.extract_signed(dut.I, OUT_WIDTH, N + N // 2)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/harness_library.py", line 17, in extract_signed
+                                                            unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/_deprecation.py", line 32, in wrapper
+                                                            return f(*args, **kwargs)
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 599, in signed_integer
+                                                            return self.to_signed()
+                                                                   ^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 669, in to_signed
+                                                            value = self._get_int()
+                                                                    ^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 304, in _get_int
+                                                            raise ValueError(
+                                                        ValueError: Can't convert LogicArray to int: it contains non-0/1 values
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.03        287.56  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.06        165.46  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=8
+[DEBUG] Parameters: {'N': 8}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347100
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Can't convert LogicArray to int: it contains non-0/1 values
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 66, in test_qam16_mapper_interpolated
+                                                            dut_I = await hrs_lb.extract_signed(dut.I, OUT_WIDTH, N + N // 2)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/harness_library.py", line 17, in extract_signed
+                                                            unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/_deprecation.py", line 32, in wrapper
+                                                            return f(*args, **kwargs)
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 599, in signed_integer
+                                                            return self.to_signed()
+                                                                   ^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 669, in to_signed
+                                                            value = self._get_int()
+                                                                    ^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 304, in _get_int
+                                                            raise ValueError(
+                                                        ValueError: Can't convert LogicArray to int: it contains non-0/1 values
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.05        188.40  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.08        128.21  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=10
+[DEBUG] Parameters: {'N': 10}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347101
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Can't convert LogicArray to int: it contains non-0/1 values
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 66, in test_qam16_mapper_interpolated
+                                                            dut_I = await hrs_lb.extract_signed(dut.I, OUT_WIDTH, N + N // 2)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/harness_library.py", line 17, in extract_signed
+                                                            unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/_deprecation.py", line 32, in wrapper
+                                                            return f(*args, **kwargs)
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 599, in signed_integer
+                                                            return self.to_signed()
+                                                                   ^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 669, in to_signed
+                                                            value = self._get_int()
+                                                                    ^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 304, in _get_int
+                                                            raise ValueError(
+                                                        ValueError: Can't convert LogicArray to int: it contains non-0/1 values
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.07        141.21  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.09        108.69  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=2
+[DEBUG] Parameters: {'N': 2}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347103
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Can't convert LogicArray to int: it contains non-0/1 values
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 66, in test_qam16_mapper_interpolated
+                                                            dut_I = await hrs_lb.extract_signed(dut.I, OUT_WIDTH, N + N // 2)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/harness_library.py", line 17, in extract_signed
+                                                            unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/_deprecation.py", line 32, in wrapper
+                                                            return f(*args, **kwargs)
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 599, in signed_integer
+                                                            return self.to_signed()
+                                                                   ^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 669, in to_signed
+                                                            value = self._get_int()
+                                                                    ^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 304, in _get_int
+                                                            raise ValueError(
+                                                        ValueError: Can't convert LogicArray to int: it contains non-0/1 values
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.04        274.35  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.05        190.73  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=4
+[DEBUG] Parameters: {'N': 4}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347104
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Can't convert LogicArray to int: it contains non-0/1 values
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 66, in test_qam16_mapper_interpolated
+                                                            dut_I = await hrs_lb.extract_signed(dut.I, OUT_WIDTH, N + N // 2)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/harness_library.py", line 17, in extract_signed
+                                                            unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/_deprecation.py", line 32, in wrapper
+                                                            return f(*args, **kwargs)
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 599, in signed_integer
+                                                            return self.to_signed()
+                                                                   ^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 669, in to_signed
+                                                            value = self._get_int()
+                                                                    ^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 304, in _get_int
+                                                            raise ValueError(
+                                                        ValueError: Can't convert LogicArray to int: it contains non-0/1 values
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.11         91.71  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.13         76.02  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=8
+[DEBUG] Parameters: {'N': 8}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347106
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Can't convert LogicArray to int: it contains non-0/1 values
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 66, in test_qam16_mapper_interpolated
+                                                            dut_I = await hrs_lb.extract_signed(dut.I, OUT_WIDTH, N + N // 2)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/harness_library.py", line 17, in extract_signed
+                                                            unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/_deprecation.py", line 32, in wrapper
+                                                            return f(*args, **kwargs)
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 599, in signed_integer
+                                                            return self.to_signed()
+                                                                   ^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 669, in to_signed
+                                                            value = self._get_int()
+                                                                    ^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 304, in _get_int
+                                                            raise ValueError(
+                                                        ValueError: Can't convert LogicArray to int: it contains non-0/1 values
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.05        196.64  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.07        135.99  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=8
+[DEBUG] Parameters: {'N': 8}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347110
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Can't convert LogicArray to int: it contains non-0/1 values
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 66, in test_qam16_mapper_interpolated
+                                                            dut_I = await hrs_lb.extract_signed(dut.I, OUT_WIDTH, N + N // 2)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/harness_library.py", line 17, in extract_signed
+                                                            unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/_deprecation.py", line 32, in wrapper
+                                                            return f(*args, **kwargs)
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 599, in signed_integer
+                                                            return self.to_signed()
+                                                                   ^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 669, in to_signed
+                                                            value = self._get_int()
+                                                                    ^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 304, in _get_int
+                                                            raise ValueError(
+                                                        ValueError: Can't convert LogicArray to int: it contains non-0/1 values
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.07        137.12  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.10        103.59  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=10
+[DEBUG] Parameters: {'N': 10}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347113
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Can't convert LogicArray to int: it contains non-0/1 values
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 66, in test_qam16_mapper_interpolated
+                                                            dut_I = await hrs_lb.extract_signed(dut.I, OUT_WIDTH, N + N // 2)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/harness_library.py", line 17, in extract_signed
+                                                            unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/_deprecation.py", line 32, in wrapper
+                                                            return f(*args, **kwargs)
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 599, in signed_integer
+                                                            return self.to_signed()
+                                                                   ^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 669, in to_signed
+                                                            value = self._get_int()
+                                                                    ^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 304, in _get_int
+                                                            raise ValueError(
+                                                        ValueError: Can't convert LogicArray to int: it contains non-0/1 values
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.04        233.43  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.06        158.49  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=2
+[DEBUG] Parameters: {'N': 2}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347115
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Can't convert LogicArray to int: it contains non-0/1 values
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 66, in test_qam16_mapper_interpolated
+                                                            dut_I = await hrs_lb.extract_signed(dut.I, OUT_WIDTH, N + N // 2)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/harness_library.py", line 17, in extract_signed
+                                                            unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/_deprecation.py", line 32, in wrapper
+                                                            return f(*args, **kwargs)
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 599, in signed_integer
+                                                            return self.to_signed()
+                                                                   ^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 669, in to_signed
+                                                            value = self._get_int()
+                                                                    ^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 304, in _get_int
+                                                            raise ValueError(
+                                                        ValueError: Can't convert LogicArray to int: it contains non-0/1 values
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.03        293.70  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.05        188.13  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=4
+[DEBUG] Parameters: {'N': 4}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347116
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Can't convert LogicArray to int: it contains non-0/1 values
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 66, in test_qam16_mapper_interpolated
+                                                            dut_I = await hrs_lb.extract_signed(dut.I, OUT_WIDTH, N + N // 2)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/harness_library.py", line 17, in extract_signed
+                                                            unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/_deprecation.py", line 32, in wrapper
+                                                            return f(*args, **kwargs)
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 599, in signed_integer
+                                                            return self.to_signed()
+                                                                   ^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 669, in to_signed
+                                                            value = self._get_int()
+                                                                    ^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 304, in _get_int
+                                                            raise ValueError(
+                                                        ValueError: Can't convert LogicArray to int: it contains non-0/1 values
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.05        200.11  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.08        127.77  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=8
+[DEBUG] Parameters: {'N': 8}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347119
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Can't convert LogicArray to int: it contains non-0/1 values
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 66, in test_qam16_mapper_interpolated
+                                                            dut_I = await hrs_lb.extract_signed(dut.I, OUT_WIDTH, N + N // 2)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/harness_library.py", line 17, in extract_signed
+                                                            unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/_deprecation.py", line 32, in wrapper
+                                                            return f(*args, **kwargs)
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 599, in signed_integer
+                                                            return self.to_signed()
+                                                                   ^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 669, in to_signed
+                                                            value = self._get_int()
+                                                                    ^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 304, in _get_int
+                                                            raise ValueError(
+                                                        ValueError: Can't convert LogicArray to int: it contains non-0/1 values
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.04        272.05  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.06        175.80  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=8
+[DEBUG] Parameters: {'N': 8}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347121
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Can't convert LogicArray to int: it contains non-0/1 values
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 66, in test_qam16_mapper_interpolated
+                                                            dut_I = await hrs_lb.extract_signed(dut.I, OUT_WIDTH, N + N // 2)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/harness_library.py", line 17, in extract_signed
+                                                            unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/_deprecation.py", line 32, in wrapper
+                                                            return f(*args, **kwargs)
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 599, in signed_integer
+                                                            return self.to_signed()
+                                                                   ^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 669, in to_signed
+                                                            value = self._get_int()
+                                                                    ^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 304, in _get_int
+                                                            raise ValueError(
+                                                        ValueError: Can't convert LogicArray to int: it contains non-0/1 values
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.03        297.02  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.06        174.50  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=10
+[DEBUG] Parameters: {'N': 10}
+F
+
+=================================== FAILURES ===================================
+________________________________ test_data[0-2] ________________________________
+
+N = 2, test = 0
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 2
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=2 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+________________________________ test_data[0-4] ________________________________
+
+N = 4, test = 0
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 4
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=4 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[0-8_0] _______________________________
+
+N = 8, test = 0
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 8
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=8 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[0-8_1] _______________________________
+
+N = 8, test = 0
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 8
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=8 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[0-10] ________________________________
+
+N = 10, test = 0
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 10
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=10 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+________________________________ test_data[1-2] ________________________________
+
+N = 2, test = 1
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 2
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=2 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+________________________________ test_data[1-4] ________________________________
+
+N = 4, test = 1
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 4
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=4 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[1-8_0] _______________________________
+
+N = 8, test = 1
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 8
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=8 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[1-8_1] _______________________________
+
+N = 8, test = 1
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 8
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=8 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[1-10] ________________________________
+
+N = 10, test = 1
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 10
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=10 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+________________________________ test_data[2-2] ________________________________
+
+N = 2, test = 2
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 2
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=2 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+________________________________ test_data[2-4] ________________________________
+
+N = 4, test = 2
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 4
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=4 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[2-8_0] _______________________________
+
+N = 8, test = 2
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 8
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=8 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[2-8_1] _______________________________
+
+N = 8, test = 2
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 8
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=8 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[2-10] ________________________________
+
+N = 10, test = 2
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 10
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=10 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_data[0-2] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[0-4] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[0-8_0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[0-8_1] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[0-10] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[1-2] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[1-4] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[1-8_0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[1-8_1] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[1-10] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[2-2] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[2-4] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[2-8_0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[2-8_1] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[2-10] - SystemExit: 1
+============================= 15 failed in 30.40s ==============================

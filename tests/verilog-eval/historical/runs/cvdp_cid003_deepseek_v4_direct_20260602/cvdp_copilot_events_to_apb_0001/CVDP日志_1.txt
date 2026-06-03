@@ -1,0 +1,99 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_apb      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1780347201
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_apb_controller.test_apb_controller_with_delay (1/4)
+    50.00ns WARNING  ..y.test_apb_controller_with_delay Latency from `apb_psel_o` should be 1 cycle, but got 2
+                                                        assert 2 == 1
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_apb_controller.py", line 46, in test_apb_controller_with_delay
+                                                            await hrs_lb.run_apb_test_with_delay(dut, select_signal, expected_addr, expected_data)
+                                                          File "/src/harness_library.py", line 37, in run_apb_test_with_delay
+                                                            assert latency_sel == 1, f"Latency from `apb_psel_o` should be 1 cycle, but got {latency_sel}"
+                                                        AssertionError: Latency from `apb_psel_o` should be 1 cycle, but got 2
+                                                        assert 2 == 1
+    50.00ns WARNING  cocotb.regression                  test_apb_controller.test_apb_controller_with_delay failed
+    50.00ns INFO     cocotb.regression                  running test_apb_controller.test_apb_controller_without_delay (2/4)
+   101.00ns WARNING  ..est_apb_controller_without_delay Latency from `apb_psel_o` should be 1 cycle, but got 2
+                                                        assert 2 == 1
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_apb_controller.py", line 87, in test_apb_controller_without_delay
+                                                            await hrs_lb.run_apb_test_without_delay(dut, select_signal, expected_addr, expected_data)
+                                                          File "/src/harness_library.py", line 100, in run_apb_test_without_delay
+                                                            assert latency_sel == 1, f"Latency from `apb_psel_o` should be 1 cycle, but got {latency_sel}"
+                                                        AssertionError: Latency from `apb_psel_o` should be 1 cycle, but got 2
+                                                        assert 2 == 1
+   101.00ns WARNING  cocotb.regression                  test_apb_controller.test_apb_controller_without_delay failed
+   101.00ns INFO     cocotb.regression                  running test_apb_controller.test_apb_controller_with_timeout (3/4)
+   152.00ns WARNING  ..test_apb_controller_with_timeout Latency from `apb_psel_o` should be 1 cycle, but got 2
+                                                        assert 2 == 1
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_apb_controller.py", line 127, in test_apb_controller_with_timeout
+                                                            await hrs_lb.test_timeout(dut, select_signal, expected_addr, expected_data)
+                                                          File "/src/harness_library.py", line 147, in test_timeout
+                                                            assert latency_sel == 1, f"Latency from `apb_psel_o` should be 1 cycle, but got {latency_sel}"
+                                                        AssertionError: Latency from `apb_psel_o` should be 1 cycle, but got 2
+                                                        assert 2 == 1
+   152.00ns WARNING  cocotb.regression                  test_apb_controller.test_apb_controller_with_timeout failed
+   152.00ns INFO     cocotb.regression                  running test_apb_controller.test_apb_controller_priority_all_events (4/4)
+                                                            Test the priority handling of the APB controller for simultaneous events A, B, and C.
+   353.00ns INFO     cocotb.regression                  test_apb_controller.test_apb_controller_priority_all_events passed
+   353.00ns INFO     cocotb.regression                  *********************************************************************************************************************
+                                                        ** TEST                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************************************
+                                                        ** test_apb_controller.test_apb_controller_with_delay            FAIL          50.00           0.03       1588.50  **
+                                                        ** test_apb_controller.test_apb_controller_without_delay         FAIL          50.00           0.01       6722.29  **
+                                                        ** test_apb_controller.test_apb_controller_with_timeout          FAIL          50.00           0.01       6748.68  **
+                                                        ** test_apb_controller.test_apb_controller_priority_all_events   PASS         200.00           0.00      63076.98  **
+                                                        *********************************************************************************************************************
+                                                        ** TESTS=4 PASS=1 FAIL=3 SKIP=0                                               353.00           0.08       4545.24  **
+                                                        *********************************************************************************************************************
+FAILED
+
+=================================== FAILURES ===================================
+___________________________________ test_apb ___________________________________
+
+    def test_apb():
+        # Run the simulation
+>       runner()
+
+/src/test_runner.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def runner():
+    
+        num_iterations = os.getenv("NUM_ITERATIONS", 5)
+        os.environ["NUM_ITERATIONS"] = str(num_iterations)
+    
+        # Configure runner
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        for i in range(num_iterations):
+>           runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E           SystemExit: 1
+
+/src/test_runner.py:33: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s apb_controller -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/apb_controller.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 3 of 4 tests.
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_apb - SystemExit: 1
+============================== 1 failed in 2.12s ===============================
