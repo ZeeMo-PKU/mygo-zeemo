@@ -1,0 +1,24 @@
+﻿{
+    "direct_verilog_pass":  37,
+    "original_mygo_pass":  37,
+    "final_mygo_pass":  45,
+    "total_tasks":  78,
+    "final_mygo_counts":  {
+                              "PASS":  45,
+                              "FAIL":  24,
+                              "MODEL_OR_MYGO_ERROR":  9
+                          },
+    "rerun_counts":  {
+                         "PASS":  8,
+                         "FAIL":  3,
+                         "MODEL_OR_MYGO_ERROR":  9
+                     },
+    "transitions_vs_direct":  {
+                                  "both_pass":  21,
+                                  "improved_fail_to_pass":  24,
+                                  "regressed_pass_to_fail":  16,
+                                  "both_fail":  17,
+                                  "union_pass":  61
+                              },
+    "source_output_dir":  "C:\\Users\\贾镕旭\\Desktop\\CVDP_MyGo_Deepseek_v4_rerun_errors_20260605"
+}

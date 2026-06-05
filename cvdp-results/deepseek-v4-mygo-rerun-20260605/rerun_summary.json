@@ -1,0 +1,142 @@
+[
+  {
+    "idx": 2,
+    "run_idx": 1,
+    "id": "cvdp_copilot_16qam_mapper_0006",
+    "status": "PASS",
+    "reason": null
+  },
+  {
+    "idx": 10,
+    "run_idx": 2,
+    "id": "cvdp_copilot_axi_register_0001",
+    "status": "MODEL_OR_MYGO_ERROR",
+    "reason": "MyGo compile failed after DeepSeek revision attempts: MyGo ir TIMEOUT after 301.0s"
+  },
+  {
+    "idx": 19,
+    "run_idx": 3,
+    "id": "cvdp_copilot_car_parking_management_0001",
+    "status": "MODEL_OR_MYGO_ERROR",
+    "reason": "MyGo compile failed after DeepSeek revision attempts: MyGo mlir TIMEOUT after 300.9s"
+  },
+  {
+    "idx": 21,
+    "run_idx": 4,
+    "id": "cvdp_copilot_clock_divider_0003",
+    "status": "PASS",
+    "reason": null
+  },
+  {
+    "idx": 25,
+    "run_idx": 5,
+    "id": "cvdp_copilot_configurable_digital_low_pass_filter_0001",
+    "status": "PASS",
+    "reason": null
+  },
+  {
+    "idx": 26,
+    "run_idx": 6,
+    "id": "cvdp_copilot_configurable_digital_low_pass_filter_0004",
+    "status": "PASS",
+    "reason": null
+  },
+  {
+    "idx": 31,
+    "run_idx": 7,
+    "id": "cvdp_copilot_dbi_0001",
+    "status": "PASS",
+    "reason": null
+  },
+  {
+    "idx": 35,
+    "run_idx": 8,
+    "id": "cvdp_copilot_edge_detector_0001",
+    "status": "FAIL",
+    "reason": null
+  },
+  {
+    "idx": 36,
+    "run_idx": 9,
+    "id": "cvdp_copilot_ethernet_packet_parser_0001",
+    "status": "FAIL",
+    "reason": null
+  },
+  {
+    "idx": 42,
+    "run_idx": 10,
+    "id": "cvdp_copilot_fsm_seq_detector_0001",
+    "status": "PASS",
+    "reason": null
+  },
+  {
+    "idx": 43,
+    "run_idx": 11,
+    "id": "cvdp_copilot_gcd_0001",
+    "status": "MODEL_OR_MYGO_ERROR",
+    "reason": "MyGo compile failed after DeepSeek revision attempts: MyGo compile failed"
+  },
+  {
+    "idx": 48,
+    "run_idx": 12,
+    "id": "cvdp_copilot_hill_cipher_0001",
+    "status": "PASS",
+    "reason": null
+  },
+  {
+    "idx": 57,
+    "run_idx": 13,
+    "id": "cvdp_copilot_perceptron_0001",
+    "status": "PASS",
+    "reason": null
+  },
+  {
+    "idx": 58,
+    "run_idx": 14,
+    "id": "cvdp_copilot_perf_counters_0001",
+    "status": "MODEL_OR_MYGO_ERROR",
+    "reason": "MyGo compile failed after DeepSeek revision attempts: MyGo verilog FAIL. C:\\temp\\mygo_cvdp_work\\58_cvdp_copilot_perf_counters_0001_1780649007522_30864\\.mygo-tmp\\.mygo-circt-1046997175\\design.mlir:6:25: error: use of undeclared SSA value name\r\n    %v3 = sv.read_inout %__mygo_state_cvdp_copilot_perf_counters_count_cur : !hw.inout<i32>\r\n                        ^\r\nbackend: circt-opt --pass-pipeline failed: exit status 1"
+  },
+  {
+    "idx": 60,
+    "run_idx": 15,
+    "id": "cvdp_copilot_piso_0001",
+    "status": "FAIL",
+    "reason": null
+  },
+  {
+    "idx": 62,
+    "run_idx": 16,
+    "id": "cvdp_copilot_restoring_division_0001",
+    "status": "MODEL_OR_MYGO_ERROR",
+    "reason": "MyGo compile failed after DeepSeek revision attempts: MyGo ir FAIL. error: C:\\temp\\mygo_cvdp_work\\62_cvdp_copilot_restoring_division_0001_1780651137487_30864\\main.go:86:1: missing return\npackage loading failed"
+  },
+  {
+    "idx": 64,
+    "run_idx": 17,
+    "id": "cvdp_copilot_secure_read_write_bus_0001",
+    "status": "MODEL_OR_MYGO_ERROR",
+    "reason": "MyGo compile failed after DeepSeek revision attempts: MyGo ir TIMEOUT after 715.8s"
+  },
+  {
+    "idx": 65,
+    "run_idx": 18,
+    "id": "cvdp_copilot_secure_read_write_register_bank_0001",
+    "status": "MODEL_OR_MYGO_ERROR",
+    "reason": "MyGo compile failed after DeepSeek revision attempts: MyGo verilog FAIL. C:\\temp\\mygo_cvdp_work\\65_cvdp_copilot_secure_read_write_register_bank_0001_1780665576886_10152\\.mygo-tmp\\.mygo-circt-3448873388\\design.mlir:213:26: error: use of undeclared SSA value name\r\n    %v40 = sv.read_inout %prev_capture : !hw.inout<i8>\r\n                         ^\r\nbackend: circt-opt --pass-pipeline failed: exit status 1"
+  },
+  {
+    "idx": 74,
+    "run_idx": 19,
+    "id": "cvdp_copilot_ttc_lite_0001",
+    "status": "MODEL_OR_MYGO_ERROR",
+    "reason": "MyGo compile failed after DeepSeek revision attempts: MyGo ir TIMEOUT after 1814.2s"
+  },
+  {
+    "idx": 75,
+    "run_idx": 20,
+    "id": "cvdp_copilot_unpacker_one_hot_0001",
+    "status": "MODEL_OR_MYGO_ERROR",
+    "reason": "JSONDecodeError: Expecting value: line 495 column 1 (char 2717)"
+  }
+]
