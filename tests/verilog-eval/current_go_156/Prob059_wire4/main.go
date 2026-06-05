@@ -6,10 +6,10 @@ var out_y bool
 var out_z bool
 
 func TopModule(a bool, b bool, c bool) {
-    out_w = a
-    out_x = b
-    out_y = b
-    out_z = c
+	out_w = a
+	out_x = b
+	out_y = b
+	out_z = c
 }
 
 func main() {}

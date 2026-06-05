@@ -5,11 +5,13 @@ import (
 	"math"
 )
 
-/*----------------------------------------------------------------------------
+/*
+----------------------------------------------------------------------------
 | Type definitions (from SPARC-GCC.h and softfloat.h)
-*----------------------------------------------------------------------------*/
+*----------------------------------------------------------------------------
+*/
 type flag int8
-type int8t int8  // renamed to avoid conflict with builtin
+type int8t int8   // renamed to avoid conflict with builtin
 type int16t int16 // renamed to avoid conflict with builtin
 type bits16 uint16
 type bits32 uint32
@@ -20,15 +22,19 @@ type sbits64 int64
 type float32 uint32
 type float64t uint64 // renamed to avoid conflict with builtin float64
 
-/*----------------------------------------------------------------------------
+/*
+----------------------------------------------------------------------------
 | Global state
-*----------------------------------------------------------------------------*/
+*----------------------------------------------------------------------------
+*/
 var float_rounding_mode int8t = float_round_nearest_even
 var float_exception_flags int8t = 0
 
-/*----------------------------------------------------------------------------
+/*
+----------------------------------------------------------------------------
 | Constants (from softfloat.h)
-*----------------------------------------------------------------------------*/
+*----------------------------------------------------------------------------
+*/
 const (
 	float_tininess_after_rounding  = 0
 	float_tininess_before_rounding = 1
@@ -45,16 +51,20 @@ const (
 	float_flag_invalid   = 16
 )
 
-/*----------------------------------------------------------------------------
+/*
+----------------------------------------------------------------------------
 | Specialized constants (from softfloat-specialize.txt)
-*----------------------------------------------------------------------------*/
+*----------------------------------------------------------------------------
+*/
 const float_detect_tininess = float_tininess_before_rounding
 
 var float64_default_nan bits64 = 0x7FFFFFFFFFFFFFFF
 
-/*----------------------------------------------------------------------------
+/*
+----------------------------------------------------------------------------
 | Helper functions for bool to int conversions (Go requires explicit conversion)
-*----------------------------------------------------------------------------*/
+*----------------------------------------------------------------------------
+*/
 func bool2bits64(b bool) bits64 {
 	if b {
 		return 1
@@ -69,9 +79,11 @@ func bool2flag(b bool) flag {
 	return 0
 }
 
-/*----------------------------------------------------------------------------
+/*
+----------------------------------------------------------------------------
 | Helper macros as functions (LIT64 not needed in Go)
-*----------------------------------------------------------------------------*/
+*----------------------------------------------------------------------------
+*/
 func LIT64(a uint64) bits64 {
 	return bits64(a)
 }
@@ -212,7 +224,7 @@ func float64_is_nan(a float64t) flag {
 }
 
 func float64_is_signaling_nan(a float64t) flag {
-	return bool2flag((((a>>51)&0xFFF) == 0xFFE) && (bits64(a)&LIT64(0x0007FFFFFFFFFFFF)) != 0)
+	return bool2flag((((a >> 51) & 0xFFF) == 0xFFE) && (bits64(a)&LIT64(0x0007FFFFFFFFFFFF)) != 0)
 }
 
 func propagateFloat64NaN(a, b float64t) float64t {
