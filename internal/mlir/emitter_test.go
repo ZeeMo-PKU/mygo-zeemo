@@ -919,6 +919,36 @@ func TestEmitDirectClockedOutputUsesResolvedSSAValue(t *testing.T) {
 	}
 }
 
+func TestEmitTopLevelNamedReturnPorts(t *testing.T) {
+	const source = `
+package main
+
+func TopModule(a uint8, b uint8, sel bool) (sum uint8, carry bool) {
+	sum = a + b
+	carry = sel
+	return
+}
+`
+	design := buildMLIRDesignFromSource(t, source)
+	out := filepath.Join(t.TempDir(), "design.mlir")
+	if err := Emit(design, out); err != nil {
+		t.Fatalf("Emit failed: %v", err)
+	}
+	data, err := os.ReadFile(out)
+	if err != nil {
+		t.Fatalf("read mlir output: %v", err)
+	}
+	text := string(data)
+	if !strings.Contains(text, "hw.module @TopModule(") ||
+		!strings.Contains(text, "out sum: i8") ||
+		!strings.Contains(text, "out carry: i1") {
+		t.Fatalf("expected named return values to become top-level output ports:\n%s", text)
+	}
+	if strings.Contains(text, "hw.output\n") || !strings.Contains(text, "hw.output ") {
+		t.Fatalf("expected named return output values to be emitted:\n%s", text)
+	}
+}
+
 func TestEmitBranchedDirectClockedOutputsAvoidRawOutputRefs(t *testing.T) {
 	design := buildMLIRDesignFromSource(t, branchedDirectClockedOutputsProgram)
 	out := filepath.Join(t.TempDir(), "design.mlir")

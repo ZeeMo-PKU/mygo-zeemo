@@ -1538,6 +1538,15 @@ func (b *builder) cloneProcess(original *Process) *Process {
 			signalMap[original.Return] = clone.Return
 		}
 	}
+	if len(original.Returns) > 0 {
+		clone.Returns = make([]*Signal, len(original.Returns))
+		for i, sig := range original.Returns {
+			if sig == nil {
+				continue
+			}
+			clone.Returns[i] = b.getRemappedSignal(sig, signalMap)
+		}
+	}
 
 	// Update predecessor/successor links after all blocks are cloned
 	b.updateBlockLinks(clone.Blocks, original.Blocks)

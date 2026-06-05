@@ -169,6 +169,7 @@ func (b *builder) buildModule(fn *ssa.Function) *Module {
 		entry.Stage = 0
 	}
 	b.addInputPortsForParams(fn)
+	b.addOutputPortsForReturns(fn, entry)
 	b.addOutputPortsForGlobals(fn.Pkg)
 	return mod
 }
@@ -178,6 +179,9 @@ func (b *builder) addInputPortsForParams(fn *ssa.Function) {
 		return
 	}
 	outputPortNames := b.outputPortNames(fn.Pkg)
+	for name := range returnPortNames(fn) {
+		outputPortNames[name] = struct{}{}
+	}
 	params := fn.Signature.Params()
 	for i := 0; i < params.Len(); i++ {
 		param := params.At(i)
@@ -225,6 +229,71 @@ func (b *builder) outputPortNames(pkg *ssa.Package) map[string]struct{} {
 		names[name] = struct{}{}
 	}
 	return names
+}
+
+func returnPortNames(fn *ssa.Function) map[string]struct{} {
+	names := make(map[string]struct{})
+	if fn == nil || fn.Signature == nil {
+		return names
+	}
+	results := fn.Signature.Results()
+	if results == nil {
+		return names
+	}
+	for i := 0; i < results.Len(); i++ {
+		result := results.At(i)
+		if result == nil {
+			continue
+		}
+		name := strings.TrimSpace(result.Name())
+		if name == "" {
+			if results.Len() == 1 {
+				name = "result"
+			} else {
+				name = fmt.Sprintf("result%d", i)
+			}
+		}
+		if name != "" {
+			names[name] = struct{}{}
+		}
+	}
+	return names
+}
+
+func (b *builder) addOutputPortsForReturns(fn *ssa.Function, proc *Process) {
+	if b == nil || b.module == nil || fn == nil || proc == nil || fn.Signature == nil {
+		return
+	}
+	results := fn.Signature.Results()
+	if results == nil || results.Len() == 0 {
+		return
+	}
+	for i := 0; i < results.Len(); i++ {
+		result := results.At(i)
+		if result == nil {
+			continue
+		}
+		name := strings.TrimSpace(result.Name())
+		if name == "" {
+			if results.Len() == 1 {
+				name = "result"
+			} else {
+				name = fmt.Sprintf("result%d", i)
+			}
+		}
+		if name == "" || b.hasPort(name) {
+			continue
+		}
+		sigType := signalType(result.Type())
+		if sigType == nil {
+			continue
+		}
+		binding := name
+		if i < len(proc.Returns) && proc.Returns[i] != nil && proc.Returns[i].Name != "" {
+			binding = proc.Returns[i].Name
+		}
+		b.appendOutputPort(name, binding, sigType)
+	}
 }
 
 func (b *builder) addOutputPortsForGlobals(pkg *ssa.Package) {
@@ -873,12 +942,22 @@ func (b *builder) handleReturn(proc *Process, bb *BasicBlock, ret *ssa.Return) {
 	}
 	b.setBlockTerminator(bb, &ReturnTerminator{})
 
-	// Extract return value if present
 	if ret != nil && len(ret.Results) > 0 {
-		returnValue := ret.Results[0]
-		if returnValue != nil {
+		if len(proc.Returns) < len(ret.Results) {
+			grown := make([]*Signal, len(ret.Results))
+			copy(grown, proc.Returns)
+			proc.Returns = grown
+		}
+		for i, returnValue := range ret.Results {
+			if returnValue == nil {
+				continue
+			}
 			sig := b.signalForValue(returnValue)
-			if sig != nil {
+			if sig == nil {
+				continue
+			}
+			proc.Returns[i] = sig
+			if i == 0 {
 				proc.Return = sig
 				if proc.ReturnValues == nil {
 					proc.ReturnValues = make(map[*BasicBlock]*Signal)

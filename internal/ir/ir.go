@@ -252,6 +252,7 @@ type Process struct {
 	SSAParams    []ssa.Value // Original SSA parameter values (for remapping during inlining)
 	Return       *Signal     // Return value signal (for non-main processes)
 	ReturnValues map[*BasicBlock]*Signal
+	Returns      []*Signal // Return value signals in function signature order.
 }
 
 // Sensitivity indicates whether process is combinational or sequential.
