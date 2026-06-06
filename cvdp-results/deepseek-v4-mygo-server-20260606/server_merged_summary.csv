@@ -1,0 +1,103 @@
+﻿index,task_id,status,category,reason_cn,reason,folder,json
+1,cvdp_copilot_16qam_mapper_0001,PASS,PASS,CVDP 判题通过。,,01_cvdp_copilot_16qam_mapper_0001,01_cvdp_copilot_16qam_mapper_0001/测试结果.json
+2,cvdp_copilot_16qam_mapper_0006,PASS,PASS,CVDP 判题通过。,,02_cvdp_copilot_16qam_mapper_0006,02_cvdp_copilot_16qam_mapper_0006/测试结果.json
+3,cvdp_copilot_64b66b_encoder_0001,FAIL,CVDP_FUNCTION_FAIL,CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。,CVDP cocotb reported failing tests despite zero process return code.,03_cvdp_copilot_64b66b_encoder_0001,03_cvdp_copilot_64b66b_encoder_0001/测试结果.json
+4,cvdp_copilot_8x3_priority_encoder_0001,PASS,PASS,CVDP 判题通过。,,04_cvdp_copilot_8x3_priority_encoder_0001,04_cvdp_copilot_8x3_priority_encoder_0001/测试结果.json
+5,cvdp_copilot_Carry_Lookahead_Adder_0001,PASS,PASS,CVDP 判题通过。,,05_cvdp_copilot_Carry_Lookahead_Adder_0001,05_cvdp_copilot_Carry_Lookahead_Adder_0001/测试结果.json
+6,cvdp_copilot_GFCM_0001,PASS,PASS,CVDP 判题通过。,,06_cvdp_copilot_GFCM_0001,06_cvdp_copilot_GFCM_0001/测试结果.json
+7,cvdp_copilot_apb_dsp_unit_0001,FAIL,CVDP_FUNCTION_FAIL,CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。,CVDP cocotb reported failing tests despite zero process return code.,07_cvdp_copilot_apb_dsp_unit_0001,07_cvdp_copilot_apb_dsp_unit_0001/测试结果.json
+8,cvdp_copilot_apb_gpio_0001,MODEL_OR_MYGO_ERROR,MODEL_OR_MYGO_ERROR,DeepSeek 修正后仍未通过 MyGo 编译/IR/Verilog 生成链路。,"MyGo compile failed after DeepSeek revision attempts: MyGo verilog FAIL. /home/rongxv/work/mygo_cvdp_work/08_cvdp_copilot_apb_gpio_0001_1780710090540_1866677/.mygo-tmp/.mygo-circt-1057250930/design.mlir:141:37: error: use of undeclared SSA value name
+    %read_pready136 = sv.read_inout %const_51 : !hw.inout<i1>
+                                    ^
+/home/rongxv/work/mygo_cvdp_work/08_cvdp_copilot_apb_gpio_0001_1780710090540_1866677/.mygo-tmp/.mygo-circt-1057250930/design.mlir:142:38: error: use of undeclared SSA value name
+    %read_pslverr137 = sv.read_inout %const_52 : !hw.inout<i1>
+                                     ^
+/home/rongxv/work/mygo_cvdp_work/08_cvdp_copilot_apb_gpio_0001_1780710090540_1866677/.mygo-tmp/.mygo-circt-1057250930/design.mlir:143:39: error: use of undeclared SSA value name
+    %read_gpio_out138 = sv.read_inout %const_39 : !hw.inout<i8>
+                                      ^
+/home/rongxv/work/mygo_cvdp_work/08_cvdp_copilot_apb_gpio_0001_1780710090540_1866677/.mygo-tmp/.mygo-circt-1057250930/design.mlir:144:42: error: use of undeclared SSA value name
+    %read_gpio_enable139 = sv.read_inout %const_42 : !hw.inout<i8>
+                                         ^
+backend: circt-opt --pass-pipeline failed: exit status 1",08_cvdp_copilot_apb_gpio_0001,08_cvdp_copilot_apb_gpio_0001/测试结果.json
+9,cvdp_copilot_apb_history_shift_register_0001,FAIL,CVDP_FUNCTION_FAIL,CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。,CVDP cocotb reported failing tests despite zero process return code.,09_cvdp_copilot_apb_history_shift_register_0001,09_cvdp_copilot_apb_history_shift_register_0001/测试结果.json
+10,cvdp_copilot_axi_register_0001,PASS,PASS,CVDP 判题通过。,,10_cvdp_copilot_axi_register_0001,10_cvdp_copilot_axi_register_0001/测试结果.json
+11,cvdp_copilot_axi_stream_upscale_0001,PASS,PASS,CVDP 判题通过。,,11_cvdp_copilot_axi_stream_upscale_0001,11_cvdp_copilot_axi_stream_upscale_0001/测试结果.json
+12,cvdp_copilot_axil_precision_counter_0001,PASS,PASS,CVDP 判题通过。,,12_cvdp_copilot_axil_precision_counter_0001,12_cvdp_copilot_axil_precision_counter_0001/测试结果.json
+13,cvdp_copilot_axis_joiner_0001,PASS,PASS,CVDP 判题通过。,,13_cvdp_copilot_axis_joiner_0001,13_cvdp_copilot_axis_joiner_0001/测试结果.json
+14,cvdp_copilot_barrel_shifter_0001,PASS,PASS,CVDP 判题通过。,,14_cvdp_copilot_barrel_shifter_0001,14_cvdp_copilot_barrel_shifter_0001/测试结果.json
+15,cvdp_copilot_bcd_counter_0001,PASS,PASS,CVDP 判题通过。,,15_cvdp_copilot_bcd_counter_0001,15_cvdp_copilot_bcd_counter_0001/测试结果.json
+16,cvdp_copilot_bcd_to_excess_3_0001,PASS,PASS,CVDP 判题通过。,,16_cvdp_copilot_bcd_to_excess_3_0001,16_cvdp_copilot_bcd_to_excess_3_0001/测试结果.json
+17,cvdp_copilot_binary_to_one_hot_decoder_0001,PASS,PASS,CVDP 判题通过。,,17_cvdp_copilot_binary_to_one_hot_decoder_0001,17_cvdp_copilot_binary_to_one_hot_decoder_0001/测试结果.json
+18,cvdp_copilot_caesar_cipher_0001,PASS,PASS,CVDP 判题通过。,,18_cvdp_copilot_caesar_cipher_0001,18_cvdp_copilot_caesar_cipher_0001/测试结果.json
+19,cvdp_copilot_car_parking_management_0001,PASS,PASS,CVDP 判题通过。,,19_cvdp_copilot_car_parking_management_0001,19_cvdp_copilot_car_parking_management_0001/测试结果.json
+20,cvdp_copilot_cascaded_adder_0001,PASS,PASS,CVDP 判题通过。,,20_cvdp_copilot_cascaded_adder_0001,20_cvdp_copilot_cascaded_adder_0001/测试结果.json
+21,cvdp_copilot_clock_divider_0003,PASS,PASS,CVDP 判题通过。,,21_cvdp_copilot_clock_divider_0003,21_cvdp_copilot_clock_divider_0003/测试结果.json
+22,cvdp_copilot_comparator_0001,PASS,PASS,CVDP 判题通过。,,22_cvdp_copilot_comparator_0001,22_cvdp_copilot_comparator_0001/测试结果.json
+23,cvdp_copilot_complex_multiplier_0001,PASS,PASS,CVDP 判题通过。,,23_cvdp_copilot_complex_multiplier_0001,23_cvdp_copilot_complex_multiplier_0001/测试结果.json
+24,cvdp_copilot_concatenate_0001,FAIL,CVDP_FUNCTION_FAIL,CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。,CVDP cocotb reported failing tests despite zero process return code.,24_cvdp_copilot_concatenate_0001,24_cvdp_copilot_concatenate_0001/测试结果.json
+25,cvdp_copilot_configurable_digital_low_pass_filter_0001,MODEL_OR_MYGO_ERROR,MODEL_OR_MYGO_ERROR,DeepSeek 修正后仍未通过 MyGo 编译/IR/Verilog 生成链路。,"MyGo compile failed after DeepSeek revision attempts: MyGo ir FAIL. error: /home/rongxv/work/mygo_cvdp_work/25_cvdp_copilot_configurable_digital_low_pass_filter_0001_1780709806034_1866668/main.go:5:107: Port redeclared in this block
+error: /home/rongxv/work/mygo_cvdp_work/25_cvdp_copilot_configurable_digital_low_pass_filter_0001_1780709806034_1866668/main.go:5:22: 	other declaration of Port
+error: /home/rongxv/work/mygo_cvdp_work/25_cvdp_copilot_configurable_digital_low_pass_filter_0001_1780709806034_1866668/main.go:28:2: result parameter Port not in scope at return
+error: /home/rongxv/work/mygo_cvdp_work/25_cvdp_copilot_configurable_digital_low_pass_filter_0001_1780709806034_1866668/main.go:5:22: 	inner declaration of var Port uint64
+package loading failed",25_cvdp_copilot_configurable_digital_low_pass_filter_0001,25_cvdp_copilot_configurable_digital_low_pass_filter_0001/测试结果.json
+26,cvdp_copilot_configurable_digital_low_pass_filter_0004,PASS,PASS,CVDP 判题通过。,,26_cvdp_copilot_configurable_digital_low_pass_filter_0004,26_cvdp_copilot_configurable_digital_low_pass_filter_0004/测试结果.json
+27,cvdp_copilot_configurable_digital_low_pass_filter_0014,PASS,PASS,CVDP 判题通过。,,27_cvdp_copilot_configurable_digital_low_pass_filter_0014,27_cvdp_copilot_configurable_digital_low_pass_filter_0014/测试结果.json
+28,cvdp_copilot_convolutional_encoder_0001,FAIL,CVDP_FUNCTION_FAIL,CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。,CVDP cocotb reported failing tests despite zero process return code.,28_cvdp_copilot_convolutional_encoder_0001,28_cvdp_copilot_convolutional_encoder_0001/测试结果.json
+29,cvdp_copilot_data_bus_controller_0001,PASS,PASS,CVDP 判题通过。,,29_cvdp_copilot_data_bus_controller_0001,29_cvdp_copilot_data_bus_controller_0001/测试结果.json
+30,cvdp_copilot_data_width_converter_0003,FAIL,CVDP_FUNCTION_FAIL,CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。,CVDP cocotb reported failing tests despite zero process return code.,30_cvdp_copilot_data_width_converter_0003,30_cvdp_copilot_data_width_converter_0003/测试结果.json
+31,cvdp_copilot_dbi_0001,PASS,PASS,CVDP 判题通过。,,31_cvdp_copilot_dbi_0001,31_cvdp_copilot_dbi_0001/测试结果.json
+32,cvdp_copilot_decode_firstbit_0001,PASS,PASS,CVDP 判题通过。,,32_cvdp_copilot_decode_firstbit_0001,32_cvdp_copilot_decode_firstbit_0001/测试结果.json
+33,cvdp_copilot_digital_dice_roller_0001,FAIL,CVDP_FUNCTION_FAIL,CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。,CVDP cocotb reported failing tests despite zero process return code.,33_cvdp_copilot_digital_dice_roller_0001,33_cvdp_copilot_digital_dice_roller_0001/测试结果.json
+34,cvdp_copilot_digital_stopwatch_0001,PASS,PASS,CVDP 判题通过。,,34_cvdp_copilot_digital_stopwatch_0001,34_cvdp_copilot_digital_stopwatch_0001/测试结果.json
+35,cvdp_copilot_edge_detector_0001,FAIL,CVDP_FUNCTION_FAIL,CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。,CVDP cocotb reported failing tests despite zero process return code.,35_cvdp_copilot_edge_detector_0001,35_cvdp_copilot_edge_detector_0001/测试结果.json
+36,cvdp_copilot_ethernet_packet_parser_0001,MODEL_OR_MYGO_ERROR,MODEL_OR_MYGO_ERROR,DeepSeek 修正后仍未通过 MyGo 编译/IR/Verilog 生成链路。,"MyGo compile failed after DeepSeek revision attempts: MyGo verilog FAIL. /home/rongxv/work/mygo_cvdp_work/36_cvdp_copilot_ethernet_packet_parser_0001_1780712037989_1866677/.mygo-tmp/.mygo-circt-2924727010/design.mlir:76:13: error: use of value '%rst' expects different type than prior uses: 'i1' vs '!hw.inout<i1>'
+      sv.if %rst {
+            ^
+/home/rongxv/work/mygo_cvdp_work/36_cvdp_copilot_ethernet_packet_parser_0001_1780712037989_1866677/.mygo-tmp/.mygo-circt-2924727010/design.mlir:29:5: note: prior use here
+    %rst = sv.reg : !hw.inout<i1>
+    ^
+backend: circt-opt --pass-pipeline failed: exit status 1",36_cvdp_copilot_ethernet_packet_parser_0001,36_cvdp_copilot_ethernet_packet_parser_0001/测试结果.json
+37,cvdp_copilot_events_to_apb_0001,PASS,PASS,CVDP 判题通过。,,37_cvdp_copilot_events_to_apb_0001,37_cvdp_copilot_events_to_apb_0001/测试结果.json
+38,cvdp_copilot_factorial_0001,PASS,PASS,CVDP 判题通过。,,38_cvdp_copilot_factorial_0001,38_cvdp_copilot_factorial_0001/测试结果.json
+39,cvdp_copilot_fibonacci_series_0001,FAIL,CVDP_FUNCTION_FAIL,CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。,CVDP cocotb reported failing tests despite zero process return code.,39_cvdp_copilot_fibonacci_series_0001,39_cvdp_copilot_fibonacci_series_0001/测试结果.json
+40,cvdp_copilot_fifo_async_0001,FAIL,CVDP_FUNCTION_FAIL,CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。,CVDP cocotb reported failing tests despite zero process return code.,40_cvdp_copilot_fifo_async_0001,40_cvdp_copilot_fifo_async_0001/测试结果.json
+41,cvdp_copilot_filo_0005,PASS,PASS,CVDP 判题通过。,,41_cvdp_copilot_filo_0005,41_cvdp_copilot_filo_0005/测试结果.json
+42,cvdp_copilot_fsm_seq_detector_0001,PASS,PASS,CVDP 判题通过。,,42_cvdp_copilot_fsm_seq_detector_0001,42_cvdp_copilot_fsm_seq_detector_0001/测试结果.json
+43,cvdp_copilot_gcd_0001,MODEL_OR_MYGO_ERROR,MODEL_OR_MYGO_ERROR,DeepSeek 修正后仍未通过 MyGo 编译/IR/Verilog 生成链路。,MyGo compile failed after DeepSeek revision attempts: MyGo compile failed,43_cvdp_copilot_gcd_0001,43_cvdp_copilot_gcd_0001/测试结果.json
+44,cvdp_copilot_gf_multiplier_0001,PASS,PASS,CVDP 判题通过。,,44_cvdp_copilot_gf_multiplier_0001,44_cvdp_copilot_gf_multiplier_0001/测试结果.json
+45,cvdp_copilot_hamming_code_tx_and_rx_0001,PASS,PASS,CVDP 判题通过。,,45_cvdp_copilot_hamming_code_tx_and_rx_0001,45_cvdp_copilot_hamming_code_tx_and_rx_0001/测试结果.json
+46,cvdp_copilot_hamming_code_tx_and_rx_0003,PASS,PASS,CVDP 判题通过。,,46_cvdp_copilot_hamming_code_tx_and_rx_0003,46_cvdp_copilot_hamming_code_tx_and_rx_0003/测试结果.json
+47,cvdp_copilot_hebbian_rule_0017,PASS,PASS,CVDP 判题通过。,,47_cvdp_copilot_hebbian_rule_0017,47_cvdp_copilot_hebbian_rule_0017/测试结果.json
+48,cvdp_copilot_hill_cipher_0001,PASS,PASS,CVDP 判题通过。,,48_cvdp_copilot_hill_cipher_0001,48_cvdp_copilot_hill_cipher_0001/测试结果.json
+49,cvdp_copilot_load_store_unit_0001,PASS,PASS,CVDP 判题通过。,,49_cvdp_copilot_load_store_unit_0001,49_cvdp_copilot_load_store_unit_0001/测试结果.json
+50,cvdp_copilot_matrix_multiplier_0001,PASS,PASS,CVDP 判题通过。,,50_cvdp_copilot_matrix_multiplier_0001,50_cvdp_copilot_matrix_multiplier_0001/测试结果.json
+51,cvdp_copilot_microcode_sequencer_0001,PASS,PASS,CVDP 判题通过。,,51_cvdp_copilot_microcode_sequencer_0001,51_cvdp_copilot_microcode_sequencer_0001/测试结果.json
+52,cvdp_copilot_morse_code_0001,PASS,PASS,CVDP 判题通过。,,52_cvdp_copilot_morse_code_0001,52_cvdp_copilot_morse_code_0001/测试结果.json
+53,cvdp_copilot_moving_average_0001,PASS,PASS,CVDP 判题通过。,,53_cvdp_copilot_moving_average_0001,53_cvdp_copilot_moving_average_0001/测试结果.json
+54,cvdp_copilot_nbit_swizzling_0001,PASS,PASS,CVDP 判题通过。,,54_cvdp_copilot_nbit_swizzling_0001,54_cvdp_copilot_nbit_swizzling_0001/测试结果.json
+55,cvdp_copilot_packet_controller_0001,PASS,PASS,CVDP 判题通过。,,55_cvdp_copilot_packet_controller_0001,55_cvdp_copilot_packet_controller_0001/测试结果.json
+56,cvdp_copilot_palindrome_3b_0002,PASS,PASS,CVDP 判题通过。,,56_cvdp_copilot_palindrome_3b_0002,56_cvdp_copilot_palindrome_3b_0002/测试结果.json
+57,cvdp_copilot_perceptron_0001,PASS,PASS,CVDP 判题通过。,,57_cvdp_copilot_perceptron_0001,57_cvdp_copilot_perceptron_0001/测试结果.json
+58,cvdp_copilot_perf_counters_0001,PASS,PASS,CVDP 判题通过。,,58_cvdp_copilot_perf_counters_0001,58_cvdp_copilot_perf_counters_0001/测试结果.json
+59,cvdp_copilot_perfect_squares_0001,PASS,PASS,CVDP 判题通过。,,59_cvdp_copilot_perfect_squares_0001,59_cvdp_copilot_perfect_squares_0001/测试结果.json
+60,cvdp_copilot_piso_0001,FAIL,CVDP_FUNCTION_FAIL,CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。,CVDP cocotb reported failing tests despite zero process return code.,60_cvdp_copilot_piso_0001,60_cvdp_copilot_piso_0001/测试结果.json
+61,cvdp_copilot_prbs_gen_0003,PASS,PASS,CVDP 判题通过。,,61_cvdp_copilot_prbs_gen_0003,61_cvdp_copilot_prbs_gen_0003/测试结果.json
+62,cvdp_copilot_restoring_division_0001,MODEL_OR_MYGO_ERROR,MODEL_OR_MYGO_ERROR,DeepSeek 修正后仍未通过 MyGo 编译/IR/Verilog 生成链路。,"MyGo compile failed after DeepSeek revision attempts: MyGo ir FAIL. error: /home/rongxv/work/mygo_cvdp_work/62_cvdp_copilot_restoring_division_0001_1780712342790_1866671/main.go:64:1: missing return
+package loading failed",62_cvdp_copilot_restoring_division_0001,62_cvdp_copilot_restoring_division_0001/测试结果.json
+63,cvdp_copilot_reverse_bits_0001,PASS,PASS,CVDP 判题通过。,,63_cvdp_copilot_reverse_bits_0001,63_cvdp_copilot_reverse_bits_0001/测试结果.json
+64,cvdp_copilot_secure_read_write_bus_0001,FAIL,CVDP_FUNCTION_FAIL,CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。,CVDP cocotb reported failing tests despite zero process return code.,64_cvdp_copilot_secure_read_write_bus_0001,64_cvdp_copilot_secure_read_write_bus_0001/测试结果.json
+65,cvdp_copilot_secure_read_write_register_bank_0001,MODEL_OR_MYGO_ERROR,MODEL_OR_MYGO_ERROR,DeepSeek 修正后仍未通过 MyGo 编译/IR/Verilog 生成链路。,MyGo compile failed after DeepSeek revision attempts: MyGo compile failed,65_cvdp_copilot_secure_read_write_register_bank_0001,65_cvdp_copilot_secure_read_write_register_bank_0001/测试结果.json
+66,cvdp_copilot_sequencial_binary_to_one_hot_decoder_0001,PASS,PASS,CVDP 判题通过。,,66_cvdp_copilot_sequencial_binary_to_one_hot_decoder_0001,66_cvdp_copilot_sequencial_binary_to_one_hot_decoder_0001/测试结果.json
+67,cvdp_copilot_serial_in_parallel_out_0004,PASS,PASS,CVDP 判题通过。,,67_cvdp_copilot_serial_in_parallel_out_0004,67_cvdp_copilot_serial_in_parallel_out_0004/测试结果.json
+68,cvdp_copilot_set_bit_calculator_0001,FAIL,CVDP_FUNCTION_FAIL,CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。,CVDP cocotb reported failing tests despite zero process return code.,68_cvdp_copilot_set_bit_calculator_0001,68_cvdp_copilot_set_bit_calculator_0001/测试结果.json
+69,cvdp_copilot_sorter_0001,PASS,PASS,CVDP 判题通过。,,69_cvdp_copilot_sorter_0001,69_cvdp_copilot_sorter_0001/测试结果.json
+70,cvdp_copilot_static_branch_predict_0001,FAIL,CVDP_FUNCTION_FAIL,CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。,CVDP cocotb reported failing tests despite zero process return code.,70_cvdp_copilot_static_branch_predict_0001,70_cvdp_copilot_static_branch_predict_0001/测试结果.json
+71,cvdp_copilot_sync_lifo_0001,PASS,PASS,CVDP 判题通过。,,71_cvdp_copilot_sync_lifo_0001,71_cvdp_copilot_sync_lifo_0001/测试结果.json
+72,cvdp_copilot_sync_serial_communication_0001,PASS,PASS,CVDP 判题通过。,,72_cvdp_copilot_sync_serial_communication_0001,72_cvdp_copilot_sync_serial_communication_0001/测试结果.json
+73,cvdp_copilot_thermostat_0001,PASS,PASS,CVDP 判题通过。,,73_cvdp_copilot_thermostat_0001,73_cvdp_copilot_thermostat_0001/测试结果.json
+74,cvdp_copilot_ttc_lite_0001,PASS,PASS,CVDP 判题通过。,,74_cvdp_copilot_ttc_lite_0001,74_cvdp_copilot_ttc_lite_0001/测试结果.json
+75,cvdp_copilot_unpacker_one_hot_0001,MODEL_OR_MYGO_ERROR,MODEL_OR_MYGO_ERROR,DeepSeek 修正后仍未通过 MyGo 编译/IR/Verilog 生成链路。,MyGo compile failed after DeepSeek revision attempts: MyGo compile failed,75_cvdp_copilot_unpacker_one_hot_0001,75_cvdp_copilot_unpacker_one_hot_0001/测试结果.json
+76,cvdp_copilot_vending_machine_0001,PASS,PASS,CVDP 判题通过。,,76_cvdp_copilot_vending_machine_0001,76_cvdp_copilot_vending_machine_0001/测试结果.json
+77,cvdp_copilot_vga_controller_0001,MODEL_OR_MYGO_ERROR,MODEL_OR_MYGO_ERROR,DeepSeek 修正后仍未通过 MyGo 编译/IR/Verilog 生成链路。,"MyGo compile failed after DeepSeek revision attempts: MyGo ir FAIL. error: /home/rongxv/work/mygo_cvdp_work/77_cvdp_copilot_vga_controller_0001_1780714849469_1866668/main.go:95:1: missing return
+package loading failed",77_cvdp_copilot_vga_controller_0001,77_cvdp_copilot_vga_controller_0001/测试结果.json
+78,cvdp_copilot_wb2ahb_0001,PASS,PASS,CVDP 判题通过。,,78_cvdp_copilot_wb2ahb_0001,78_cvdp_copilot_wb2ahb_0001/测试结果.json

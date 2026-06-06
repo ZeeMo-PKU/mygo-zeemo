@@ -100,6 +100,29 @@ The archived directory includes the summary CSV files, run configuration, and
 one subdirectory per CVDP problem with the prompt, direct Verilog output, test
 result JSON, and CVDP logs.
 
+### 5. CVDP cid003 MyGO server run -- 56/78 PASS
+
+This run used the MyGO route on the `Trifoliate` server:
+
+`DeepSeek V4 Pro -> Go/MyGO -> MyGO -> CIRCT -> Icarus/CVDP cocotb`.
+
+| Suite | Model | Path | Score | Rate |
+|---|---|---|---|---|
+| CVDP cid003 | DeepSeek V4 Pro | prompt -> Go/MyGO -> MyGO -> Verilog -> CVDP harness | 56/78 | 71.79% |
+
+Status breakdown:
+
+| Status | Count | Meaning |
+|---|---:|---|
+| PASS | 56 | Generated HDL passed CVDP cocotb functional judging |
+| FAIL | 14 | HDL reached CVDP cocotb judging but failed functional tests |
+| MODEL_OR_MYGO_ERROR | 8 | The model/MyGO/CIRCT route did not produce valid HDL for functional judging |
+
+Compared with the direct Verilog baseline above, the MyGO server run improved
+the final score from 37/78 to 56/78 (+19 tasks). Per-task comparison artifacts
+and the rendered report are archived in
+`cvdp-results/deepseek-v4-mygo-server-20260606/`.
+
 #### Path B hard floor (4 problems never solved by DeepSeek)
 - Prob092_gatesv100: LLM uses loops instead of BitsHelper for 100-bit vectors
 - Prob144_conwaylife: LLM gets neighbor counting wrong (Kimi solves it)

@@ -1,0 +1,2 @@
+MyGo CVDP server run: deepseek-v4-mygo-server-20260606
+Total 78; PASS 56; FAIL 14; MODEL_OR_MYGO_ERROR 8; pass rate 71.79%

@@ -1,0 +1,812 @@
+{
+  "summary": {
+    "run_name": "deepseek-v4-mygo-server-20260606",
+    "generated_at": "2026-06-06T11:13:59",
+    "total": 78,
+    "status_counts": {
+      "PASS": 56,
+      "FAIL": 14,
+      "MODEL_OR_MYGO_ERROR": 8
+    },
+    "category_counts": {
+      "PASS": 56,
+      "CVDP_FUNCTION_FAIL": 14,
+      "MODEL_OR_MYGO_ERROR": 8
+    },
+    "pass_rate": 0.717948717948718,
+    "model": "deepseek/deepseek-v4-pro",
+    "flow": "DeepSeek -> MyGo -> CIRCT -> Icarus/CVDP cocotb",
+    "server": "Trifoliate (/home/rongxv)",
+    "parallelism": "4 shards, skip-existing enabled, go-attempts=3, retries=2",
+    "mygo_root": "/home/rongxv/work/MyGo-ZeeMo",
+    "mygo_commit": "125084e",
+    "dataset": "/home/rongxv/work/cvdp-assets/cvdp_v1.1.0_nonagentic_code_generation_no_commercial.jsonl",
+    "notes": [
+      "FAIL 表示 CVDP cocotb 已经执行功能判题并报告不通过。",
+      "MODEL_OR_MYGO_ERROR 表示未得到可用于 CVDP 功能判题的 HDL，原因通常是模型输出 Go/MyGo 不可编译、MyGo IR/Verilog 生成失败或工具链错误。",
+      "本轮没有把 API key 或临时编译目录纳入报告。"
+    ]
+  },
+  "tasks": [
+    {
+      "index": 1,
+      "folder": "01_cvdp_copilot_16qam_mapper_0001",
+      "task_id": "cvdp_copilot_16qam_mapper_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "01_cvdp_copilot_16qam_mapper_0001/测试结果.json"
+    },
+    {
+      "index": 2,
+      "folder": "02_cvdp_copilot_16qam_mapper_0006",
+      "task_id": "cvdp_copilot_16qam_mapper_0006",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "02_cvdp_copilot_16qam_mapper_0006/测试结果.json"
+    },
+    {
+      "index": 3,
+      "folder": "03_cvdp_copilot_64b66b_encoder_0001",
+      "task_id": "cvdp_copilot_64b66b_encoder_0001",
+      "status": "FAIL",
+      "category": "CVDP_FUNCTION_FAIL",
+      "reason_cn": "CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。",
+      "reason": "CVDP cocotb reported failing tests despite zero process return code.",
+      "json": "03_cvdp_copilot_64b66b_encoder_0001/测试结果.json"
+    },
+    {
+      "index": 4,
+      "folder": "04_cvdp_copilot_8x3_priority_encoder_0001",
+      "task_id": "cvdp_copilot_8x3_priority_encoder_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "04_cvdp_copilot_8x3_priority_encoder_0001/测试结果.json"
+    },
+    {
+      "index": 5,
+      "folder": "05_cvdp_copilot_Carry_Lookahead_Adder_0001",
+      "task_id": "cvdp_copilot_Carry_Lookahead_Adder_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "05_cvdp_copilot_Carry_Lookahead_Adder_0001/测试结果.json"
+    },
+    {
+      "index": 6,
+      "folder": "06_cvdp_copilot_GFCM_0001",
+      "task_id": "cvdp_copilot_GFCM_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "06_cvdp_copilot_GFCM_0001/测试结果.json"
+    },
+    {
+      "index": 7,
+      "folder": "07_cvdp_copilot_apb_dsp_unit_0001",
+      "task_id": "cvdp_copilot_apb_dsp_unit_0001",
+      "status": "FAIL",
+      "category": "CVDP_FUNCTION_FAIL",
+      "reason_cn": "CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。",
+      "reason": "CVDP cocotb reported failing tests despite zero process return code.",
+      "json": "07_cvdp_copilot_apb_dsp_unit_0001/测试结果.json"
+    },
+    {
+      "index": 8,
+      "folder": "08_cvdp_copilot_apb_gpio_0001",
+      "task_id": "cvdp_copilot_apb_gpio_0001",
+      "status": "MODEL_OR_MYGO_ERROR",
+      "category": "MODEL_OR_MYGO_ERROR",
+      "reason_cn": "DeepSeek 修正后仍未通过 MyGo 编译/IR/Verilog 生成链路。",
+      "reason": "MyGo compile failed after DeepSeek revision attempts: MyGo verilog FAIL. /home/rongxv/work/mygo_cvdp_work/08_cvdp_copilot_apb_gpio_0001_1780710090540_1866677/.mygo-tmp/.mygo-circt-1057250930/design.mlir:141:37: error: use of undeclared SSA value name\n    %read_pready136 = sv.read_inout %const_51 : !hw.inout<i1>\n                                    ^\n/home/rongxv/work/mygo_cvdp_work/08_cvdp_copilot_apb_gpio_0001_1780710090540_1866677/.mygo-tmp/.mygo-circt-1057250930/design.mlir:142:38: error: use of undeclared SSA value name\n    %read_pslverr137 = sv.read_inout %const_52 : !hw.inout<i1>\n                                     ^\n/home/rongxv/work/mygo_cvdp_work/08_cvdp_copilot_apb_gpio_0001_1780710090540_1866677/.mygo-tmp/.mygo-circt-1057250930/design.mlir:143:39: error: use of undeclared SSA value name\n    %read_gpio_out138 = sv.read_inout %const_39 : !hw.inout<i8>\n                                      ^\n/home/rongxv/work/mygo_cvdp_work/08_cvdp_copilot_apb_gpio_0001_1780710090540_1866677/.mygo-tmp/.mygo-circt-1057250930/design.mlir:144:42: error: use of undeclared SSA value name\n    %read_gpio_enable139 = sv.read_inout %const_42 : !hw.inout<i8>\n                                         ^\nbackend: circt-opt --pass-pipeline failed: exit status 1",
+      "json": "08_cvdp_copilot_apb_gpio_0001/测试结果.json"
+    },
+    {
+      "index": 9,
+      "folder": "09_cvdp_copilot_apb_history_shift_register_0001",
+      "task_id": "cvdp_copilot_apb_history_shift_register_0001",
+      "status": "FAIL",
+      "category": "CVDP_FUNCTION_FAIL",
+      "reason_cn": "CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。",
+      "reason": "CVDP cocotb reported failing tests despite zero process return code.",
+      "json": "09_cvdp_copilot_apb_history_shift_register_0001/测试结果.json"
+    },
+    {
+      "index": 10,
+      "folder": "10_cvdp_copilot_axi_register_0001",
+      "task_id": "cvdp_copilot_axi_register_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "10_cvdp_copilot_axi_register_0001/测试结果.json"
+    },
+    {
+      "index": 11,
+      "folder": "11_cvdp_copilot_axi_stream_upscale_0001",
+      "task_id": "cvdp_copilot_axi_stream_upscale_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "11_cvdp_copilot_axi_stream_upscale_0001/测试结果.json"
+    },
+    {
+      "index": 12,
+      "folder": "12_cvdp_copilot_axil_precision_counter_0001",
+      "task_id": "cvdp_copilot_axil_precision_counter_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "12_cvdp_copilot_axil_precision_counter_0001/测试结果.json"
+    },
+    {
+      "index": 13,
+      "folder": "13_cvdp_copilot_axis_joiner_0001",
+      "task_id": "cvdp_copilot_axis_joiner_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "13_cvdp_copilot_axis_joiner_0001/测试结果.json"
+    },
+    {
+      "index": 14,
+      "folder": "14_cvdp_copilot_barrel_shifter_0001",
+      "task_id": "cvdp_copilot_barrel_shifter_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "14_cvdp_copilot_barrel_shifter_0001/测试结果.json"
+    },
+    {
+      "index": 15,
+      "folder": "15_cvdp_copilot_bcd_counter_0001",
+      "task_id": "cvdp_copilot_bcd_counter_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "15_cvdp_copilot_bcd_counter_0001/测试结果.json"
+    },
+    {
+      "index": 16,
+      "folder": "16_cvdp_copilot_bcd_to_excess_3_0001",
+      "task_id": "cvdp_copilot_bcd_to_excess_3_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "16_cvdp_copilot_bcd_to_excess_3_0001/测试结果.json"
+    },
+    {
+      "index": 17,
+      "folder": "17_cvdp_copilot_binary_to_one_hot_decoder_0001",
+      "task_id": "cvdp_copilot_binary_to_one_hot_decoder_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "17_cvdp_copilot_binary_to_one_hot_decoder_0001/测试结果.json"
+    },
+    {
+      "index": 18,
+      "folder": "18_cvdp_copilot_caesar_cipher_0001",
+      "task_id": "cvdp_copilot_caesar_cipher_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "18_cvdp_copilot_caesar_cipher_0001/测试结果.json"
+    },
+    {
+      "index": 19,
+      "folder": "19_cvdp_copilot_car_parking_management_0001",
+      "task_id": "cvdp_copilot_car_parking_management_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "19_cvdp_copilot_car_parking_management_0001/测试结果.json"
+    },
+    {
+      "index": 20,
+      "folder": "20_cvdp_copilot_cascaded_adder_0001",
+      "task_id": "cvdp_copilot_cascaded_adder_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "20_cvdp_copilot_cascaded_adder_0001/测试结果.json"
+    },
+    {
+      "index": 21,
+      "folder": "21_cvdp_copilot_clock_divider_0003",
+      "task_id": "cvdp_copilot_clock_divider_0003",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "21_cvdp_copilot_clock_divider_0003/测试结果.json"
+    },
+    {
+      "index": 22,
+      "folder": "22_cvdp_copilot_comparator_0001",
+      "task_id": "cvdp_copilot_comparator_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "22_cvdp_copilot_comparator_0001/测试结果.json"
+    },
+    {
+      "index": 23,
+      "folder": "23_cvdp_copilot_complex_multiplier_0001",
+      "task_id": "cvdp_copilot_complex_multiplier_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "23_cvdp_copilot_complex_multiplier_0001/测试结果.json"
+    },
+    {
+      "index": 24,
+      "folder": "24_cvdp_copilot_concatenate_0001",
+      "task_id": "cvdp_copilot_concatenate_0001",
+      "status": "FAIL",
+      "category": "CVDP_FUNCTION_FAIL",
+      "reason_cn": "CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。",
+      "reason": "CVDP cocotb reported failing tests despite zero process return code.",
+      "json": "24_cvdp_copilot_concatenate_0001/测试结果.json"
+    },
+    {
+      "index": 25,
+      "folder": "25_cvdp_copilot_configurable_digital_low_pass_filter_0001",
+      "task_id": "cvdp_copilot_configurable_digital_low_pass_filter_0001",
+      "status": "MODEL_OR_MYGO_ERROR",
+      "category": "MODEL_OR_MYGO_ERROR",
+      "reason_cn": "DeepSeek 修正后仍未通过 MyGo 编译/IR/Verilog 生成链路。",
+      "reason": "MyGo compile failed after DeepSeek revision attempts: MyGo ir FAIL. error: /home/rongxv/work/mygo_cvdp_work/25_cvdp_copilot_configurable_digital_low_pass_filter_0001_1780709806034_1866668/main.go:5:107: Port redeclared in this block\nerror: /home/rongxv/work/mygo_cvdp_work/25_cvdp_copilot_configurable_digital_low_pass_filter_0001_1780709806034_1866668/main.go:5:22: \tother declaration of Port\nerror: /home/rongxv/work/mygo_cvdp_work/25_cvdp_copilot_configurable_digital_low_pass_filter_0001_1780709806034_1866668/main.go:28:2: result parameter Port not in scope at return\nerror: /home/rongxv/work/mygo_cvdp_work/25_cvdp_copilot_configurable_digital_low_pass_filter_0001_1780709806034_1866668/main.go:5:22: \tinner declaration of var Port uint64\npackage loading failed",
+      "json": "25_cvdp_copilot_configurable_digital_low_pass_filter_0001/测试结果.json"
+    },
+    {
+      "index": 26,
+      "folder": "26_cvdp_copilot_configurable_digital_low_pass_filter_0004",
+      "task_id": "cvdp_copilot_configurable_digital_low_pass_filter_0004",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "26_cvdp_copilot_configurable_digital_low_pass_filter_0004/测试结果.json"
+    },
+    {
+      "index": 27,
+      "folder": "27_cvdp_copilot_configurable_digital_low_pass_filter_0014",
+      "task_id": "cvdp_copilot_configurable_digital_low_pass_filter_0014",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "27_cvdp_copilot_configurable_digital_low_pass_filter_0014/测试结果.json"
+    },
+    {
+      "index": 28,
+      "folder": "28_cvdp_copilot_convolutional_encoder_0001",
+      "task_id": "cvdp_copilot_convolutional_encoder_0001",
+      "status": "FAIL",
+      "category": "CVDP_FUNCTION_FAIL",
+      "reason_cn": "CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。",
+      "reason": "CVDP cocotb reported failing tests despite zero process return code.",
+      "json": "28_cvdp_copilot_convolutional_encoder_0001/测试结果.json"
+    },
+    {
+      "index": 29,
+      "folder": "29_cvdp_copilot_data_bus_controller_0001",
+      "task_id": "cvdp_copilot_data_bus_controller_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "29_cvdp_copilot_data_bus_controller_0001/测试结果.json"
+    },
+    {
+      "index": 30,
+      "folder": "30_cvdp_copilot_data_width_converter_0003",
+      "task_id": "cvdp_copilot_data_width_converter_0003",
+      "status": "FAIL",
+      "category": "CVDP_FUNCTION_FAIL",
+      "reason_cn": "CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。",
+      "reason": "CVDP cocotb reported failing tests despite zero process return code.",
+      "json": "30_cvdp_copilot_data_width_converter_0003/测试结果.json"
+    },
+    {
+      "index": 31,
+      "folder": "31_cvdp_copilot_dbi_0001",
+      "task_id": "cvdp_copilot_dbi_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "31_cvdp_copilot_dbi_0001/测试结果.json"
+    },
+    {
+      "index": 32,
+      "folder": "32_cvdp_copilot_decode_firstbit_0001",
+      "task_id": "cvdp_copilot_decode_firstbit_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "32_cvdp_copilot_decode_firstbit_0001/测试结果.json"
+    },
+    {
+      "index": 33,
+      "folder": "33_cvdp_copilot_digital_dice_roller_0001",
+      "task_id": "cvdp_copilot_digital_dice_roller_0001",
+      "status": "FAIL",
+      "category": "CVDP_FUNCTION_FAIL",
+      "reason_cn": "CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。",
+      "reason": "CVDP cocotb reported failing tests despite zero process return code.",
+      "json": "33_cvdp_copilot_digital_dice_roller_0001/测试结果.json"
+    },
+    {
+      "index": 34,
+      "folder": "34_cvdp_copilot_digital_stopwatch_0001",
+      "task_id": "cvdp_copilot_digital_stopwatch_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "34_cvdp_copilot_digital_stopwatch_0001/测试结果.json"
+    },
+    {
+      "index": 35,
+      "folder": "35_cvdp_copilot_edge_detector_0001",
+      "task_id": "cvdp_copilot_edge_detector_0001",
+      "status": "FAIL",
+      "category": "CVDP_FUNCTION_FAIL",
+      "reason_cn": "CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。",
+      "reason": "CVDP cocotb reported failing tests despite zero process return code.",
+      "json": "35_cvdp_copilot_edge_detector_0001/测试结果.json"
+    },
+    {
+      "index": 36,
+      "folder": "36_cvdp_copilot_ethernet_packet_parser_0001",
+      "task_id": "cvdp_copilot_ethernet_packet_parser_0001",
+      "status": "MODEL_OR_MYGO_ERROR",
+      "category": "MODEL_OR_MYGO_ERROR",
+      "reason_cn": "DeepSeek 修正后仍未通过 MyGo 编译/IR/Verilog 生成链路。",
+      "reason": "MyGo compile failed after DeepSeek revision attempts: MyGo verilog FAIL. /home/rongxv/work/mygo_cvdp_work/36_cvdp_copilot_ethernet_packet_parser_0001_1780712037989_1866677/.mygo-tmp/.mygo-circt-2924727010/design.mlir:76:13: error: use of value '%rst' expects different type than prior uses: 'i1' vs '!hw.inout<i1>'\n      sv.if %rst {\n            ^\n/home/rongxv/work/mygo_cvdp_work/36_cvdp_copilot_ethernet_packet_parser_0001_1780712037989_1866677/.mygo-tmp/.mygo-circt-2924727010/design.mlir:29:5: note: prior use here\n    %rst = sv.reg : !hw.inout<i1>\n    ^\nbackend: circt-opt --pass-pipeline failed: exit status 1",
+      "json": "36_cvdp_copilot_ethernet_packet_parser_0001/测试结果.json"
+    },
+    {
+      "index": 37,
+      "folder": "37_cvdp_copilot_events_to_apb_0001",
+      "task_id": "cvdp_copilot_events_to_apb_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "37_cvdp_copilot_events_to_apb_0001/测试结果.json"
+    },
+    {
+      "index": 38,
+      "folder": "38_cvdp_copilot_factorial_0001",
+      "task_id": "cvdp_copilot_factorial_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "38_cvdp_copilot_factorial_0001/测试结果.json"
+    },
+    {
+      "index": 39,
+      "folder": "39_cvdp_copilot_fibonacci_series_0001",
+      "task_id": "cvdp_copilot_fibonacci_series_0001",
+      "status": "FAIL",
+      "category": "CVDP_FUNCTION_FAIL",
+      "reason_cn": "CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。",
+      "reason": "CVDP cocotb reported failing tests despite zero process return code.",
+      "json": "39_cvdp_copilot_fibonacci_series_0001/测试结果.json"
+    },
+    {
+      "index": 40,
+      "folder": "40_cvdp_copilot_fifo_async_0001",
+      "task_id": "cvdp_copilot_fifo_async_0001",
+      "status": "FAIL",
+      "category": "CVDP_FUNCTION_FAIL",
+      "reason_cn": "CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。",
+      "reason": "CVDP cocotb reported failing tests despite zero process return code.",
+      "json": "40_cvdp_copilot_fifo_async_0001/测试结果.json"
+    },
+    {
+      "index": 41,
+      "folder": "41_cvdp_copilot_filo_0005",
+      "task_id": "cvdp_copilot_filo_0005",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "41_cvdp_copilot_filo_0005/测试结果.json"
+    },
+    {
+      "index": 42,
+      "folder": "42_cvdp_copilot_fsm_seq_detector_0001",
+      "task_id": "cvdp_copilot_fsm_seq_detector_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "42_cvdp_copilot_fsm_seq_detector_0001/测试结果.json"
+    },
+    {
+      "index": 43,
+      "folder": "43_cvdp_copilot_gcd_0001",
+      "task_id": "cvdp_copilot_gcd_0001",
+      "status": "MODEL_OR_MYGO_ERROR",
+      "category": "MODEL_OR_MYGO_ERROR",
+      "reason_cn": "DeepSeek 修正后仍未通过 MyGo 编译/IR/Verilog 生成链路。",
+      "reason": "MyGo compile failed after DeepSeek revision attempts: MyGo compile failed",
+      "json": "43_cvdp_copilot_gcd_0001/测试结果.json"
+    },
+    {
+      "index": 44,
+      "folder": "44_cvdp_copilot_gf_multiplier_0001",
+      "task_id": "cvdp_copilot_gf_multiplier_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "44_cvdp_copilot_gf_multiplier_0001/测试结果.json"
+    },
+    {
+      "index": 45,
+      "folder": "45_cvdp_copilot_hamming_code_tx_and_rx_0001",
+      "task_id": "cvdp_copilot_hamming_code_tx_and_rx_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "45_cvdp_copilot_hamming_code_tx_and_rx_0001/测试结果.json"
+    },
+    {
+      "index": 46,
+      "folder": "46_cvdp_copilot_hamming_code_tx_and_rx_0003",
+      "task_id": "cvdp_copilot_hamming_code_tx_and_rx_0003",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "46_cvdp_copilot_hamming_code_tx_and_rx_0003/测试结果.json"
+    },
+    {
+      "index": 47,
+      "folder": "47_cvdp_copilot_hebbian_rule_0017",
+      "task_id": "cvdp_copilot_hebbian_rule_0017",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "47_cvdp_copilot_hebbian_rule_0017/测试结果.json"
+    },
+    {
+      "index": 48,
+      "folder": "48_cvdp_copilot_hill_cipher_0001",
+      "task_id": "cvdp_copilot_hill_cipher_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "48_cvdp_copilot_hill_cipher_0001/测试结果.json"
+    },
+    {
+      "index": 49,
+      "folder": "49_cvdp_copilot_load_store_unit_0001",
+      "task_id": "cvdp_copilot_load_store_unit_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "49_cvdp_copilot_load_store_unit_0001/测试结果.json"
+    },
+    {
+      "index": 50,
+      "folder": "50_cvdp_copilot_matrix_multiplier_0001",
+      "task_id": "cvdp_copilot_matrix_multiplier_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "50_cvdp_copilot_matrix_multiplier_0001/测试结果.json"
+    },
+    {
+      "index": 51,
+      "folder": "51_cvdp_copilot_microcode_sequencer_0001",
+      "task_id": "cvdp_copilot_microcode_sequencer_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "51_cvdp_copilot_microcode_sequencer_0001/测试结果.json"
+    },
+    {
+      "index": 52,
+      "folder": "52_cvdp_copilot_morse_code_0001",
+      "task_id": "cvdp_copilot_morse_code_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "52_cvdp_copilot_morse_code_0001/测试结果.json"
+    },
+    {
+      "index": 53,
+      "folder": "53_cvdp_copilot_moving_average_0001",
+      "task_id": "cvdp_copilot_moving_average_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "53_cvdp_copilot_moving_average_0001/测试结果.json"
+    },
+    {
+      "index": 54,
+      "folder": "54_cvdp_copilot_nbit_swizzling_0001",
+      "task_id": "cvdp_copilot_nbit_swizzling_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "54_cvdp_copilot_nbit_swizzling_0001/测试结果.json"
+    },
+    {
+      "index": 55,
+      "folder": "55_cvdp_copilot_packet_controller_0001",
+      "task_id": "cvdp_copilot_packet_controller_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "55_cvdp_copilot_packet_controller_0001/测试结果.json"
+    },
+    {
+      "index": 56,
+      "folder": "56_cvdp_copilot_palindrome_3b_0002",
+      "task_id": "cvdp_copilot_palindrome_3b_0002",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "56_cvdp_copilot_palindrome_3b_0002/测试结果.json"
+    },
+    {
+      "index": 57,
+      "folder": "57_cvdp_copilot_perceptron_0001",
+      "task_id": "cvdp_copilot_perceptron_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "57_cvdp_copilot_perceptron_0001/测试结果.json"
+    },
+    {
+      "index": 58,
+      "folder": "58_cvdp_copilot_perf_counters_0001",
+      "task_id": "cvdp_copilot_perf_counters_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "58_cvdp_copilot_perf_counters_0001/测试结果.json"
+    },
+    {
+      "index": 59,
+      "folder": "59_cvdp_copilot_perfect_squares_0001",
+      "task_id": "cvdp_copilot_perfect_squares_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "59_cvdp_copilot_perfect_squares_0001/测试结果.json"
+    },
+    {
+      "index": 60,
+      "folder": "60_cvdp_copilot_piso_0001",
+      "task_id": "cvdp_copilot_piso_0001",
+      "status": "FAIL",
+      "category": "CVDP_FUNCTION_FAIL",
+      "reason_cn": "CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。",
+      "reason": "CVDP cocotb reported failing tests despite zero process return code.",
+      "json": "60_cvdp_copilot_piso_0001/测试结果.json"
+    },
+    {
+      "index": 61,
+      "folder": "61_cvdp_copilot_prbs_gen_0003",
+      "task_id": "cvdp_copilot_prbs_gen_0003",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "61_cvdp_copilot_prbs_gen_0003/测试结果.json"
+    },
+    {
+      "index": 62,
+      "folder": "62_cvdp_copilot_restoring_division_0001",
+      "task_id": "cvdp_copilot_restoring_division_0001",
+      "status": "MODEL_OR_MYGO_ERROR",
+      "category": "MODEL_OR_MYGO_ERROR",
+      "reason_cn": "DeepSeek 修正后仍未通过 MyGo 编译/IR/Verilog 生成链路。",
+      "reason": "MyGo compile failed after DeepSeek revision attempts: MyGo ir FAIL. error: /home/rongxv/work/mygo_cvdp_work/62_cvdp_copilot_restoring_division_0001_1780712342790_1866671/main.go:64:1: missing return\npackage loading failed",
+      "json": "62_cvdp_copilot_restoring_division_0001/测试结果.json"
+    },
+    {
+      "index": 63,
+      "folder": "63_cvdp_copilot_reverse_bits_0001",
+      "task_id": "cvdp_copilot_reverse_bits_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "63_cvdp_copilot_reverse_bits_0001/测试结果.json"
+    },
+    {
+      "index": 64,
+      "folder": "64_cvdp_copilot_secure_read_write_bus_0001",
+      "task_id": "cvdp_copilot_secure_read_write_bus_0001",
+      "status": "FAIL",
+      "category": "CVDP_FUNCTION_FAIL",
+      "reason_cn": "CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。",
+      "reason": "CVDP cocotb reported failing tests despite zero process return code.",
+      "json": "64_cvdp_copilot_secure_read_write_bus_0001/测试结果.json"
+    },
+    {
+      "index": 65,
+      "folder": "65_cvdp_copilot_secure_read_write_register_bank_0001",
+      "task_id": "cvdp_copilot_secure_read_write_register_bank_0001",
+      "status": "MODEL_OR_MYGO_ERROR",
+      "category": "MODEL_OR_MYGO_ERROR",
+      "reason_cn": "DeepSeek 修正后仍未通过 MyGo 编译/IR/Verilog 生成链路。",
+      "reason": "MyGo compile failed after DeepSeek revision attempts: MyGo compile failed",
+      "json": "65_cvdp_copilot_secure_read_write_register_bank_0001/测试结果.json"
+    },
+    {
+      "index": 66,
+      "folder": "66_cvdp_copilot_sequencial_binary_to_one_hot_decoder_0001",
+      "task_id": "cvdp_copilot_sequencial_binary_to_one_hot_decoder_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "66_cvdp_copilot_sequencial_binary_to_one_hot_decoder_0001/测试结果.json"
+    },
+    {
+      "index": 67,
+      "folder": "67_cvdp_copilot_serial_in_parallel_out_0004",
+      "task_id": "cvdp_copilot_serial_in_parallel_out_0004",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "67_cvdp_copilot_serial_in_parallel_out_0004/测试结果.json"
+    },
+    {
+      "index": 68,
+      "folder": "68_cvdp_copilot_set_bit_calculator_0001",
+      "task_id": "cvdp_copilot_set_bit_calculator_0001",
+      "status": "FAIL",
+      "category": "CVDP_FUNCTION_FAIL",
+      "reason_cn": "CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。",
+      "reason": "CVDP cocotb reported failing tests despite zero process return code.",
+      "json": "68_cvdp_copilot_set_bit_calculator_0001/测试结果.json"
+    },
+    {
+      "index": 69,
+      "folder": "69_cvdp_copilot_sorter_0001",
+      "task_id": "cvdp_copilot_sorter_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "69_cvdp_copilot_sorter_0001/测试结果.json"
+    },
+    {
+      "index": 70,
+      "folder": "70_cvdp_copilot_static_branch_predict_0001",
+      "task_id": "cvdp_copilot_static_branch_predict_0001",
+      "status": "FAIL",
+      "category": "CVDP_FUNCTION_FAIL",
+      "reason_cn": "CVDP cocotb 功能测试失败，说明生成 HDL 已进入判题但行为不符合参考测试。",
+      "reason": "CVDP cocotb reported failing tests despite zero process return code.",
+      "json": "70_cvdp_copilot_static_branch_predict_0001/测试结果.json"
+    },
+    {
+      "index": 71,
+      "folder": "71_cvdp_copilot_sync_lifo_0001",
+      "task_id": "cvdp_copilot_sync_lifo_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "71_cvdp_copilot_sync_lifo_0001/测试结果.json"
+    },
+    {
+      "index": 72,
+      "folder": "72_cvdp_copilot_sync_serial_communication_0001",
+      "task_id": "cvdp_copilot_sync_serial_communication_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "72_cvdp_copilot_sync_serial_communication_0001/测试结果.json"
+    },
+    {
+      "index": 73,
+      "folder": "73_cvdp_copilot_thermostat_0001",
+      "task_id": "cvdp_copilot_thermostat_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "73_cvdp_copilot_thermostat_0001/测试结果.json"
+    },
+    {
+      "index": 74,
+      "folder": "74_cvdp_copilot_ttc_lite_0001",
+      "task_id": "cvdp_copilot_ttc_lite_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "74_cvdp_copilot_ttc_lite_0001/测试结果.json"
+    },
+    {
+      "index": 75,
+      "folder": "75_cvdp_copilot_unpacker_one_hot_0001",
+      "task_id": "cvdp_copilot_unpacker_one_hot_0001",
+      "status": "MODEL_OR_MYGO_ERROR",
+      "category": "MODEL_OR_MYGO_ERROR",
+      "reason_cn": "DeepSeek 修正后仍未通过 MyGo 编译/IR/Verilog 生成链路。",
+      "reason": "MyGo compile failed after DeepSeek revision attempts: MyGo compile failed",
+      "json": "75_cvdp_copilot_unpacker_one_hot_0001/测试结果.json"
+    },
+    {
+      "index": 76,
+      "folder": "76_cvdp_copilot_vending_machine_0001",
+      "task_id": "cvdp_copilot_vending_machine_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "76_cvdp_copilot_vending_machine_0001/测试结果.json"
+    },
+    {
+      "index": 77,
+      "folder": "77_cvdp_copilot_vga_controller_0001",
+      "task_id": "cvdp_copilot_vga_controller_0001",
+      "status": "MODEL_OR_MYGO_ERROR",
+      "category": "MODEL_OR_MYGO_ERROR",
+      "reason_cn": "DeepSeek 修正后仍未通过 MyGo 编译/IR/Verilog 生成链路。",
+      "reason": "MyGo compile failed after DeepSeek revision attempts: MyGo ir FAIL. error: /home/rongxv/work/mygo_cvdp_work/77_cvdp_copilot_vga_controller_0001_1780714849469_1866668/main.go:95:1: missing return\npackage loading failed",
+      "json": "77_cvdp_copilot_vga_controller_0001/测试结果.json"
+    },
+    {
+      "index": 78,
+      "folder": "78_cvdp_copilot_wb2ahb_0001",
+      "task_id": "cvdp_copilot_wb2ahb_0001",
+      "status": "PASS",
+      "category": "PASS",
+      "reason_cn": "CVDP 判题通过。",
+      "reason": "",
+      "json": "78_cvdp_copilot_wb2ahb_0001/测试结果.json"
+    }
+  ]
+}
