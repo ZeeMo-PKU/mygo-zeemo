@@ -1,0 +1,299 @@
+﻿[
+    {
+        "idx":  3,
+        "id":  "cvdp_copilot_64b66b_encoder_0001",
+        "status":  "PASS",
+        "target_function":  "encoder_64b66b",
+        "expected_output_files":  "rtl/encoder_64b66b.sv",
+        "failure_category":  "Passed CVDP",
+        "reason":  ""
+    },
+    {
+        "idx":  7,
+        "id":  "cvdp_copilot_apb_dsp_unit_0001",
+        "status":  "MODEL_OR_MYGO_ERROR",
+        "target_function":  "apb_dsp_unit",
+        "expected_output_files":  "rtl/apb_dsp_unit.v",
+        "failure_category":  "MyGo/CIRCT backend SSA error",
+        "reason":  "MyGo compile failed for reused model output: MyGo verilog FAIL. C:\\temp\\mygo_cvdp_work\\07_cvdp_copilot_apb_dsp_unit_0001_1780696084327_15616\\.mygo-tmp\\.mygo-circt-3645026439\\design.mlir:319:37: error: use of undeclared SSA value name %read_pready327 = sv.read_inout %const_70 : !hw.inout\u003ci1\u003e ^ backend: circt-opt --pass-pipeline failed: exit status 1"
+    },
+    {
+        "idx":  9,
+        "id":  "cvdp_copilot_apb_history_shift_register_0001",
+        "status":  "PASS",
+        "target_function":  "APBGlobalHistoryRegister",
+        "expected_output_files":  "rtl/APBGlobalHistoryRegister.v",
+        "failure_category":  "Passed CVDP",
+        "reason":  ""
+    },
+    {
+        "idx":  10,
+        "id":  "cvdp_copilot_axi_register_0001",
+        "status":  "MODEL_OR_MYGO_ERROR",
+        "target_function":  "axi_register",
+        "expected_output_files":  "rtl/axi_register.sv",
+        "failure_category":  "MyGo timeout",
+        "reason":  "MyGo compile failed for reused model output: MyGo ir TIMEOUT after 307.3s"
+    },
+    {
+        "idx":  14,
+        "id":  "cvdp_copilot_barrel_shifter_0001",
+        "status":  "MODEL_OR_MYGO_ERROR",
+        "target_function":  "barrel_shifter_8bit",
+        "expected_output_files":  "rtl/barrel_shifter_8bit.sv",
+        "failure_category":  "MyGo timeout",
+        "reason":  "MyGo compile failed for reused model output: MyGo mlir TIMEOUT after 302.6s"
+    },
+    {
+        "idx":  17,
+        "id":  "cvdp_copilot_binary_to_one_hot_decoder_0001",
+        "status":  "MODEL_OR_MYGO_ERROR",
+        "target_function":  "binary_to_one_hot_decoder",
+        "expected_output_files":  "rtl/binary_to_one_hot_decoder.v",
+        "failure_category":  "MyGo timeout",
+        "reason":  "MyGo compile failed for reused model output: MyGo ir TIMEOUT after 304.0s"
+    },
+    {
+        "idx":  18,
+        "id":  "cvdp_copilot_caesar_cipher_0001",
+        "status":  "MODEL_OR_MYGO_ERROR",
+        "target_function":  "caesar_cipher",
+        "expected_output_files":  "rtl/caesar_cipher.sv",
+        "failure_category":  "MyGo timeout",
+        "reason":  "MyGo compile failed for reused model output: MyGo ir TIMEOUT after 5604.2s"
+    },
+    {
+        "idx":  19,
+        "id":  "cvdp_copilot_car_parking_management_0001",
+        "status":  "MODEL_OR_MYGO_ERROR",
+        "target_function":  "car_parking_system",
+        "expected_output_files":  "rtl/car_parking_system.sv",
+        "failure_category":  "Model output Go compile error",
+        "reason":  "MyGo compile failed for reused model output: MyGo ir FAIL. error: C:\\temp\\mygo_cvdp_work\\19_cvdp_copilot_car_parking_management_0001_1780702641414_15616\\main.go:77:1: missing return package loading failed"
+    },
+    {
+        "idx":  22,
+        "id":  "cvdp_copilot_comparator_0001",
+        "status":  "PASS",
+        "target_function":  "signed_unsigned_comparator",
+        "expected_output_files":  "rtl/signed_comparator.sv",
+        "failure_category":  "Passed CVDP",
+        "reason":  ""
+    },
+    {
+        "idx":  24,
+        "id":  "cvdp_copilot_concatenate_0001",
+        "status":  "MODEL_OR_MYGO_ERROR",
+        "target_function":  "enhanced_fsm_signal_processor",
+        "expected_output_files":  "rtl/enhanced_fsm_signal_processor.v",
+        "failure_category":  "MyGo compile/backend error",
+        "reason":  "MyGo compile failed for reused model output: MyGo mlir FAIL after 275.7s"
+    },
+    {
+        "idx":  28,
+        "id":  "cvdp_copilot_convolutional_encoder_0001",
+        "status":  "MODEL_OR_MYGO_ERROR",
+        "target_function":  "convolutional_encoder",
+        "expected_output_files":  "rtl/convolutional_encoder.sv",
+        "failure_category":  "MyGo timeout",
+        "reason":  "MyGo compile failed for reused model output: MyGo ir TIMEOUT after 302.7s"
+    },
+    {
+        "idx":  30,
+        "id":  "cvdp_copilot_data_width_converter_0003",
+        "status":  "PASS",
+        "target_function":  "data_width_converter",
+        "expected_output_files":  "rtl/data_width_converter.sv",
+        "failure_category":  "Passed CVDP",
+        "reason":  ""
+    },
+    {
+        "idx":  33,
+        "id":  "cvdp_copilot_digital_dice_roller_0001",
+        "status":  "PASS",
+        "target_function":  "digital_dice_roller",
+        "expected_output_files":  "rtl/digital_dice_roller.sv",
+        "failure_category":  "Passed CVDP",
+        "reason":  ""
+    },
+    {
+        "idx":  35,
+        "id":  "cvdp_copilot_edge_detector_0001",
+        "status":  "MODEL_OR_MYGO_ERROR",
+        "target_function":  "sync_pos_neg_edge_detector",
+        "expected_output_files":  "rtl/sync_pos_neg_edge_detector.sv",
+        "failure_category":  "Model output Go compile error",
+        "reason":  "MyGo compile failed for reused model output: MyGo ir FAIL. error: C:\\temp\\mygo_cvdp_work\\35_cvdp_copilot_edge_detector_0001_1780703273885_15616\\main.go:14:1: missing return package loading failed"
+    },
+    {
+        "idx":  36,
+        "id":  "cvdp_copilot_ethernet_packet_parser_0001",
+        "status":  "MODEL_OR_MYGO_ERROR",
+        "target_function":  "field_extract",
+        "expected_output_files":  "rtl/ethernet_parser.v",
+        "failure_category":  "MyGo timeout",
+        "reason":  "MyGo compile failed for reused model output: MyGo ir TIMEOUT after 303.8s"
+    },
+    {
+        "idx":  39,
+        "id":  "cvdp_copilot_fibonacci_series_0001",
+        "status":  "PASS",
+        "target_function":  "fibonacci_series",
+        "expected_output_files":  "rtl/fibonacci_series.sv",
+        "failure_category":  "Passed CVDP",
+        "reason":  ""
+    },
+    {
+        "idx":  40,
+        "id":  "cvdp_copilot_fifo_async_0001",
+        "status":  "PASS",
+        "target_function":  "fifo_async",
+        "expected_output_files":  "rtl/fifo_async.sv",
+        "failure_category":  "Passed CVDP",
+        "reason":  ""
+    },
+    {
+        "idx":  43,
+        "id":  "cvdp_copilot_gcd_0001",
+        "status":  "MODEL_OR_MYGO_ERROR",
+        "target_function":  "gcd_top",
+        "expected_output_files":  "rtl/gcd_top.sv",
+        "failure_category":  "Model used unsupported Go construct",
+        "reason":  "Do not use unsupported Go constructs."
+    },
+    {
+        "idx":  44,
+        "id":  "cvdp_copilot_gf_multiplier_0001",
+        "status":  "PASS",
+        "target_function":  "gf_multiplier",
+        "expected_output_files":  "rtl/gf_multiplier.sv",
+        "failure_category":  "Passed CVDP",
+        "reason":  ""
+    },
+    {
+        "idx":  52,
+        "id":  "cvdp_copilot_morse_code_0001",
+        "status":  "MODEL_OR_MYGO_ERROR",
+        "target_function":  "morse_encoder",
+        "expected_output_files":  "rtl/morse_encoder.sv",
+        "failure_category":  "MyGo timeout",
+        "reason":  "MyGo compile failed for reused model output: MyGo mlir TIMEOUT after 305.4s"
+    },
+    {
+        "idx":  58,
+        "id":  "cvdp_copilot_perf_counters_0001",
+        "status":  "PASS",
+        "target_function":  "cvdp_copilot_perf_counters",
+        "expected_output_files":  "rtl/cvdp_copilot_perf_counters.sv",
+        "failure_category":  "Passed CVDP",
+        "reason":  ""
+    },
+    {
+        "idx":  60,
+        "id":  "cvdp_copilot_piso_0001",
+        "status":  "MODEL_OR_MYGO_ERROR",
+        "target_function":  "piso_8bit",
+        "expected_output_files":  "rtl/piso_8bit.sv",
+        "failure_category":  "Go toolchain access error",
+        "reason":  "MyGo compile failed for reused model output: MyGo ir FAIL. err: fork/exec C:\\Program Files\\Go\\bin\\go.exe: Access is denied.: stderr:"
+    },
+    {
+        "idx":  62,
+        "id":  "cvdp_copilot_restoring_division_0001",
+        "status":  "PASS",
+        "target_function":  "restoring_division",
+        "expected_output_files":  "rtl/restore_division.sv",
+        "failure_category":  "Passed CVDP",
+        "reason":  ""
+    },
+    {
+        "idx":  63,
+        "id":  "cvdp_copilot_reverse_bits_0001",
+        "status":  "MODEL_OR_MYGO_ERROR",
+        "target_function":  "reverse_bits",
+        "expected_output_files":  "rtl/reverse_bits.v",
+        "failure_category":  "MyGo timeout",
+        "reason":  "MyGo compile failed for reused model output: MyGo ir TIMEOUT after 303.1s"
+    },
+    {
+        "idx":  64,
+        "id":  "cvdp_copilot_secure_read_write_bus_0001",
+        "status":  "MODEL_OR_MYGO_ERROR",
+        "target_function":  "secure_read_write_bus_interface",
+        "expected_output_files":  "rtl/secure_read_write_bus_interface.v",
+        "failure_category":  "Go toolchain access error",
+        "reason":  "MyGo compile failed for reused model output: MyGo ir FAIL. err: fork/exec C:\\Program Files\\Go\\bin\\go.exe: Access is denied.: stderr:"
+    },
+    {
+        "idx":  65,
+        "id":  "cvdp_copilot_secure_read_write_register_bank_0001",
+        "status":  "MODEL_OR_MYGO_ERROR",
+        "target_function":  "secure_read_write_register_bank",
+        "expected_output_files":  "rtl/secure_read_write_register_bank.v",
+        "failure_category":  "MyGo/CIRCT backend SSA error",
+        "reason":  "MyGo compile failed for reused model output: MyGo verilog FAIL. C:\\temp\\mygo_cvdp_work\\65_cvdp_copilot_secure_read_write_register_bank_0001_1780704341275_15616\\.mygo-tmp\\.mygo-circt-688119169\\design.mlir:226:26: error: use of undeclared SSA value name %v53 = sv.read_inout %prev_pulse : !hw.inout\u003ci1\u003e ^ backend: circt-opt --pass-pipeline failed: exit status 1"
+    },
+    {
+        "idx":  66,
+        "id":  "cvdp_copilot_sequencial_binary_to_one_hot_decoder_0001",
+        "status":  "MODEL_OR_MYGO_ERROR",
+        "target_function":  "binary_to_one_hot_decoder_sequential",
+        "expected_output_files":  "rtl/binary_to_one_hot_decoder_sequential.v",
+        "failure_category":  "MyGo timeout",
+        "reason":  "MyGo compile failed for reused model output: MyGo ir TIMEOUT after 303.7s"
+    },
+    {
+        "idx":  67,
+        "id":  "cvdp_copilot_serial_in_parallel_out_0004",
+        "status":  "PASS",
+        "target_function":  "serial_in_parallel_out_8bit",
+        "expected_output_files":  "rtl/serial_in_parallel_out_8bit.sv",
+        "failure_category":  "Passed CVDP",
+        "reason":  ""
+    },
+    {
+        "idx":  68,
+        "id":  "cvdp_copilot_set_bit_calculator_0001",
+        "status":  "MODEL_OR_MYGO_ERROR",
+        "target_function":  "SetBitStreamCalculator",
+        "expected_output_files":  "rtl/SetBitStreamCalculator.v",
+        "failure_category":  "MyGo timeout",
+        "reason":  "MyGo compile failed for reused model output: MyGo mlir TIMEOUT after 304.0s"
+    },
+    {
+        "idx":  70,
+        "id":  "cvdp_copilot_static_branch_predict_0001",
+        "status":  "MODEL_OR_MYGO_ERROR",
+        "target_function":  "static_branch_predict",
+        "expected_output_files":  "rtl/static_branch_predict.sv",
+        "failure_category":  "Go toolchain access error",
+        "reason":  "MyGo compile failed for reused model output: MyGo ir FAIL. err: fork/exec C:\\Program Files\\Go\\bin\\go.exe: Access is denied.: stderr:"
+    },
+    {
+        "idx":  73,
+        "id":  "cvdp_copilot_thermostat_0001",
+        "status":  "PASS",
+        "target_function":  "thermostat",
+        "expected_output_files":  "rtl/thermostat.v",
+        "failure_category":  "Passed CVDP",
+        "reason":  ""
+    },
+    {
+        "idx":  74,
+        "id":  "cvdp_copilot_ttc_lite_0001",
+        "status":  "MODEL_OR_MYGO_ERROR",
+        "target_function":  "ttc_counter_lite",
+        "expected_output_files":  "rtl/ttc_counter_lite.sv",
+        "failure_category":  "Model output Go compile error",
+        "reason":  "MyGo compile failed for reused model output: MyGo ir FAIL. error: C:\\temp\\mygo_cvdp_work\\74_cvdp_copilot_ttc_lite_0001_1780704994245_15616\\main.go:121:1: missing return package loading failed"
+    },
+    {
+        "idx":  75,
+        "id":  "cvdp_copilot_unpacker_one_hot_0001",
+        "status":  "MODEL_OR_MYGO_ERROR",
+        "target_function":  "unpack_one_hot",
+        "expected_output_files":  "rtl/unpack_one_hot.v",
+        "failure_category":  "Model target function mismatch",
+        "reason":  "Missing requested target function unpack_one_hot."
+    }
+]
